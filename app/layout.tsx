@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import { Theme } from "@radix-ui/themes";
 
+import { Header, Footer } from "@@src/components";
+
+import "@radix-ui/themes/styles.css";
 import "./assets/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +18,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"font-body"}>{children}</body>
+      <body className={"font-body"}>
+        <Theme appearance="dark">
+          <header className="py-28 px-16 xl:px-1">
+            <Header />
+          </header>
+          <main className="px-16 xl:px-1">{children}</main>
+          <footer className="py-28 px-16 xl:px-1">
+            <Footer />
+          </footer>
+        </Theme>
+      </body>
     </html>
   );
 }

@@ -9,8 +9,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      display: ["display"],
-      body: ["body", "sans-serif"],
+      display: ["fontdisplay"],
+      body: ["fontbody", "sans-serif"],
     },
     colors: {
       transparent: "transparent",

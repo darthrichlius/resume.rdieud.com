@@ -1,21 +1,21 @@
 
 @font-face {
-    font-family: 'display';
-    src: local('display'), url('../fonts/PPRightGrotesk-TallBold.woff2') format('woff2');
+    font-family: 'FontDisplay';
+    src: url('../fonts/PPRightGrotesk-TallBold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
 
 @font-face {
-    font-family: 'body';
-    src: local('body'), url('../fonts/NHaasGroteskDSPro-55Rg.otf') format('opentype');
+    font-family: 'FontBody';
+    src: url('../fonts/NHaasGroteskDSPro-55Rg.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
 @font-face {
-    font-family: 'body';
-    src: local('body'), url('../fonts/NHaasGroteskDSPro-65Md.otf') format('opentype');
+    font-family: 'FontBody';
+    src: url('../fonts/NHaasGroteskDSPro-65Md.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
   }

@@ -4,6 +4,10 @@
 
 @import 'font.css';
 
+.radix-themes {
+  --default-font-family: 'fontbody', sans-serif !important;
+}
+
 :root {
   background-color: #000;
   --foreground-rgb: 255, 255, 255;
