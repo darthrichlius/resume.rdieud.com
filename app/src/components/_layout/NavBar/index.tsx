@@ -16,7 +16,7 @@ const NavBar = () => {
       <NavigationMenu.List className="gap-32 hidden sm:flex">
         {menus.map((menu) => (
           <NavigationMenu.Item key={menu.label}>
-            <NavigationMenu.Link className="text-xl" href={menu.href}>
+            <NavigationMenu.Link className="text-base md:text-xl" href={menu.href}>
               {menu.label}
             </NavigationMenu.Link>
           </NavigationMenu.Item>

@@ -4,17 +4,17 @@ import NavBar from "../NavBar";
 
 const LayoutHeader = () => {
   return (
-    <Container className="NavBar h-96">
+    <div className="app-container">
       <Flex justify="between" align={"center"}>
-        <NextLink className="text-2xl font-bold" href={"/"}>
-          RD{" "}
-          <Text className="text-sm text-zinc-400" ml={"1"}>
+        <NextLink className="font-bold text-lg md:text-2xl" href={"/"}>
+          <Text className="">RD</Text>
+          <Text className="text-sm text-zinc-400" ml={"2"}>
             v0.1.0
           </Text>
         </NextLink>
         <NavBar />
       </Flex>
-    </Container>
+    </div>
   );
 };
 

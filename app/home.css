@@ -1,0 +1,11 @@
+
+.home-section {
+    padding-top: 64px;
+    height: 100vh;
+    max-height: 1024px;
+}
+
+.home-section-wordked-for {
+    @apply text-base font-bold pr-36 border-r border-r-zinc-400 md:text-xl;
+    word-spacing: 0.085em;
+}

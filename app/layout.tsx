@@ -20,11 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={"font-body"}>
         <Theme appearance="dark">
-          <header className="py-28 px-16 xl:px-1">
+          <header className="flex justify-center fixed w-full py-28 px-24 md:px-32 xl:px-1">
             <Header />
           </header>
-          <main className="px-16 xl:px-1">{children}</main>
-          <footer className="py-28 px-16 xl:px-1">
+          <main className="px-24 md:px-32 xl:px-1">{children}</main>
+          <footer className="py-28 px-24 md:px-32 xl:px-1">
             <Footer />
           </footer>
         </Theme>

@@ -74,6 +74,12 @@ const config: Config = {
       "384": "384px",
       "512": "512px",
     },
+    extend: {
+      screens: {
+        lg: "1104px",
+        // => @media (min-width: 1104px) { ... }
+      },
+    },
   },
   plugins: [],
 };
