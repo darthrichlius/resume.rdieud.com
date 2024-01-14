@@ -1,7 +1,7 @@
 "use client";
 import NextLink from "next/link";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { HamburgerMenuIcon as MenuIcon } from "@radix-ui/react-icons";
+import { RxHamburgerMenu as MenuIcon } from "react-icons/rx";
 
 const menus = [
   { label: "Reference", href: "#reference" },

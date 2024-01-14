@@ -9,3 +9,12 @@
     @apply text-base font-bold pr-36 border-r border-r-zinc-400 md:text-xl;
     word-spacing: 0.085em;
 }
+.home-stack-highlight {
+    @apply flex gap-24 justify-center mt-56 md:gap-64  md:mt-96 lg:gap-64 lg:mt-128;
+}
+
+.home-stack-highlight svg {
+    @apply text-zinc-600;
+    width: 100%;
+    height: 100%;
+}
