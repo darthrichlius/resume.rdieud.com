@@ -41,7 +41,7 @@ const HomeWorkExperienceSection = () => {
             </div>
           </article>
           <article className="flex bg-zinc-200 text-zinc-950">
-            <aside className="hidden max-w-192 bg-zinc-400 px-16 py-32 md:block">
+            <aside className="hidden bg-zinc-400 px-16 py-32 md:block md:w-176 md:grow md:shrink-0 lg:w-192">
               <Typography className="font-bold">Chronological</Typography>
               <Typography className="mt-8 text-sm text-zinc-600">
                 This view simplifies the understanding of how those work
