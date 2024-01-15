@@ -37,7 +37,10 @@ const expertHighlight = [
 
 const HomePresentationSection = () => {
   return (
-    <section id="presentation" className="home-section flex justify-center">
+    <section
+      id="presentation"
+      className="home-section home-section-h-max flex justify-center"
+    >
       <div className={"app-container"}>
         <div className={"lg:flex lg:justify-between"}>
           <div className="w-full lg:max-w-lg">

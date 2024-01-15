@@ -7,10 +7,7 @@ interface Props {
 
 const Typography = ({ children, className, ...rest }: Props) => {
   return (
-    <p
-      className={`${className} tracking-wide [word-spacing:0.065em]`}
-      {...rest}
-    >
+    <p className={`${className} app-typography`} {...rest}>
       {children}
     </p>
   );

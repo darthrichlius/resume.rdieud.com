@@ -14,7 +14,10 @@ const companies = [
 
 const HomeIntroductionSection = () => {
   return (
-    <section id="introduction" className="home-section flex justify-center">
+    <section
+      id="introduction"
+      className="home-section home-section-h-max flex justify-center"
+    >
       <div className={"app-container flex flex-col justify-center"}>
         <div className="flex flex-col gap-40 md:gap-64 md:-mt-64">
           <div>
@@ -27,7 +30,7 @@ const HomeIntroductionSection = () => {
             I bring passion 🎨, <strong>efficiency</strong> 🗝️ and{" "}
             <strong>full proficiency</strong> 🧠 together
             <br />
-            to build valuable <strong>experiences</strong> and{" "}
+            to build user-centric <strong>experiences</strong> and{" "}
             <strong>products</strong> that scale ✨
           </Typography>
           <div className="flex gap-36">

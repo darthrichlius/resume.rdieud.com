@@ -9,7 +9,7 @@ const LayoutHeader = () => {
         <NextLink className="font-bold text-lg md:text-2xl" href={"/"}>
           <Text className="">RD</Text>
           <Text className="text-sm text-zinc-400" ml={"2"}>
-            v0.1.0
+            Beta v0.1.0
           </Text>
         </NextLink>
         <NavBar />

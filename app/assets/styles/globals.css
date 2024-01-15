@@ -16,6 +16,12 @@
 @media (prefers-color-scheme: dark) {
 }
 
+@layer utilities {
+  .app-typography {
+    @apply tracking-[0.035em] [word-spacing:0.065em]
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
 }
@@ -32,3 +38,4 @@ svg {
 .app-container {
   @apply container max-w-screen-lg
 }
+

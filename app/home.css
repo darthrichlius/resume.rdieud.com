@@ -1,8 +1,15 @@
 
 .home-section {
     padding-top: 64px;
+}
+
+.home-section-h-max {
     height: 100vh;
     max-height: 1024px;
+}
+
+.home-section > header {
+    @apply flex mt-160 md:mt-176 w-full min-h-176 shrink-0 bg-wine-200 items-center justify-center font-display text-6xl uppercase mb-192 md:h-256 md:text-9xl lg:text-[192px]
 }
 
 .home-section-wordked-for {
@@ -17,4 +24,56 @@
     @apply text-zinc-600;
     width: 100%;
     height: 100%;
+}
+
+#resume h3 {
+    @apply  text-3xl font-bold
+}
+
+#resume .experience-grid {
+    @apply flex flex-col gap-24 mt-48 md:flex-row
+}
+
+#resume .experience-grid-group-card {
+    @apply w-full md:max-w-[1/3]
+}
+
+#resume .experience-grid-group-card h4 {
+    @apply text-xl font-bold
+}
+
+#resume .experience-grid-group-list {
+    @apply  flex flex-col gap-20 md:gap-28 my-28
+}
+
+#resume .experience-grid-group-list-item-main {
+    @apply flex
+}
+
+#resume .experience-grid-group-list-item-main p {
+    @apply  md:text-base
+}
+
+#resume .experience-grid-group-list-item-main > :nth-child(2) {
+    @apply  ml-8 text-zinc-400
+}
+
+#resume .experience-grid-group-list-item-sub {
+    @apply flex flex-col gap-16 md:gap-24 border-l border-l-zinc-400 mt-24 ml-16 pl-24
+}
+
+#resume .experience-grid-group-list-item-sub p {
+    @apply  md:text-base
+}
+
+#resume .job-experience-card {
+    @apply flex items-start gap-24
+}
+
+#resume .job-experience-card-experience-description {
+    @apply mt-24 app-typography text-sm 
+}
+
+#resume .job-experience-card-experience-description p:not(:first-child) {
+    @apply mt-12
 }
