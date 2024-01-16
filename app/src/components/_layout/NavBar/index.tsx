@@ -4,7 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { RxHamburgerMenu as MenuIcon } from "react-icons/rx";
 
 const menus = [
-  { label: "Reference", href: "#references" },
+  { label: "References", href: "#references" },
   { label: "Resume", href: "#resume" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
