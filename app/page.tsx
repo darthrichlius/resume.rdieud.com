@@ -5,8 +5,6 @@ import {
   HomeWorkExperienceSection,
 } from "@@/Home";
 
-import "./home.css";
-
 export default function Home() {
   return (
     <>

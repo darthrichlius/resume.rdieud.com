@@ -4,7 +4,7 @@ import { Theme } from "@radix-ui/themes";
 import { Header, Footer } from "@@src/components";
 
 import "@radix-ui/themes/styles.css";
-import "./assets/styles/globals.css";
+import "@@/assets/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

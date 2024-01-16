@@ -1,0 +1,5 @@
+@layer utilities {
+  .app-typography {
+    @apply tracking-[0.035em] [word-spacing:0.065em];
+  }
+}

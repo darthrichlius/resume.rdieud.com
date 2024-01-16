@@ -1,41 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* We trade the traditionnal @tailwind <element>; to be able to use @import */
+/* @see https://tailwindcss.com/docs/using-with-preprocessors */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@import 'font.css';
+@import "font.css";
+@import "utilities.css";
 
-.radix-themes {
-  --default-font-family: 'fontbody', sans-serif !important;
-}
-
-:root {
-  background-color: #000;
-  --foreground-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-}
-
-@layer utilities {
-  .app-typography {
-    @apply tracking-[0.035em] [word-spacing:0.065em]
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-.app-container {
-  @apply container max-w-screen-lg
-}
-
+@import "base.css";
+@import "home.css";
