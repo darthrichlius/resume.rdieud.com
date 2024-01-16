@@ -3,11 +3,11 @@ import { ExperienceListGroupCard, JobExperienceCard } from "./_";
 import experienceSummaryMap from "@/static/experienceSummaryMap";
 import experienceMap from "@/static/experienceMap";
 
-const HomeWorkExperienceSection = () => {
+const HomeResumeSection = () => {
   return (
     <section id="resume" className="home-section flex flex-col items-center">
       <header>
-        <h2>Work Experience</h2>
+        <h2>Resume</h2>
       </header>
       <div className="app-container flex justify-center">
         <div className="w-full max-w-4xl">
@@ -61,4 +61,4 @@ const HomeWorkExperienceSection = () => {
   );
 };
 
-export default HomeWorkExperienceSection;
+export default HomeResumeSection;

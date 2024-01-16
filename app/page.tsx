@@ -2,7 +2,7 @@ import {
   HomeIntroductionSection,
   HomePresentationSection,
   HomeReferencesSection,
-  HomeWorkExperienceSection,
+  HomeResumeSection,
 } from "@@/Home";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <HomeIntroductionSection />
       <HomePresentationSection />
       <HomeReferencesSection />
-      <HomeWorkExperienceSection />
+      <HomeResumeSection />
     </>
   );
 }
