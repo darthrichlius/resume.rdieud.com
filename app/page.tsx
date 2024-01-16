@@ -3,6 +3,7 @@ import {
   HomePresentationSection,
   HomeReferencesSection,
   HomeResumeSection,
+  HomePortfolioSection,
 } from "@@/Home";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <HomePresentationSection />
       <HomeReferencesSection />
       <HomeResumeSection />
+      <HomePortfolioSection />
     </>
   );
 }

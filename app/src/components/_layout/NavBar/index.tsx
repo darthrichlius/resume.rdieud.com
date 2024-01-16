@@ -6,7 +6,7 @@ import { RxHamburgerMenu as MenuIcon } from "react-icons/rx";
 const menus = [
   { label: "Reference", href: "#references" },
   { label: "Resume", href: "#resume" },
-  { label: "Projects", href: "#projects" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
 ];
 
