@@ -13,7 +13,9 @@ import experienceMap from "@/static/experienceMap";
 const ResumeExperience = () => {
   const [expandWorkExperience, toggleWorkExperience] = useState(false);
 
-  const experiences = expandWorkExperience ? experienceMap : [experienceMap[0]];
+  const experiences = expandWorkExperience
+    ? experienceMap
+    : experienceMap.slice(0, 2);
 
   return (
     <div>
