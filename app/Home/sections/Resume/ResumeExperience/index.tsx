@@ -1,4 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import {
+  FaChevronDown as ExpandIcon,
+  FaChevronUp as LessIcon,
+} from "react-icons/fa";
 
 import { Typography } from "@@src/components";
 import { ExperienceListGroupCard, JobExperienceCard } from "../_";
@@ -6,6 +11,10 @@ import experienceSummaryMap from "@/static/experienceSummaryMap";
 import experienceMap from "@/static/experienceMap";
 
 const ResumeExperience = () => {
+  const [expandWorkExperience, toggleWorkExperience] = useState(false);
+
+  const experiences = expandWorkExperience ? experienceMap : [experienceMap[0]];
+
   return (
     <div>
       <article className="p-24 bg-zinc-900">
@@ -44,12 +53,26 @@ const ResumeExperience = () => {
           </Typography>
         </aside>
         <div className="flex flex-col gap-32 px-32 py-32">
-          {experienceMap.map((exp, i) => (
+          {experiences.map((exp, i) => (
             <JobExperienceCard key={i} experience={exp} />
           ))}
         </div>
       </article>
-      <Typography>Reduce</Typography>
+      <div className="">
+        <button
+          onClick={() => toggleWorkExperience((s) => !s)}
+          className="flex flex-col items-center justify-center h-56 w-full rounded-b-lg text-lg font-bold hover:bg-zinc-800"
+        >
+          <Typography as="span">
+            {expandWorkExperience ? "Show Less" : "Show all experiences"}
+          </Typography>
+          {expandWorkExperience ? (
+            <LessIcon className="w-12 h-12" />
+          ) : (
+            <ExpandIcon className="w-12 h-12" />
+          )}
+        </button>
+      </div>
     </div>
   );
 };

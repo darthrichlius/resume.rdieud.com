@@ -1,6 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import NextImage from "next/image";
 import { Avatar } from "@radix-ui/themes";
+
+import {
+  FaChevronRight as RightIcon,
+  FaChevronUp as UpIcon,
+} from "react-icons/fa";
 
 import { Typography } from "@@src/components";
 
@@ -14,6 +20,8 @@ const JobExperienceCard = ({
   experience: IExperience;
   options?: Record<string, any>;
 }) => {
+  const [showAboutCompany, toggleAboutCompany] = useState(false);
+
   return (
     <article>
       <header className="job-experience-card">
@@ -63,13 +71,28 @@ const JobExperienceCard = ({
         className={`mt-8  ${options?.disableAvatar ? "" : "ml-24 md:ml-72"}`}
       >
         {experience.company?.description && (
-          <div className="p-16 rounded bg-zinc-400 text-sm">
-            <Typography className="font-bold">
-              About the company
-            </Typography>
-            <Typography className="mt-8">
-              {experience.company.description}
-            </Typography>
+          <div className="p-12 rounded bg-zinc-400 text-sm">
+            <div className="flex justify-between">
+              <Typography className="font-bold">About the company</Typography>
+              <button
+                className="flex shrink-0 gap-8 py-4 px-8 rounded leading-4 hover:bg-zinc-300 "
+                onClick={() => toggleAboutCompany((s) => !s)}
+              >
+                <Typography as="span">
+                  {showAboutCompany ? "Hide" : "Learn more"}
+                </Typography>
+                {showAboutCompany ? (
+                  <UpIcon className="w-12" />
+                ) : (
+                  <RightIcon className="w-8" />
+                )}
+              </button>
+            </div>
+            {showAboutCompany && (
+              <Typography className="mt-12">
+                {experience.company.description}
+              </Typography>
+            )}
           </div>
         )}
 
