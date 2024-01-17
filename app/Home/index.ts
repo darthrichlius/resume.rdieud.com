@@ -1,4 +1,4 @@
-export { default as HomeSectionLayout } from "./sections/layout";
+export { default as HomeSectionLayout } from "./sections/SectionLayout";
 
 export { default as HomeIntroductionSection } from "./sections/Introduction";
 export { default as HomePresentationSection } from "./sections/Presentation";

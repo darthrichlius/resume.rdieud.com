@@ -4,7 +4,7 @@ import { IoLogoFigma as FigmaLogo } from "react-icons/io5";
 import { FaGithub as GithubLogo, FaGlobe as WebsiteLogo } from "react-icons/fa";
 
 import { Typography } from "@@src/components";
-import HomeSectionLayout from "../layout";
+import HomeSectionLayout from "../SectionLayout";
 
 interface IStack {
   label: string;

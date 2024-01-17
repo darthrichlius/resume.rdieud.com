@@ -37,6 +37,6 @@ next-env.d.ts
 
 ## CUSTOMS
 
-app/assets/images/*
+# app/assets/images/*
 .env*
 .ignore

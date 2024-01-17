@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48.11" height="48.03" viewBox="0 0 48.11 48.03" id="calendar-small" data-supported-dps="48x48">
+  <path fill="#f8c77e" d="M48.05 12.03v34.99h-48V12.03h48z"/>
+  <path d="M48.05 5.35V12h-48V5.35A3.24 3.24 0 013.15 2H45a3.23 3.23 0 013.05 3.35z" fill="#788fa5"/>
+  <path d="M38.05 14a1 1 0 01-1-1V1a1 1 0 012 0v12a1 1 0 01-1 1zM10.05 14a1 1 0 01-1-1V1a1 1 0 112 0v12a1 1 0 01-1 1z" fill="#dce6f1"/>
+  <rect x="39.05" y="19.02" width="6" height="6" rx="1.2" fill="#fff"/>
+  <rect x="30.05" y="19.02" width="6" height="6" rx="1.2" fill="#56687a"/>
+  <rect x="21.05" y="19.02" width="6" height="6" rx="1.2" fill="#fff"/>
+  <rect x="12.05" y="19.02" width="6" height="6" rx="1.2" fill="#fff"/>
+  <rect x="3.05" y="19.02" width="6" height="6" rx="1.2" fill="#fff"/>
+  <rect x="39.05" y="28.02" width="6" height="6" rx="1.29" fill="#fff"/>
+  <rect x="30.05" y="28.02" width="6" height="6" rx="1.29" fill="#fff"/>
+  <rect x="21.05" y="28.02" width="6" height="6" rx="1.29" fill="#fff"/>
+  <rect x="12.05" y="28.02" width="6" height="6" rx="1.29" fill="#56687a"/>
+  <rect x="3.05" y="28.02" width="6" height="6" rx="1.29" fill="#fff"/>
+  <rect x="39.05" y="37.02" width="6" height="6" rx="1.28" fill="#fff"/>
+  <rect x="30.05" y="37.02" width="6" height="6" rx="1.28" fill="#fff"/>
+  <rect x="21.05" y="37.02" width="6" height="6" rx="1.28" fill="#fff"/>
+  <rect x="12.05" y="37.02" width="6" height="6" rx="1.28" fill="#fff"/>
+  <rect x="3.05" y="37.02" width="6" height="6" rx="1.28" fill="#fff"/>
+</svg>

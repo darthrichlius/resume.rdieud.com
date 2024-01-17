@@ -17,7 +17,7 @@ import { BiLogoTypescript as ExpertTypeScriptLogo } from "react-icons/bi";
 import { IoLogoFigma as ExpertFigmaLogo } from "react-icons/io5";
 import { TbBrandNextjs as ContactNextJsLogo } from "react-icons/tb";
 
-import Image from "@@/assets/images/avatar-website-rdieud.webp";
+import Image from "@@/assets/images/avatar.jpeg";
 
 const contactLinks = [
   { label: "Github", href: "/", icon: <ContactGithubLogo /> },
