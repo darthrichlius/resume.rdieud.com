@@ -2,4 +2,11 @@
   .app-typography {
     @apply tracking-[0.035em] [word-spacing:0.065em];
   }
+
+  .font-first-letter-bold::first-letter {
+    @apply font-bold;
+  }
+  .font-first-letter-normal::first-letter {
+    @apply font-normal;
+  }
 }
