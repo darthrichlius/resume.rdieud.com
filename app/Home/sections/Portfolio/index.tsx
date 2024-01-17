@@ -1,5 +1,8 @@
 import NextLink from "next/link";
 
+import { IoLogoFigma as FigmaLogo } from "react-icons/io5";
+import { FaGithub as GithubLogo, FaGlobe as WebsiteLogo } from "react-icons/fa";
+
 import { Typography } from "@@src/components";
 import HomeSectionLayout from "../layout";
 
@@ -44,9 +47,9 @@ const projectsMap: IProject[] = [
       back: [{ label: "Next.js" }],
     },
     links: [
-      { label: "Figma", href: "/", icon: "" },
-      { label: "Github", href: "/", icon: "" },
-      { label: "Website", href: "/", icon: "" },
+      { label: "Figma", href: "/", icon: <FigmaLogo /> },
+      { label: "Github", href: "/", icon: <GithubLogo /> },
+      { label: "Website", href: "/", icon: <WebsiteLogo /> },
     ],
   },
   {
@@ -72,9 +75,9 @@ const projectsMap: IProject[] = [
       ],
     },
     links: [
-      { label: "Figma", href: "/", icon: "" },
-      { label: "Github", href: "/", icon: "" },
-      { label: "Website", href: "/", icon: "" },
+      { label: "Figma", href: "/", icon: <FigmaLogo /> },
+      { label: "Github", href: "/", icon: <GithubLogo /> },
+      { label: "Website", href: "/", icon: <WebsiteLogo /> },
     ],
   },
 ];
@@ -133,7 +136,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
             </div>
           )}
           {project.links && (
-            <footer className="flex justify-end gap-24">
+            <footer className="flex justify-end gap-32 bg-zinc-900 py-8 px-20">
               {project.links.map((link) => (
                 <NextLink
                   key={link.label}
@@ -141,7 +144,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                   className="flex gap-4 text-zinc-400 hover:text-wine-200"
                 >
                   {link.icon && link.icon}
-                  <span className="border-b border-b-zinc-600 hover:border-b-wine-200">
+                  <span className="border-b border-b-zinc-600 hover:border-b-wine-200 ml-2">
                     {link.label}
                   </span>
                 </NextLink>
