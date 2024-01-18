@@ -1,16 +1,16 @@
-import { JobReferenceCard } from "@@src/components";
+import WorkReferenceCard from "./_/WorkReferenceCard";
 
 const HomeReferencesSection = () => {
   return (
     <section id="references" className="home-section flex justify-center">
       <div className={"app-container"}>
         <div className="flex gap-32 flex-wrap justify-center">
-          <JobReferenceCard />
-          <JobReferenceCard />
-          <JobReferenceCard />
-          <JobReferenceCard />
-          <JobReferenceCard />
-          <JobReferenceCard />
+          <WorkReferenceCard />
+          <WorkReferenceCard />
+          <WorkReferenceCard />
+          <WorkReferenceCard />
+          <WorkReferenceCard />
+          <WorkReferenceCard />
         </div>
       </div>
     </section>

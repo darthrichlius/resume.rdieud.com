@@ -4,7 +4,7 @@ import { FaLinkedin as ContactLinkedinLogo } from "react-icons/fa";
 
 import { Typography } from "@@src/components";
 
-const JobReferenceCard = () => {
+const WorkReferenceCard = () => {
   return (
     <article className="bg-zinc-900 p-16 relative lg:max-w-md">
       <NextLink
@@ -41,4 +41,4 @@ const JobReferenceCard = () => {
   );
 };
 
-export default JobReferenceCard;
+export default WorkReferenceCard;
