@@ -4,7 +4,19 @@ import { FaLinkedin as ContactLinkedinLogo } from "react-icons/fa";
 
 import { Typography } from "@@src/components";
 
-const WorkReferenceCard = () => {
+export interface IWorkReference {
+  message: string;
+  issuedAt: string;
+  author: {
+    fullname: string;
+    introduction: string;
+    relationship?: string;
+    avatar?: any;
+    linkedIn: string;
+  };
+}
+
+const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
   return (
     <article className="bg-zinc-900 p-16 relative lg:max-w-md">
       <NextLink
@@ -16,26 +28,25 @@ const WorkReferenceCard = () => {
       <header className="flex items-center gap-24">
         <Avatar
           size="3"
-          src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
+          src={reference.author.avatar}
           radius="full"
           fallback="?"
         />
         <div>
-          <Typography className="font-bold">Jamel. M</Typography>
+          <Typography className="font-bold">
+            {reference.author.fullname}
+          </Typography>
           <Typography className="mt-1">
-            Senior Product Owner | Manager | Freelance
+            {reference.author.introduction}
           </Typography>
           <Typography className="text-sm text-zinc-400">
-            <span>July 1, 2022 - </span>
-            <span>Worked with Richard on the same team</span>
+            <span>{reference.issuedAt} - </span>
+            <span>{reference.author.relationship}</span>
           </Typography>
         </div>
       </header>
       <Typography className="mt-24 text-zinc-400">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod commodi
-        alias minus nisi, at eveniet harum aspernatur accusantium quasi
-        voluptatum, dicta incidunt nesciunt natus perferendis ipsa rem labore
-        quaerat. Sint.
+        {reference.message}
       </Typography>
     </article>
   );
