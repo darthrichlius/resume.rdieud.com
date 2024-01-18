@@ -18,7 +18,7 @@ export interface IWorkReference {
 
 const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
   return (
-    <article className="bg-zinc-900 p-16 relative lg:max-w-md">
+    <article className="bg-zinc-900 p-16 relative z-10 lg:max-w-md">
       <NextLink
         href="/"
         className="absolute w-20 h-20 top-16 right-16 hover:text-wine-200"

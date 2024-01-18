@@ -36,8 +36,8 @@ const NavBar = () => {
     <>
       <NavigationMenu.Root>
         <NavigationMenu.List className="gap-32 hidden sm:flex">
-          {menus.map((menu) => (
-            <NavigationMenu.Item key={menu.label}>
+          {menus.map((menu, i) => (
+            <NavigationMenu.Item key={`menu-${i}`}>
               <NavigationMenu.Link
                 className="text-base md:text-xl"
                 href={menu.href}
@@ -109,17 +109,13 @@ const MobileMenu = ({
             <Typography as="span">Home</Typography>
           </NextLink>
           <div className="mobile-menu-separator" />
-          {menus.map((menu) => (
-            <>
-              <NextLink
-                key={menu.label}
-                onClick={(e) => onMenuClick(e, menu.href)}
-                href={""}
-              >
+          {menus.map((menu, i) => (
+            <div key={`mobile-menu-${i}`}>
+              <NextLink onClick={(e) => onMenuClick(e, menu.href)} href={""}>
                 <Typography as="span">{menu.label}</Typography>
               </NextLink>
               <div className="mobile-menu-separator" />
-            </>
+            </div>
           ))}
         </menu>
         <footer>

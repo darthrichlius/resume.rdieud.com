@@ -44,9 +44,9 @@ const HomePresentationSection = () => {
       <div className={"app-container"}>
         <div className={"lg:flex lg:justify-between"}>
           <div className="w-full lg:max-w-lg">
-            <div className="flex w-56 h-56 float-left relative mr-20 md:w-64 md:h-64 lg:w-96 lg:h-96 ">
+            <div className="flex w-56 h-56 float-left relative z-20 mr-20 md:w-64 md:h-64 lg:w-96 lg:h-96 ">
               <NextImage
-                className="rounded-full w-full h-full absolute"
+                className="rounded-full w-full h-full absolute z-10"
                 alt="image"
                 layout="fill"
                 objectFit="contain"
