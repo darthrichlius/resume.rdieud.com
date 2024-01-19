@@ -12,7 +12,7 @@ import { Typography } from "@@src/components";
 
 import CompanyLogoFallback from "@@/assets/images/companies/logoFallback.svg";
 import { IExperience } from "@@src/types";
-import { useCompany } from "@/app/src/hooks";
+import { useCompany } from "@@src/hooks";
 
 const JobExperienceCard = ({
   experience,

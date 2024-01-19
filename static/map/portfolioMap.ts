@@ -1,4 +1,4 @@
-import { IProject } from "@/app/Home/sections/Portfolio";
+import { IProject } from "@@/Home/sections/Portfolio";
 
 const portfolioMap: IProject[] = [
   {

@@ -1,4 +1,4 @@
-import { ICertification } from "@/app/Home/sections/Resume/_/CertificationCard";
+import { ICertification } from "@@/Home/sections/Resume/_/CertificationCard";
 
 const CertificationsMap: ICertification[] = [
   {
