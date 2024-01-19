@@ -1,6 +1,7 @@
 import React from "react";
 import { IExperience } from "@@src/types";
 import { Typography } from "@@src/components";
+import { useCompany } from "@@src/hooks";
 
 const ExperienceListGroupCard = ({
   heading,
@@ -22,10 +23,12 @@ const ExperienceListGroupCard = ({
 };
 
 const ExperienceListItem = ({ experience }: { experience: IExperience }) => {
+  const company = useCompany(experience.company);
+
   return (
     <div className="experience-grid-group-list-item">
       <div className="experience-grid-group-list-item-main">
-        <Typography>{experience.company!.name}</Typography>
+        <Typography>{company!.name}</Typography>
         {(experience.contract!.location || experience.contract!.refYear) && (
           <Typography>
             - {experience.contract!.location}
@@ -37,12 +40,18 @@ const ExperienceListItem = ({ experience }: { experience: IExperience }) => {
       {experience.children && (
         <div className="experience-grid-group-list-item-sub">
           {experience.children.map((exp, i) => (
-            <Typography key={i}>{exp.company?.name}</Typography>
+            <ExperienceListItemSub key={i} companyId={exp.company} />
           ))}
         </div>
       )}
     </div>
   );
+};
+
+const ExperienceListItemSub = ({ companyId }: { companyId: string }) => {
+  const company = useCompany(companyId);
+
+  return <Typography>{company!.name}</Typography>;
 };
 
 export default ExperienceListGroupCard;

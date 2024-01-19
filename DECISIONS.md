@@ -36,15 +36,36 @@ Finally, it serves as a complement to the `CHANGELOG.md` by offering a more **ex
 - Tailwind's approach is to use as minimal a style file as possible; therefore, using an approach with several files leads to unstable code where some classes are not recognized.
 - The solution is to use `@import` along with the `postcss-import` plugin.
 
-### Why using static data?
+### Why Use Static Data?
 
-- The question behind this question is actually why not using a database?
-- There is no good or bad approach on over the subject of data source type
-- The choice is more related to "what is the most straightforward" approach regarding the context
-- As of this version, the website serves as a "public online resume"
-  - In this context, data is most static than anything
-  - A database is more suitable for synamic contexts, where data changes regularely, their nature is complex and their lifecycle unpredictable
-- If the context changes the data source will change accordingly
-  - For example, the section who is more likely to changes reguraly is "Portfolio"
-- Additionally, if we decide to add features based on events, this will also likely motivates a change in approach
-- Let us remember, the goal of a product is to create value to the user and should be built at the lower cost to preserve it scalability over time
+- The underlying question is, why not use a database?
+- **There is no inherently superior or inferior approach** regarding the choice of a data source type.
+- The decision is more about **"what is the most straightforward" approach within the given context.**
+  - In other words, **"Do we need a database?"**
+  - **The answer is NO!**
+- In its current version, the website functions as a "public online resume."
+  - In this context, **data is primarily kept static.**
+  - The information provided **does not change regularly.**
+  - A database is more suitable for dynamic contexts where data changes regularly, has a complex nature, and an unpredictable lifecycle.
+  - Using a database introduces constraints, necessitates additional tools, and, inevitably, adds technical debt.
+- Naturally, if the context evolves, the data source will adapt accordingly.
+  - For instance, the section most likely to change regularly is the "Portfolio."
+- Moreover, if we decide to add features based on events, this would also likely warrant a change in approach.
+- Let's remember, **the goal of a product is to create value** for the user and should be built at the lowest cost to preserve scalability over time.
+  - **Code should never be an opportunity or an excuse to showcase skills by using unnecessary tech.**
+
+### Why Necessary to Create a Static System with `Company Model`?
+
+- Company data is utilized in several places.
+- In this context, we aim to establish a single source of truth from which we can retrieve our data.
+- We are essentially mimicking how a database approach would function but opting for static data.
+- As a reminder, for this version, the use of a database was not chosen.
+  - Our approach involves utilizing a **static model data** along with a **hook to easily retrieve our data**.
+
+### What is the Difference Between "Map" and "Model"?
+
+- A Model represents the "data," answering the **WHAT**.
+- A Map represents the **HOW** data should be displayed, specifically the **order of appearance**.
+- The component uses data to **RENDER** following the paradigm outlined in the Map, focusing on the Look & Feel.
+- This approach aligns with what is commonly referred to as **"Object Mapping."**
+- Yes, I understand that "Model" may introduce confusion if you think in terms of `MVC`, but take a breath and cut me some slack :)

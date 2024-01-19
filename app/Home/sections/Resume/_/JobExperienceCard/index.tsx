@@ -12,6 +12,7 @@ import { Typography } from "@@src/components";
 
 import CompanyLogoFallback from "@@/assets/images/companies/logoFallback.svg";
 import { IExperience } from "@@src/types";
+import { useCompany } from "@/app/src/hooks";
 
 const JobExperienceCard = ({
   experience,
@@ -21,6 +22,7 @@ const JobExperienceCard = ({
   options?: Record<string, any>;
 }) => {
   const [showAboutCompany, toggleAboutCompany] = useState(false);
+  const company = useCompany(experience.company);
 
   return (
     <article>
@@ -28,7 +30,7 @@ const JobExperienceCard = ({
         {!(options?.disableAvatar === true) && (
           <Avatar
             size="4"
-            src={experience.company?.logo}
+            src={company?.logo}
             fallback={<NextImage src={CompanyLogoFallback} alt="" />}
           />
         )}
@@ -38,12 +40,12 @@ const JobExperienceCard = ({
               {experience.contract?.position}
             </Typography>
           )}
-          {(experience.company?.name || experience.contract?.type) && (
+          {(company?.name || experience.contract?.type) && (
             <Typography className="text-sm">
-              {experience.company?.name && (
-                <span>{experience.company?.name}</span>
+              {company?.name && (
+                <span>{company?.name}</span>
               )}
-              {experience.company?.name && experience.contract?.type && (
+              {company?.name && experience.contract?.type && (
                 <span>·</span>
               )}
               {experience.contract?.type && (
@@ -70,7 +72,7 @@ const JobExperienceCard = ({
       <div
         className={`mt-8  ${options?.disableAvatar ? "" : "ml-24 md:ml-72"}`}
       >
-        {experience.company?.description && (
+        {company?.description && (
           <div className="p-12 rounded bg-zinc-400 text-sm">
             <div className="flex justify-between">
               <Typography className="font-bold">About the company</Typography>
@@ -90,7 +92,7 @@ const JobExperienceCard = ({
             </div>
             {showAboutCompany && (
               <Typography className="mt-12">
-                {experience.company.description}
+                {company.description}
               </Typography>
             )}
           </div>

@@ -29,11 +29,14 @@ export interface IExperienceContract {
   duration?: string;
 }
 
-export interface IExperienceCompany {
+export interface ICompany {
   name: string;
   description?: string;
   logo?: any;
-  website?: string;
+  links?: {
+    website?: string;
+    linkedin?: string;
+  };
 }
 
 export interface IExperience {
@@ -41,7 +44,10 @@ export interface IExperience {
     disableChildrenAvatar: boolean;
   };
   contract?: IExperienceContract;
-  company?: IExperienceCompany;
+  /**
+   * Represents the company ID
+   */
+  company: string;
   description?: string;
   children?: IExperience[];
   group?: (TExperienceYear | EExperiencePosition)[];
