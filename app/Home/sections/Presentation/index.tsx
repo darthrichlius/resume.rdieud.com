@@ -3,36 +3,23 @@ import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 
-import {
-  FaLinkedin as ContactLinkedinLogo,
-  FaGithub as ContactGithubLogo,
-  FaFileDownload as ContactResumeLogo,
-  FaReact as ExpertReactLogo,
-  FaNodeJs as ExpertNodeJsLogo,
-  FaSymfony as ExpertSymfonyLogo,
-} from "react-icons/fa";
-import { MdEmail as ContactMailLogo } from "react-icons/md";
-
-import { BiLogoTypescript as ExpertTypeScriptLogo } from "react-icons/bi";
-import { IoLogoFigma as ExpertFigmaLogo } from "react-icons/io5";
-import { TbBrandNextjs as ContactNextJsLogo } from "react-icons/tb";
-
+import { Icon } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
 
 const contactLinks = [
-  { label: "Github", href: "/", icon: <ContactGithubLogo /> },
-  { label: "LinkedIn", href: "/", icon: <ContactLinkedinLogo /> },
-  { label: "Email", href: "/", icon: <ContactMailLogo /> },
-  { label: "Resume", href: "/", icon: <ContactResumeLogo /> },
+  { label: "Github", href: "/", icon: <Icon index="Github" /> },
+  { label: "LinkedIn", href: "/", icon: <Icon index="Linkedin" /> },
+  { label: "Email", href: "/", icon: <Icon index="Email" /> },
+  { label: "Resume", href: "/", icon: <Icon index="Download" /> },
 ];
 
 const expertHighlight = [
-  { icon: <ExpertFigmaLogo />, alt: "Figma" },
-  { icon: <ExpertTypeScriptLogo />, alt: "TypeScript" },
-  { icon: <ExpertReactLogo />, alt: "React" },
-  { icon: <ContactNextJsLogo />, alt: "NextJs" },
-  { icon: <ExpertSymfonyLogo />, alt: "Symfony" },
-  { icon: <ExpertNodeJsLogo />, alt: "NodeJs" },
+  { icon: <Icon index="Figma" />, alt: "Figma" },
+  { icon: <Icon index="TypeScript" />, alt: "TypeScript" },
+  { icon: <Icon index="React" />, alt: "React" },
+  { icon: <Icon index="NextJs" />, alt: "NextJs" },
+  { icon: <Icon index="Symfony" />, alt: "Symfony" },
+  { icon: <Icon index="NodeJs" />, alt: "NodeJs" },
 ];
 
 const HomePresentationSection = () => {

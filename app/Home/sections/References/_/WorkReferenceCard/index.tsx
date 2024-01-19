@@ -1,8 +1,7 @@
 import { Avatar } from "@radix-ui/themes";
 import NextLink from "next/link";
-import { FaLinkedin as ContactLinkedinLogo } from "react-icons/fa";
 
-import { Typography } from "@@src/components";
+import { Typography, Icon } from "@@src/components";
 
 export interface IWorkReference {
   message: string;
@@ -23,7 +22,7 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
         href="/"
         className="absolute w-20 h-20 top-16 right-16 hover:text-wine-200"
       >
-        <ContactLinkedinLogo />
+        <Icon index="Linkedin" />
       </NextLink>
       <header className="flex items-center gap-24">
         <Avatar
