@@ -62,7 +62,7 @@ const CertificationCard = ({
         <footer className="flex justify-start md:justify-end mt-24 md:mt-12">
           <NextLink
             className="rounded-full flex gap-8 py-4 px-16 md:px-32 bg-wine-200 text-sm md:text-base font-bold text-zinc-200"
-            href=""
+            href={certification.credentialUrl}
           >
             Show credential <LinkLogo className="w-12 md:w-16" />
           </NextLink>
