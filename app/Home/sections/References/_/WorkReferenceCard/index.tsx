@@ -25,7 +25,7 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
       >
         <Icon index="Linkedin" />
       </NextLink>
-      <header className="flex items-center gap-24">
+      <header className="flex items-start gap-24">
         <Avatar
           size="3"
           src={reference.author.avatar}
