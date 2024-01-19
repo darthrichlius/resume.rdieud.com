@@ -4,7 +4,7 @@ import NextImage from "next/image";
 import { Avatar } from "@radix-ui/themes";
 import { FaExternalLinkAlt as LinkLogo } from "react-icons/fa";
 
-import { Typography } from "@/app/src/components";
+import { Typography } from "@@src/components";
 
 export interface ICertification {
   title: string;

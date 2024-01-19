@@ -1,4 +1,4 @@
-import { EExperiencePosition, IExperience } from "@/app/src/types";
+import { EExperiencePosition, IExperience } from "@@src/types";
 
 const experienceMap: IExperience[] = [
   {

@@ -1,4 +1,4 @@
-import { IExperience } from "@/app/src/types";
+import { IExperience } from "@@src/types";
 
 const experienceSummaryMap: {
   heading: string;
