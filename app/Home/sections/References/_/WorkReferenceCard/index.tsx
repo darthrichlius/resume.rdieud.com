@@ -19,7 +19,8 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
   return (
     <article className="bg-zinc-900 p-16 relative z-10 lg:max-w-md">
       <NextLink
-        href="/"
+        href="https://www.linkedin.com/in/iamloucarther/details/recommendations/?detailScreenTabIndex=0"
+        target="_blank"
         className="absolute w-20 h-20 top-16 right-16 hover:text-wine-200"
       >
         <Icon index="Linkedin" />
