@@ -25,7 +25,7 @@ const JobExperienceCard = ({
   const company = useCompany(experience.company);
 
   return (
-    <article>
+    <article id={experience.company}>
       <header className="job-experience-card">
         {!(options?.disableAvatar === true) && (
           <Avatar
@@ -42,12 +42,8 @@ const JobExperienceCard = ({
           )}
           {(company?.name || experience.contract?.type) && (
             <Typography className="text-sm">
-              {company?.name && (
-                <span>{company?.name}</span>
-              )}
-              {company?.name && experience.contract?.type && (
-                <span>·</span>
-              )}
+              {company?.name && <span>{company?.name}</span>}
+              {company?.name && experience.contract?.type && <span>·</span>}
               {experience.contract?.type && (
                 <span>{experience.contract?.type}</span>
               )}
@@ -91,9 +87,7 @@ const JobExperienceCard = ({
               </button>
             </div>
             {showAboutCompany && (
-              <Typography className="mt-12">
-                {company.description}
-              </Typography>
+              <Typography className="mt-12">{company.description}</Typography>
             )}
           </div>
         )}

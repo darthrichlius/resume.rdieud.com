@@ -5,11 +5,11 @@ import NextLink from "next/link";
 import { Typography } from "@@src/components";
 
 const companies = [
-  { label: "Veepee", href: "/" },
-  { label: "Universign", href: "/" },
-  { label: "Catimini", href: "/" },
-  { label: "Yse Paris", href: "/" },
-  { label: "Ultra Premium Direct", href: "/" },
+  { label: "Veepee", href: "#veepee" },
+  { label: "Universign", href: "#universign" },
+  { label: "Catimini", href: "#catimini" },
+  { label: "Yse Paris", href: "#yse" },
+  { label: "Ultra Premium Direct", href: "#upd" },
 ];
 
 const HomeIntroductionSection = () => {
