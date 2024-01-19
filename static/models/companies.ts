@@ -58,6 +58,7 @@ const CompaniesStatic: ICompanyModel[] = [
   {
     id: "deuslynn",
     name: "Deuslynn Entreprise",
+    shortName: "Deuslynn",
     logo: "https://media.licdn.com/dms/image/C560BAQFSAba7Lp-LUA/company-logo_100_100/0/1631341291740?e=1714003200&v=beta&t=G12HGGLtVWkP9g9Tbx8bRctM02w-u1kqd_k3ZnAbr3I",
   },
   {

@@ -28,7 +28,7 @@ const ExperienceListItem = ({ experience }: { experience: IExperience }) => {
   return (
     <div className="experience-grid-group-list-item">
       <div className="experience-grid-group-list-item-main">
-        <Typography>{company!.name}</Typography>
+        <Typography>{company!.shortName || company!.name}</Typography>
         {(experience.contract!.location || experience.contract!.refYear) && (
           <Typography>
             - {experience.contract!.location}

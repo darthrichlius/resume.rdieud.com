@@ -31,6 +31,7 @@ export interface IExperienceContract {
 
 export interface ICompany {
   name: string;
+  shortName?: string;
   description?: string;
   logo?: any;
   links?: {
