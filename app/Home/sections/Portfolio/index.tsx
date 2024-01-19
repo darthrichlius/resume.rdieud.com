@@ -1,23 +1,22 @@
 import NextLink from "next/link";
 
-import { IoLogoFigma as FigmaLogo } from "react-icons/io5";
-import { FaGithub as GithubLogo, FaGlobe as WebsiteLogo } from "react-icons/fa";
-
-import { Typography } from "@@src/components";
+import { Typography, Icon } from "@@src/components";
 import HomeSectionLayout from "../SectionLayout";
+import { TRegisteredIcon } from "@@src/components/_layout/Icon";
+import portfolioMap from "@/static/portfolioMap";
 
 interface IStack {
   label: string;
-  icon?: any;
+  icon?: TRegisteredIcon;
 }
 
 interface IProjectLink {
   label: string;
   href: string;
-  icon?: any;
+  icon?: TRegisteredIcon;
 }
 
-interface IProject {
+export interface IProject {
   title: string;
   subtitle?: string;
   description: string;
@@ -29,59 +28,6 @@ interface IProject {
   links?: IProjectLink[];
 }
 
-const projectsMap: IProject[] = [
-  {
-    title: "Richard Dieud's Personal Website",
-    subtitle: "Identity Management Responsive Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione quidem quibusdam porro ab obcaecati sint quam. Dolorem vitae quas, soluta magni quaerat aut, nostrum amet, reprehenderit rerum quam nesciunt?",
-    stack: {
-      design: [{ label: "Figma" }],
-      front: [
-        { label: "TypeScript" },
-        { label: "React" },
-
-        { label: "Radix UI" },
-        { label: "Tailwind" },
-      ],
-      back: [{ label: "Next.js" }],
-    },
-    links: [
-      { label: "Figma", href: "/", icon: <FigmaLogo /> },
-      { label: "Github", href: "/", icon: <GithubLogo /> },
-      { label: "Website", href: "/", icon: <WebsiteLogo /> },
-    ],
-  },
-  {
-    title: "IamServiceDesk",
-    subtitle: "Service Desk Responsive Web Application",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione quidem quibusdam porro ab obcaecati sint quam. Dolorem vitae quas, soluta magni quaerat aut, nostrum amet, reprehenderit rerum quam nesciunt?",
-    stack: {
-      front: [
-        { label: "TypeScript" },
-        { label: "React" },
-        { label: "Radix UI" },
-        { label: "Tailwind" },
-        { label: "React Hook Form" },
-        { label: "Zod" },
-      ],
-      back: [
-        { label: "Next.js" },
-        { label: "Prisma" },
-        { label: "MySQL" },
-        { label: "Sentry" },
-        { label: "Zustand" },
-      ],
-    },
-    links: [
-      { label: "Figma", href: "/", icon: <FigmaLogo /> },
-      { label: "Github", href: "/", icon: <GithubLogo /> },
-      { label: "Website", href: "/", icon: <WebsiteLogo /> },
-    ],
-  },
-];
-
 const HomePortfolioSection = () => {
   return (
     <HomeSectionLayout id="portfolio">
@@ -90,7 +36,7 @@ const HomePortfolioSection = () => {
       </header>
       <div className="app-container flex justify-center">
         <div className="flex flex-col gap-96">
-          {projectsMap.map((project) => (
+          {portfolioMap.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
@@ -143,7 +89,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                   href={link.href}
                   className="flex gap-4 text-zinc-400 hover:text-wine-200"
                 >
-                  {link.icon && link.icon}
+                  {link.icon && <Icon index={link.icon} />}
                   <span className="border-b border-b-zinc-600 hover:border-b-wine-200 ml-2">
                     {link.label}
                   </span>
