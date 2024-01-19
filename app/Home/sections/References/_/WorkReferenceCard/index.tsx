@@ -44,9 +44,12 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
           </Typography>
         </div>
       </header>
-      <Typography className="mt-24 text-zinc-400">
-        {reference.message}
-      </Typography>
+      <div
+        className="app-typography mt-24 text-zinc-400"
+        dangerouslySetInnerHTML={{
+          __html: reference.message,
+        }}
+      />
     </article>
   );
 };
