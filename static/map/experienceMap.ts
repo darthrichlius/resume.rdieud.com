@@ -3,8 +3,7 @@ import { EExperiencePosition, IExperience } from "@@src/types";
 const experienceMap: IExperience[] = [
   {
     description: `
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat. Donec congue eros ligula<p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat. Donec congue eros ligula<p>
+        
       `,
     company: "veepee",
     contract: {
@@ -18,6 +17,17 @@ const experienceMap: IExperience[] = [
     group: ["2023", EExperiencePosition.PRODUCT_MANAGER],
   },
   {
+    description: `
+    <ul>
+        <li>- <b>Discovery</b>: Market Analysis</li>
+        <li>- <b>Strategy</b>: Wokskhop / Brainstorming</li>
+        <li>- <b>Design</b>: UI/UX Validation, Sketch / Prototyping</li>
+        <li>- <b>Execution</b>: Prioritization, Backlog Grooming / Functional specification, Progress monitoring, QA / Acceptance Testing, Demos / Review- Discovery: Market Analysis - Strategy: Wokskhop / Brainstorming - Design: UI/UX Validation, Sketch / Prototyping - Execution: Prioritization, Backlog Grooming / Functional specification, Progress monitoring, QA / Acceptance Testing, Demos / Review</li>
+    </ul>
+    <p>
+        <b>Skills:</b> Adobe XD · Trello · Datadog · Confluence · Anglais · Signature électronique · Gestion de projet · JIRA · Gestion des versions · Gestion de projet logiciel · Project Management · Kanban · Product Management · Product Development
+    </p>
+    `,
     company: "universign",
     contract: {
       location: "Paris, Île-de-France, France",
@@ -30,6 +40,13 @@ const experienceMap: IExperience[] = [
     group: ["2022", EExperiencePosition.PRODUCT_MANAGER],
   },
   {
+    description: `
+    <p>Worked on the development of the SaaS solution built specifically for retailer willing to go digital and improve their experience in managing their stock and orders thanks to a ready to use omni-canal solution. The solution is currently helping several brands increasing their revenue by 10 to 15%.</p>
+    <p>Beyond my Product Manager role, I helped the company on improving their workflow thanks to a tailored Scrum methodology to help deliver faster and better</p>
+    <p>
+        <b>Skills:</b> Trello · Datadog · Confluence · Anglais · Gestion de projet · JIRA · Linux · Test unitaire · Gestion des versions · Gestion de projet logiciel · Change Management · Scrum · E-commerce · Symfony · Api Platform · Redux · Product Management · Product Development
+    </p>
+    `,
     company: "wishibam",
     contract: {
       location: "Paris, Île-de-France, France",
@@ -44,7 +61,6 @@ const experienceMap: IExperience[] = [
     },
     children: [
       {
-        description: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat. Donec congue eros ligula<p>`,
         company: "wishibam",
         contract: {
           location: "Paris, Île-de-France, France",
@@ -72,8 +88,12 @@ const experienceMap: IExperience[] = [
 
   {
     description: `
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat. Donec congue eros ligula<p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat. Donec congue eros ligula<p>
+        <p>Worked on several projects around e-commerce online shops in the interest of brands like Ultra Premium Direct, Catimini, Yse Paris, Kidiliz, ... just to name a few.<p>
+        <p>As a developer and senior member of the Scrum team, I was in charge of improving the software architecture, optimizing the database and adding new features.<p>
+        <p>One of our core tasks was about adding SaaS serives like Target2Sell, Google UTM, ... Improving search performance through tools like Elastic Search and Algolia but also to create a tailored Prestashop version to meet our clients specific needs</p>
+        <p>
+          <b>Skills:</b> Confluence · JIRA · PHP · JavaScript · MySQL · Test unitaire · Tests de régression · Gestion des versions · Scrum · Prestashop · E-commerce · Symfony
+        </p>
       `,
     company: "antilop",
     contract: {
@@ -124,7 +144,12 @@ const experienceMap: IExperience[] = [
     group: ["2016", EExperiencePosition.DEVELOPER],
   },
   {
-    company: "deuxlynn",
+    description: `
+      <p>
+        <b>Skills:</b> Confluence · Gestion de projet · JIRA · PHP · JavaScript · MySQL · Linux · SEO · Test unitaire · Tests de régression · Gestion des versions · Lean Startup · Gestion de projet logiciel · Administration des serveurs · Project Management · Scrum · Stratégie marketing · Management · Hotjar · Product Management
+      </p>
+    `,
+    company: "deuslynn",
     contract: {
       location: "Lyon, Auvergne-Rhône-Alpes, France",
       position: "Owner / CPTO",
@@ -141,7 +166,12 @@ const experienceMap: IExperience[] = [
     ],
   },
   {
-    company: "deuslynn",
+    description: `
+      <p>
+        <b>Skills:</b> Gestion de projet · jQuery · HTML 5 · MySQL · Test unitaire · Gestion des versions · Gestion de projet logiciel · Project Management
+      </p>
+    `,
+    company: "alstom",
     contract: {
       location: "Lyon, Auvergne-Rhône-Alpes, France",
       position: "Project Manager",

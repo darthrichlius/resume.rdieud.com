@@ -15,7 +15,7 @@ const CompaniesStatic: ICompanyModel[] = [
   {
     id: "universign",
     name: "Universign",
-    logo: "https://media.licdn.com/dms/image/D4E0BAQFQItGYgQKYcQ/company-logo_100_100/0/1704357630320/signaturitgroup_logo?e=1713398400&v=beta&t=88kJckJ9Q21madCmCD8l1pn0TY2YaVwa6lTBQosRMjo",
+    logo: "https://media.licdn.com/dms/image/D560BAQHvvXP-MLE5mQ/company-logo_100_100/0/1705589789842/signaturitgroup_logo?e=1714003200&v=beta&t=-wOtDjGfLMroWuLbAav5GTwvTrDMp_1aIAWxv2jfJS0",
   },
   {
     id: "wishibam",
@@ -58,12 +58,12 @@ const CompaniesStatic: ICompanyModel[] = [
   {
     id: "deuslynn",
     name: "Deuslynn Entreprise",
-    logo: "https://media.licdn.com/dms/image/C560BAQFSAba7Lp-LUA/company-logo_100_100/0/1631341291740?e=1713398400&v=beta&t=spTSqOhfXIkEk_s_nrZzTyipupk1ggYWrYSE9wemfJk",
+    logo: "https://media.licdn.com/dms/image/C560BAQFSAba7Lp-LUA/company-logo_100_100/0/1631341291740?e=1714003200&v=beta&t=G12HGGLtVWkP9g9Tbx8bRctM02w-u1kqd_k3ZnAbr3I",
   },
   {
     id: "alstom",
     name: "Alstom Transport",
-    logo: "https://media.licdn.com/dms/image/C4E0BAQHeGrabdKRiig/company-logo_100_100/0/1630578969587/alstom_logo?e=1713398400&v=beta&t=t0pNOPGx82bm0-MfGUr_znfT4jtxReXCAMYr6VH_n2s",
+    logo: "https://media.licdn.com/dms/image/C4E0BAQHeGrabdKRiig/company-logo_100_100/0/1630578969587/alstom_logo?e=1714003200&v=beta&t=Z7-6ePeUvDA-4X6v1S-s9aiuUHPGYvYGmcx1iIg2-9E",
   },
 ];
 
