@@ -1,11 +1,23 @@
-import { Avatar } from "@radix-ui/themes";
+"use client";
+import { useState } from "react";
 import NextLink from "next/link";
+import { Avatar } from "@radix-ui/themes";
+
+import {
+  FaChevronRight as ShowMoreIcon,
+  FaChevronLeft as ShowLessIcon,
+} from "react-icons/fa";
 
 import { Typography, Icon } from "@@src/components";
 import AppConfig from "@/app/config/app";
 
+type TMessageInObject = {
+  display: string;
+  full: string;
+};
+
 export interface IWorkReference {
-  message: string;
+  message: string | TMessageInObject;
   issuedAt: string;
   author: {
     fullname: string;
@@ -17,8 +29,21 @@ export interface IWorkReference {
 }
 
 const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
+  const isMessageInObject = typeof reference.message !== "string";
+  const [expand, toggleExpand] = useState(false);
+  let message: string = "";
+  if (expand) {
+    message = isMessageInObject
+      ? (reference.message as TMessageInObject).full
+      : (reference.message as string);
+  } else {
+    message = isMessageInObject
+      ? (reference.message as TMessageInObject).display
+      : (reference.message as string);
+  }
+
   return (
-    <article className="bg-zinc-900 p-16 relative z-10 lg:max-w-md">
+    <article className="bg-zinc-900 p-16 relative z-10 lg:max-w-2xl">
       <NextLink
         href={`${AppConfig.owner.contact.linkedin}/details/recommendations/`.replaceAll(
           "//",
@@ -49,12 +74,36 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
           </Typography>
         </div>
       </header>
-      <div
-        className="app-typography mt-24 text-zinc-400"
-        dangerouslySetInnerHTML={{
-          __html: reference.message,
-        }}
-      />
+      <div className="app-typography mt-24 text-zinc-400">
+        <span
+          className=""
+          dangerouslySetInnerHTML={{
+            __html: message,
+          }}
+        />
+        {isMessageInObject && (
+          <>
+            {!expand && (
+              <button
+                onClick={() => toggleExpand((v) => !v)}
+                className="inline-flex items-center gap-4 ml-8 text-zinc-200 font-bold hover:text-zinc-400"
+              >
+                <span>... read more</span>
+                <ShowMoreIcon className="inline-block w-12 text-zinc-200" />
+              </button>
+            )}
+            {expand && (
+              <button
+                onClick={() => toggleExpand((v) => !v)}
+                className="inline-flex items-center gap-4 ml-8 text-zinc-200 font-bold hover:text-zinc-400"
+              >
+                <ShowLessIcon className="inline-block w-12 text-zinc-200" />
+                <span>show less</span>
+              </button>
+            )}
+          </>
+        )}
+      </div>
     </article>
   );
 };

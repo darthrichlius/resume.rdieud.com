@@ -5,7 +5,7 @@ const HomeReferencesSection = () => {
   return (
     <section id="references" className="home-section flex justify-center">
       <div className={"app-container"}>
-        <div className="flex gap-32 flex-wrap justify-center">
+        <div className="flex gap-32 flex-col items-center">
           {workReferencesMap.map((reference, i) => (
             <WorkReferenceCard
               key={`${reference.author.fullname}${i}`}
