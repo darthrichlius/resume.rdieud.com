@@ -19,6 +19,7 @@ interface IProjectLink {
 export interface IProject {
   title: string;
   subtitle?: string;
+  shortDescription: string;
   description: string;
   stack: {
     design?: IStack[];
@@ -61,9 +62,12 @@ const ProjectCard = ({ project }: { project: IProject }) => {
         </header>
         <div className="flex flex-col gap-32 mt-32">
           {project.description && (
-            <Typography className="text-zinc-400 text-base">
-              {project.description}
-            </Typography>
+            <div
+              className="text-zinc-400 text-base"
+              dangerouslySetInnerHTML={{
+                __html: project.shortDescription,
+              }}
+            />
           )}
           {project.stack && Object.values(project.stack).length && (
             <div className="flex flex-col gap-12">

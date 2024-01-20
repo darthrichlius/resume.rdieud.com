@@ -17,7 +17,7 @@ const expertHighlight = [
   { icon: <Icon index="Figma" />, alt: "Figma" },
   { icon: <Icon index="TypeScript" />, alt: "TypeScript" },
   { icon: <Icon index="React" />, alt: "React" },
-  { icon: <Icon index="NextJs" />, alt: "NextJs" },
+  { icon: <Icon index="NextJs" />, alt: "Next.Js" },
   { icon: <Icon index="Symfony" />, alt: "Symfony" },
   { icon: <Icon index="NodeJs" />, alt: "NodeJs" },
 ];
