@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import { Typography, Icon } from "@@src/components";
 import HomeSectionLayout from "../SectionLayout";
 import { TRegisteredIcon } from "@@src/components/_layout/Icon";
-import portfolioMap from "@/static/map/portfolioMap";
+import portfolioMap from "@/data/map/portfolioMap";
 
 interface IStack {
   label: string;

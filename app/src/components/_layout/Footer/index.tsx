@@ -6,6 +6,8 @@ const LayoutFooter = () => {
       <Text as="p" className="font-display text-9xl" align={"center"}>
         Footer
       </Text>
+      {/* Maybe add a picture */}
+      <p>Design & Dev by (ME) in France</p>
     </Container>
   );
 };

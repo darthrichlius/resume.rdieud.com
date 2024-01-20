@@ -7,8 +7,8 @@ import {
 
 import { Typography } from "@@src/components";
 import { ExperienceListGroupCard, JobExperienceCard } from "../_";
-import experienceSummaryMap from "@/static/map/experienceSummaryMap";
-import experienceMap from "@/static/map/experienceMap";
+import experienceSummaryMap from "@/data/map/experienceSummaryMap";
+import experienceMap from "@/data/map/experienceMap";
 
 const ResumeExperience = () => {
   const [expandWorkExperience, toggleWorkExperience] = useState(true);

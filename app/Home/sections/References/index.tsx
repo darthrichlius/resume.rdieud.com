@@ -1,5 +1,5 @@
 import WorkReferenceCard from "./_/WorkReferenceCard";
-import workReferencesMap from "@/static/map/workReferencesMap";
+import workReferencesMap from "@/data/map/workReferencesMap";
 
 const HomeReferencesSection = () => {
   return (

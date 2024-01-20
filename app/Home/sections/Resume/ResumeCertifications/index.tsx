@@ -1,6 +1,6 @@
 import React from "react";
 import { CertificationCard } from "../_/";
-import CertificationsMap from "@/static/map/certificationsMap";
+import CertificationsMap from "@/data/map/certificationsMap";
 
 const ResumeCertifications = () => {
   return (

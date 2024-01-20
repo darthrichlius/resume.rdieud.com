@@ -1,4 +1,4 @@
-import CompaniesStatic from "@/static/models/companies";
+import CompaniesStatic from "@/data/models/companies";
 
 // @todo Add test
 const useCompany = (id: string) => {

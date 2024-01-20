@@ -15,7 +15,7 @@ const portfolioMap: IProject[] = [
         { label: "Radix UI" },
         { label: "Tailwind" },
       ],
-      back: [{ label: "Next.js" }],
+      back: [{ label: "Next.Js" }],
     },
     links: [
       { label: "Github", href: "/", icon: "Github" },
