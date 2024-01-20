@@ -5,11 +5,24 @@ import NextImage from "next/image";
 
 import { Icon } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
+import AppConfig from "@@/config/app";
 
 const contactLinks = [
-  { label: "Github", href: "/", icon: <Icon index="Github" /> },
-  { label: "LinkedIn", href: "/", icon: <Icon index="Linkedin" /> },
-  { label: "Email", href: "/", icon: <Icon index="Email" /> },
+  {
+    label: "Github",
+    href: AppConfig.owner.contact.github,
+    icon: <Icon index="Github" />,
+  },
+  {
+    label: "LinkedIn",
+    href: AppConfig.owner.contact.linkedin,
+    icon: <Icon index="Linkedin" />,
+  },
+  {
+    label: "Email",
+    href: `mailto:${AppConfig.owner.contact.email}`,
+    icon: <Icon index="Email" />,
+  },
   { label: "Resume", href: "/", icon: <Icon index="Download" /> },
 ];
 
@@ -57,6 +70,7 @@ const HomePresentationSection = () => {
                 <NextLink
                   key={link.label}
                   className="flex items-center gap-8 max-w-fit text-lg md:text-xl hover:text-wine-200"
+                  target="_blank"
                   href={link.href}
                 >
                   <span>{link.icon}</span>

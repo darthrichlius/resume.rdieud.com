@@ -2,6 +2,7 @@ import { Avatar } from "@radix-ui/themes";
 import NextLink from "next/link";
 
 import { Typography, Icon } from "@@src/components";
+import AppConfig from "@/app/config/app";
 
 export interface IWorkReference {
   message: string;
@@ -19,7 +20,10 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
   return (
     <article className="bg-zinc-900 p-16 relative z-10 lg:max-w-md">
       <NextLink
-        href="https://www.linkedin.com/in/iamloucarther/details/recommendations/"
+        href={`${AppConfig.owner.contact.linkedin}/details/recommendations/`.replaceAll(
+          "//",
+          "/"
+        )}
         target="_blank"
         className="absolute w-20 h-20 top-16 right-16 hover:text-wine-200"
       >
