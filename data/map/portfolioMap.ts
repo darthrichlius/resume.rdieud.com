@@ -65,7 +65,11 @@ const portfolioMap: IProject[] = [
         href: "https://github.com/darthrichlius/IamServiceDesk",
         icon: "Github",
       },
-      { label: "Website", href: "/", icon: "Website" },
+      {
+        label: "Website",
+        href: "https://iamservicedesk.vercel.app/",
+        icon: "Website",
+      },
     ],
   },
   {
