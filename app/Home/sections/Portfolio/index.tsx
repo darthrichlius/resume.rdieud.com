@@ -91,6 +91,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
                 <NextLink
                   key={link.label}
                   href={link.href}
+                  target="blank"
                   className="flex gap-4 text-zinc-400 hover:text-wine-200"
                 >
                   {link.icon && <Icon index={link.icon} />}

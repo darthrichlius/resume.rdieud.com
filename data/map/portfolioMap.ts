@@ -89,8 +89,16 @@ const portfolioMap: IProject[] = [
       ],
     },
     links: [
-      { label: "Github", href: "/", icon: "Github" },
-      { label: "Website", href: "/", icon: "Website" },
+      {
+        label: "Github",
+        href: "https://github.com/darthrichlius/garcegames",
+        icon: "Github",
+      },
+      {
+        label: "Website",
+        href: "https://garcegames.vercel.app/",
+        icon: "Website",
+      },
     ],
   },
 ];

@@ -1,4 +1,3 @@
-
 import { Theme } from "@radix-ui/themes";
 
 import { Header, Footer } from "@@src/components";
@@ -15,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={"font-body"}>
         <Theme appearance="dark">
-          <header className="flex justify-center fixed  bg-zinc-950 z-40 w-full py-16 px-24 md:px-32 xl:px-1">
+          <header className="flex justify-center fixed  bg-[#111113] z-40 w-full py-16 px-24 md:px-32 xl:px-1">
             <Header />
           </header>
           <main className="px-24 md:px-32 xl:px-1">{children}</main>
