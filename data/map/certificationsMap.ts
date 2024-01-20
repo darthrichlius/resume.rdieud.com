@@ -2,6 +2,20 @@ import { ICertification } from "@@/Home/sections/Resume/_/CertificationCard";
 
 const CertificationsMap: ICertification[] = [
   {
+    title: "TOEIC® | 920/990",
+    issued: "Jan 2023",
+    provider: {
+      name: "ETS Global",
+      url: "",
+      /**
+       * ! IMPORTANT
+       * @todo Use local
+       */
+      logoUrl:
+        "https://media.licdn.com/dms/image/C560BAQG8wr1PJuA-qw/company-logo_200_200/0/1630587150189/educational_testing_service_ets_logo?e=1714003200&v=beta&t=8H4FNF3eFpv0zjSXPQCdVDecPF1hvrLuYdyzng5WOj4",
+    },
+  },
+  {
     title: "Professional Scrum Product Owner I",
     issued: "Feb 2023",
     credentialUrl: "https://www.scrum.org/certificates/924702",
