@@ -29,10 +29,15 @@ export interface IExperienceContract {
   duration?: string;
 }
 
+type TMessageInObject = {
+  display: string;
+  full?: string;
+};
+
 export interface ICompany {
   name: string;
   shortName?: string;
-  description?: string;
+  description?: string | TMessageInObject;
   logo?: any;
   links?: {
     website?: string;

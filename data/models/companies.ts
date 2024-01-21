@@ -8,62 +8,109 @@ const CompaniesStatic: ICompanyModel[] = [
   {
     id: "veepee",
     name: "Veepee",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat",
+    description: {
+      display:
+        "Veepee is an international and European leader in e-commerce, specializing in flash sales",
+      full: "Veepee is an international and European leader in e-commerce, specializing in flash sales. For over 20 years, Veepee has served millions of clients worldwide, thanks to the collaboration of over 6000 employees contributing to the company's multi-billion-dollar annual revenue.",
+    },
     logo: "https://media.licdn.com/dms/image/C4D0BAQE-L8HBv3pQeg/company-logo_100_100/0/1630513258950/veepee_logo?e=1713398400&v=beta&t=1KecDAotDXMVWpDGLkl3gzB6MyuYjr7JPvCNdEcna5A",
   },
   {
     id: "universign",
     name: "Universign",
+    description: {
+      display:
+        "Universign is an eIDAS Trust service that provides electronic signature solutions competing with Docusign",
+      full: "Universign specializes in providing electronic signature solutions to businesses and is among the few eIDAS Trust service providers in France. Using advanced cryptographic technologies, Universign ensures compliance with legal regulations. Now part of a European conglomerate, the company aims to compete with the global leader, Docusign.",
+    },
     logo: "https://media.licdn.com/dms/image/D560BAQHvvXP-MLE5mQ/company-logo_100_100/0/1705589789842/signaturitgroup_logo?e=1714003200&v=beta&t=-wOtDjGfLMroWuLbAav5GTwvTrDMp_1aIAWxv2jfJS0",
   },
   {
     id: "wishibam",
     name: "Wishibam",
     logo: "https://media.licdn.com/dms/image/C4D0BAQFKQPh3FJIb4Q/company-logo_100_100/0/1632414460524/wishibam_logo?e=1713398400&v=beta&t=cpFE6yi37vgbok7ZGZF_OxwFn6GjmSf0hlUMfL2VdrI",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat",
+    description: {
+      display:
+        "Whishibam specializes in omnichannel solutions, empowering physical shops to seamlessly transition to an omnichannel sales strategy",
+      full: "Whishibam is a specialist omnichannel company. It offers a white-label solution for businesses to facilitate their transition to an omnichannel sales model and adapt to the changing consumption habits of consumers, who are increasingly turning to giants like Amazon at the expense of local physical stores.",
+    },
   },
   {
     id: "antilop",
     name: "Antilop",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eleifend turpis, cursus sagittis velit blandit non. Quisque tincidunt faucibus dui ornare elementum. Fusce ante arcu, tincidunt eu ex nec, porttitor tempor odio. Pellentesque tristique lacus in sapien aliquet, non aliquet massa vestibulum. Sed tempor nisl quis risus ullamcorper volutpat. Suspendisse id arcu diam. Sed at congue elit. Phasellus porta feugiat lectus, non ornare velit. Maecenas risus est, ornare ut pretium sit amet, efficitur a erat",
+    description: {
+      display:
+        "Antilop was an IT service company specializing in creating and maintaining e-commerce online shops mainly for premium clothing brands",
+      full: "Antilop was an IT service company specializing in creating and maintaining e-commerce online shops for its partners, primarily in the premium clothing sector. Businesses relied on the technical and product expertise of the Antilop team, allowing them to focus on their core operations. Unfortunately, the company did not survive the challenges posed by the COVID-19 pandemic.",
+    },
   },
   {
     id: "catimini",
     name: "Catimini",
+    description: {
+      display: "Catimini, a French premium children's prêt-à-porter brand",
+      full: "Catimini, a French premium children's prêt-à-porter brand established in 1972 and owned by the Zannier group, offers its catalog online through its e-shop website and boutiques across France, providing an appreciable omnichannel experience for customers.",
+    },
     logo: "https://media.licdn.com/dms/image/C4D0BAQFfemjsrvPhMg/company-logo_200_200/0/1631336122444?e=1713398400&v=beta&t=vrGWlntLSlXlTfqBOIHZSpoYxEcAiwMxlap3pbZz8ZY",
   },
   {
     id: "kidiliz",
     name: "Kidiliz",
+    description: {
+      display:
+        "A French premium children's prêt-à-porter brand, owned by the Zannier Group, also known as the Kidiliz Group",
+    },
     logo: "https://media.licdn.com/dms/image/C4D0BAQFfemjsrvPhMg/company-logo_200_200/0/1631336122444?e=1713398400&v=beta&t=vrGWlntLSlXlTfqBOIHZSpoYxEcAiwMxlap3pbZz8ZY",
   },
   {
     id: "tartine",
     name: "Tartine et Chocolat",
+    description: {
+      display:
+        "Tartine et Chocolat, a French luxury children's brand synonymous with timeless elegance and sophisticated designs.",
+      full: "Tartine et Chocolat is a premium French children's clothing and lifestyle brand. It is known for its high-end and elegant designs for infants and children. The brand offers a range of clothing, accessories, and other products with a focus on quality and sophistication",
+    },
     logo: "https://media.licdn.com/dms/image/C4D0BAQHhEBcd2jO9nQ/company-logo_200_200/0/1630580947720/tartine_et_chocolat_logo?e=1713398400&v=beta&t=A157pgVjxBzbUlVDjIgOtFhvoQ06Nxd5PUGh5pFyhrU",
   },
   {
     id: "yse",
     name: "Ysé Paris",
+    description: {
+      display:
+        "Ysé is a renowned French lingerie brand based in Paris created in 2012, catering to a chic audience",
+      full: "Ysé is a lingerie brand created in 2012. It's a brand that describes itself as inspired by women, for women, embracing all their differences. Their mission: to progress and grow constantly, to continue surprising and making their customers even more beautiful.",
+    },
     logo: "https://media.licdn.com/dms/image/C4E0BAQERrmiVh1t78w/company-logo_200_200/0/1677084042599?e=1713398400&v=beta&t=vlEZPTjUnwxSaehim0XrBcQc1UNz9SrNSEsqh2JPVoA",
   },
   {
     id: "upd",
     name: "Ultra Premium Direct",
+    description: {
+      display:
+        "A renowned French brand of premium food for dogs and cats, regularly listed among the top 120 French Tech companies.",
+      full: "Ultra Premium Direct is a notorious French brand of premium food for dogs and cats regularely quoted among the top 120 French Tech companies. Their mission is to assist all dog and cat owners in honoring the genuine bond of trust and love that exists between them and their pets by providing quality food that is easily accessible and perfectly suited to their needs",
+    },
     logo: "https://media.licdn.com/dms/image/C4E0BAQE10q9bFmsnrA/company-logo_200_200/0/1630648967699/natura_plus_ultra_pet_food_logo?e=1713398400&v=beta&t=A30CeZ5q0UI3FEtkBKr8I76ytTRf80W9C1sCLRZtKEc",
   },
   {
     id: "deuslynn",
     name: "Deuslynn Entreprise",
+    description: {
+      display:
+        "A startup specializing in building enjoyable user-centric products based on user feedback",
+      full: "DEUSLYNN was a startup specializing in designing, building, and publishing user-centric applications. Their mission was to offer people with values innovative and enjoyable alternatives that catered to their needs and feedback, providing an incredible user experience.",
+    },
     shortName: "Deuslynn",
     logo: "https://media.licdn.com/dms/image/C560BAQFSAba7Lp-LUA/company-logo_100_100/0/1631341291740?e=1714003200&v=beta&t=G12HGGLtVWkP9g9Tbx8bRctM02w-u1kqd_k3ZnAbr3I",
   },
   {
     id: "alstom",
     name: "Alstom Transport",
+    description: {
+      display:
+        "A leading French company specializing in designing and building trains, renowned for its iconic French TGV",
+      full: "As the principal subsidiary of Alstom, one of the largest companies globally, Alstom Transport is a leading French company renowned for its expertise in building trains, including the iconic TGV—recognized worldwide as one of the most reliable and efficient high-speed trains. With a rich history and a reputation for competence in high-speed train manufacturing, Alstom has solidified its position as an industry leader.",
+    },
     logo: "https://media.licdn.com/dms/image/C4E0BAQHeGrabdKRiig/company-logo_100_100/0/1630578969587/alstom_logo?e=1714003200&v=beta&t=Z7-6ePeUvDA-4X6v1S-s9aiuUHPGYvYGmcx1iIg2-9E",
   },
 ];
