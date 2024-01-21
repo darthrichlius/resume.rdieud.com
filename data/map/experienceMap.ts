@@ -21,12 +21,16 @@ const experienceMap: IExperience[] = [
   },
   {
     description: `
-    <ul>
-        <li>- <b>Discovery</b>: Competitive Analysis</li>
-        <li>- <b>Strategy</b>: Wokskhop / Brainstorming</li>
-        <li>- <b>Design</b>: UI/UX Validation, Sketch / Prototyping</li>
-        <li>- <b>Execution</b>: Prioritization, Backlog Grooming / Functional Specification, Progress Monitoring, QA / Acceptance Testing, Demos / Review</li>
-    </ul>
+    <p>After a 2-year professional break in the context of the COVID-19 pandemic and a private event, I re-entered the professional arena as a Product Owner for Universign, driven by my curiosity around crypto technologies.</p>
+    <p>I was part of a product team composed of 3 other POs (1 permanent and 2 contractual) and a Product Lead. My daily routine involved project meetings, workshops, follow-ups with designers, testing, backlog management, and backlog grooming with tech leads, as well as competitive analysis.</p>
+    <p>My scope <b>covered both the web application and the mobile application</b>. In contrast to the web scope, I was the sole Product Owner for a mobile team of 4.</p>
+    
+    <p>
+      - <b>Discovery</b>: Competitive Analysis
+      - <b>Strategy</b>: Wokskhop / Brainstorming
+      - <b>Design</b>: UI/UX Validation, Sketch / Prototyping
+      - <b>Execution</b>: Prioritization, Backlog Grooming / Functional Specification, Progress Monitoring, QA / Acceptance Testing, Demos / Review
+    </p>
     <p>
       <b>Scope</b>: Product Management · Electronic Signature · Software Project Management · Scrum · Kanban · English Workplace
     </p>
