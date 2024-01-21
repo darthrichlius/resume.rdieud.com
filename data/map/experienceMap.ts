@@ -66,6 +66,7 @@ const experienceMap: IExperience[] = [
     },
     meta: {
       disableChildrenAvatar: true,
+      disableChildrenCompany: true,
     },
     children: [
       {

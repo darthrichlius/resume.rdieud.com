@@ -47,7 +47,8 @@ export interface ICompany {
 
 export interface IExperience {
   meta?: {
-    disableChildrenAvatar: boolean;
+    disableChildrenCompany?: boolean;
+    disableChildrenAvatar?: boolean;
   };
   contract?: IExperienceContract;
   /**

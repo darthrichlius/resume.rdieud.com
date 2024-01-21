@@ -14,20 +14,29 @@ import CompanyLogoFallback from "@@/assets/images/companies/logoFallback.svg";
 import { IExperience } from "@@src/types";
 import { useCompany } from "@@src/hooks";
 
+type TDeactivable = ("avatar" | "company")[];
+
 const JobExperienceCard = ({
   experience,
   options,
 }: {
   experience: IExperience;
-  options?: Record<string, any>;
+  options?: {
+    disabled: TDeactivable;
+  };
 }) => {
   const [showAboutCompany, toggleAboutCompany] = useState(false);
   const company = useCompany(experience.company);
 
+  let disabledOptions: TDeactivable = [];
+  if (!!experience.meta?.disableChildrenAvatar) disabledOptions.push("avatar");
+  if (!!experience.meta?.disableChildrenCompany)
+    disabledOptions.push("company");
+
   return (
     <article id={experience.company}>
       <header className="job-experience-card">
-        {!(options?.disableAvatar === true) && (
+        {!options?.disabled.includes("avatar") && (
           <Avatar
             size="4"
             src={company?.logo}
@@ -66,9 +75,11 @@ const JobExperienceCard = ({
         </div>
       </header>
       <div
-        className={`mt-8  ${options?.disableAvatar ? "" : "ml-24 md:ml-72"}`}
+        className={`mt-8  ${
+          options?.disabled.includes("avatar") ? "" : "ml-24 md:ml-72"
+        }`}
       >
-        {company?.description && (
+        {company?.description && !options?.disabled.includes("company") && (
           <div className="p-12 rounded bg-zinc-300 text-sm">
             <div className="flex justify-between">
               <Typography className="font-bold">About the company</Typography>
@@ -108,7 +119,7 @@ const JobExperienceCard = ({
               <JobExperienceCard
                 experience={child}
                 options={{
-                  disableAvatar: !!experience.meta?.disableChildrenAvatar,
+                  disabled: disabledOptions,
                 }}
               />
             </div>
