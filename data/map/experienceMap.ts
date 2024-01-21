@@ -3,7 +3,10 @@ import { EExperiencePosition, IExperience } from "@@src/types";
 const experienceMap: IExperience[] = [
   {
     description: `
-        
+        <p>Veepee is an extraordinary company, where I had the pleasure of experiencing an <b>exceptional working environment</b>, <b>talented management</b>, and the <b>responsibility and challenges</b> that accelerated my experience in product ownership.</p>
+        <p>Recruited in 2023 as a Product Owner, I led a portfolio of a dozen products, impacting the entire 5000+ employee organization.</p>
+        <p>In this pivotal role, my team and I were central to the company's operations, engaging with stakeholders at various levels, including the CTO (Director of VeepeeTech), VP Tech (Jean Baptiste Kempf, Founder and Lead for VLC), and VP Product (Boris De Lastours), among others. Our work had a real impact on millions of our users, providing solutions that helped other teams perform..</p>
+        <p>Finally, the internal work environment, where English is widely spoken, added to the unique and vibrant atmosphere of the company. I really appreciated the international-oriented environment and the confidence given to each employee, while being a very demanding position and company.</p>
       `,
     company: "veepee",
     contract: {
@@ -19,13 +22,16 @@ const experienceMap: IExperience[] = [
   {
     description: `
     <ul>
-        <li>- <b>Discovery</b>: Market Analysis</li>
+        <li>- <b>Discovery</b>: Competitive Analysis</li>
         <li>- <b>Strategy</b>: Wokskhop / Brainstorming</li>
         <li>- <b>Design</b>: UI/UX Validation, Sketch / Prototyping</li>
-        <li>- <b>Execution</b>: Prioritization, Backlog Grooming / Functional specification, Progress monitoring, QA / Acceptance Testing, Demos / Review- Discovery: Market Analysis - Strategy: Wokskhop / Brainstorming - Design: UI/UX Validation, Sketch / Prototyping - Execution: Prioritization, Backlog Grooming / Functional specification, Progress monitoring, QA / Acceptance Testing, Demos / Review</li>
+        <li>- <b>Execution</b>: Prioritization, Backlog Grooming / Functional Specification, Progress Monitoring, QA / Acceptance Testing, Demos / Review</li>
     </ul>
     <p>
-        <b>Skills:</b> Adobe XD · Trello · Datadog · Confluence · Anglais · Signature électronique · Gestion de projet · JIRA · Gestion des versions · Gestion de projet logiciel · Project Management · Kanban · Product Management · Product Development
+      <b>Scope</b>: Product Management · Electronic Signature · Software Project Management · Scrum · Kanban · English Workplace
+    </p>
+    <p>
+      <b>Stack</b>: Adobe XD · Trello · Datadog · Confluence · JIRA · Miro
     </p>
     `,
     company: "universign",
@@ -41,16 +47,14 @@ const experienceMap: IExperience[] = [
   },
   {
     description: `
-    <p>Worked on the development of the SaaS solution built specifically for retailer willing to go digital and improve their experience in managing their stock and orders thanks to a ready to use omni-canal solution. The solution is currently helping several brands increasing their revenue by 10 to 15%.</p>
-    <p>Beyond my Product Manager role, I helped the company on improving their workflow thanks to a tailored Scrum methodology to help deliver faster and better</p>
-    <p>
-        <b>Skills:</b> Trello · Datadog · Confluence · Anglais · Gestion de projet · JIRA · Linux · Test unitaire · Gestion des versions · Gestion de projet logiciel · Change Management · Scrum · E-commerce · Symfony · Api Platform · Redux · Product Management · Product Development
-    </p>
+    <p>Worked on the development of a <b>SaaS solution</b> specifically designed for retailers <b>transitioning to an omnichannel sales strategy</b>. One of the key features was the creation of a smart and versatile catalog importer, addressing a significant barrier in the transition process.</p>
+    <p>The solution facilitates digital transformation, enhances stock management, and streamlines orders through a ready-to-use online omnichannel platform. A major achievement has been assisting several retailers in sustaining their operations and staying competitive. Consequently, our solution played a pivotal role in <b>increasing the revenue of several brands by 10 to 15%</b>.</p>
+    <p>In addition to my role as a Product Manager, I contributed to improving the company's workflow by implementing a customized Scrum methodology, resulting in faster and more effective delivery.</p>
     `,
     company: "wishibam",
     contract: {
       location: "Paris, Île-de-France, France",
-      position: "Product Owner / Developer",
+      position: "Product Manager / Developer",
       type: "Permanent",
       startDate: "Dec 2018",
       endDate: "Jun 2020",
@@ -61,10 +65,18 @@ const experienceMap: IExperience[] = [
     },
     children: [
       {
+        description: `
+        <p>
+          <b>Scope</b>: Product Management · Product Development · Project Management · Change Management · Scrum · E-commerce
+        </p>
+        <p>
+          <b>Stack</b>: Trello · Confluence  · JIRA
+        </p>
+        `,
         company: "wishibam",
         contract: {
           location: "Paris, Île-de-France, France",
-          position: "Product Owner",
+          position: "Product Manager",
           type: "Permanent",
           startDate: "Jun 2019",
           endDate: "Jun 2020",
@@ -72,6 +84,11 @@ const experienceMap: IExperience[] = [
         },
       },
       {
+        description: `
+        <p>
+          <b>Stack</b>: React · Symfony · API Platform · Redux · Unit Testing · Git · Wordpress · Docker
+        </p>
+        `,
         company: "wishibam",
         contract: {
           location: "Paris, Île-de-France, France",
@@ -88,13 +105,16 @@ const experienceMap: IExperience[] = [
 
   {
     description: `
-        <p>Worked on several projects around e-commerce online shops in the interest of brands like Ultra Premium Direct, Catimini, Yse Paris, Kidiliz, ... just to name a few.<p>
-        <p>As a developer and senior member of the Scrum team, I was in charge of improving the software architecture, optimizing the database and adding new features.<p>
-        <p>One of our core tasks was about adding SaaS serives like Target2Sell, Google UTM, ... Improving search performance through tools like Elastic Search and Algolia but also to create a tailored Prestashop version to meet our clients specific needs</p>
-        <p>
-          <b>Skills:</b> Confluence · JIRA · PHP · JavaScript · MySQL · Test unitaire · Tests de régression · Gestion des versions · Scrum · Prestashop · E-commerce · Symfony
-        </p>
-      `,
+      <p>Contributed to multiple projects involving <b>e-commerce online shops</b> for prominent brands such as Ultra Premium Direct, Catimini, Yse Paris, Kidiliz, and more. Notably, our work helped our clients <b>sustain the high seasons of sales and other major marketing events, regularly increasing their revenues</b>.<p>
+      <p>In my capacity as a developer and senior member of the Scrum team, I spearheaded efforts to enhance software architecture, optimize databases, and introduce new features.<p>
+      <p>A central focus was integrating <b>SaaS services like Global-E, Target2Sell, Google UTM, and others</b>. Additionally, we prioritized improving search performance utilizing tools such as Elastic Search and Algolia. Moreover, we developed a customized Prestashop version to cater to the specific needs of our clients.</p>
+      <p>
+        <b>Scope</b>: Scrum · E-commerce · API Design · Unit Testing · E2E Testing
+      </p>
+      <p>
+        <b>Stack</b>: Gulp · Git · Stripe · Be2Bill · PHP · Prestashop · Symfony · JavaScript · Algolia · Elastic Search · MySQL · PHP Unit · Behat · Cypress · Jenkins · Capistrano
+      </p>
+    `,
     company: "antilop",
     contract: {
       location: "Paris, Île-de-France, France",
@@ -146,7 +166,10 @@ const experienceMap: IExperience[] = [
   {
     description: `
       <p>
-        <b>Skills:</b> Confluence · Gestion de projet · JIRA · PHP · JavaScript · MySQL · Linux · SEO · Test unitaire · Tests de régression · Gestion des versions · Lean Startup · Gestion de projet logiciel · Administration des serveurs · Project Management · Scrum · Stratégie marketing · Management · Hotjar · Product Management
+        <b>Scope</b>: Project Management · Product Management · Team Management
+      </p>
+      <p>
+        <b>Stack</b>: PHP · Javascript · jQuery · HTML 5 · MySQL · Unit Testing · Tortoise SVN
       </p>
     `,
     company: "deuslynn",
@@ -168,7 +191,10 @@ const experienceMap: IExperience[] = [
   {
     description: `
       <p>
-        <b>Skills:</b> Gestion de projet · jQuery · HTML 5 · MySQL · Test unitaire · Gestion des versions · Gestion de projet logiciel · Project Management
+          <b>Scope</b>: Project Management · Software Development · Roadmapping
+      </p>
+      <p>
+          <b>Stack</b>: C# · .Net · Microsoft Access · Tortoise SVN 
       </p>
     `,
     company: "alstom",

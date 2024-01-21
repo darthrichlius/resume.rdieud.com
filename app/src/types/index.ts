@@ -37,7 +37,7 @@ type TMessageInObject = {
 export interface ICompany {
   name: string;
   shortName?: string;
-  description?: string | TMessageInObject;
+  description?: TMessageInObject;
   logo?: any;
   links?: {
     website?: string;

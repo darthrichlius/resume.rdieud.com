@@ -87,7 +87,9 @@ const JobExperienceCard = ({
               </button>
             </div>
             {showAboutCompany && (
-              <Typography className="mt-12">{company.description}</Typography>
+              <Typography className="mt-12">
+                {company.description.display}
+              </Typography>
             )}
           </div>
         )}
