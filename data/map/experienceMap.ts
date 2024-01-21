@@ -165,6 +165,9 @@ const experienceMap: IExperience[] = [
   },
   {
     description: `
+      <p>As a Lead Technical and Product Manager, I led a 3-member team in the development of "Trenqr.com," a social network designed for individuals seeking connections and friendships based on common interests.</p>
+      <p>The pitch aimed to offer a solution that blended the visual appeal of Instagram, the networking features of Facebook, and the interest-based meetings of Meetup. Despite the product turning out to be more technically challenging than anticipated, notably due to a <b>lack of experience in complex technologies such as real-time, concomitant events management, and responsiveness (which was not as simple as it is today), we successfully launched it in 2015</b>.</p>
+      <p>Unfortunately, we missed the market momentum, and the final product did not align with current trends and the intense competition from our rivals. Consequently, the platform was closed one year later, although it did manage to activate a little more than a <b>thousand user accounts</b>.</p>
       <p>
         <b>Scope</b>: Project Management · Product Management · Team Management
       </p>
@@ -190,6 +193,9 @@ const experienceMap: IExperience[] = [
   },
   {
     description: `
+      <p>I work-studied for 1 year at Alstom Transport as a Junior Project Manager and technical lead for a project during my 'IT Project Management' License program.</p>
+      <p>The objective was to collaborate with team members on the train boardcard manufacturing line. Their main challenge revolved around using Excel as a reporting and monitoring tool.</p>
+      <p>During my mission, I was tasked with studying and understanding their needs, providing requirements, and successfully developing a Proof of Concept (POC).</p>
       <p>
           <b>Scope</b>: Project Management · Software Development · Roadmapping
       </p>

@@ -69,7 +69,7 @@ const JobExperienceCard = ({
         className={`mt-8  ${options?.disableAvatar ? "" : "ml-24 md:ml-72"}`}
       >
         {company?.description && (
-          <div className="p-12 rounded bg-zinc-400 text-sm">
+          <div className="p-12 rounded bg-zinc-300 text-sm">
             <div className="flex justify-between">
               <Typography className="font-bold">About the company</Typography>
               <button
