@@ -57,13 +57,15 @@ const HomePresentationSection = () => {
               I design <span className="text-wine-200">& code app systems</span>
             </h2>
           </div>
-          <div className="w-full lg:max-w-md mt-56 lg:mt-1">
+          <div className="w-full lg:max-w-lg mt-56 lg:mt-1">
             <p className="text-zinc-400 text-lg leading-8 md:text-xl [word-spacing:0.1em] md:leading-10">
               <strong>Senior fullstack web engineer</strong> and Product
-              Manager, with the experience and{" "}
-              <strong>critical thinking</strong> mindset, to{" "}
-              <strong>effectively</strong> plan, design, test, code, ship and
-              manage digital <strong>systems and their life cycles</strong>
+              Manager, specialized in <strong>React</strong>,{" "}
+              <strong>NodeJs</strong> & <strong>Symfony</strong> environments,
+              with the experience and <strong>critical thinking</strong>{" "}
+              mindset, to <strong>effectively</strong> think, plan, design,
+              test, ship, and manage digital{" "}
+              <strong>systems throughout their cycles</strong>
             </p>
             <div className="grid grid-cols-2 gap-56 mt-48">
               {contactLinks.map((link) => (
