@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import NextLink from "next/link";
-import { Avatar } from "@radix-ui/themes";
+import NextImage from "next/image";
 
 import {
   FaChevronRight as ShowMoreIcon,
@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 import { Typography, Icon } from "@@src/components";
-import AppConfig from "@/app/config/app";
+import AppConfig from "@@/config/app";
 
 type TMessageInObject = {
   display: string;
@@ -55,11 +55,10 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
         <Icon index="Linkedin" />
       </NextLink>
       <header className="flex items-start gap-24">
-        <Avatar
-          size="3"
+        <NextImage
           src={reference.author.avatar}
-          radius="full"
-          fallback="?"
+          className="rounded-full w-40"
+          alt="Momo"
         />
         <div>
           <Typography className="font-bold">

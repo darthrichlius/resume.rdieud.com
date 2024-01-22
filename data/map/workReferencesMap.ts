@@ -1,5 +1,11 @@
 import { IWorkReference } from "@@/Home/sections/References/_/WorkReferenceCard";
 
+import JamelProfilePic from "@@/assets/images/people/jamel.jpeg";
+import OmarProfilePic from "@@/assets/images/people/omar.jpeg";
+import JeremieProfilePic from "@@/assets/images/people/jeremie.jpeg";
+import FloreProfilePic from "@@/assets/images/people/flore.jpeg";
+import MohamedProfilePic from "@@/assets/images/people/mohamed.jpeg";
+
 const workReferencesMap: IWorkReference[] = [
   {
     message: {
@@ -10,8 +16,7 @@ const workReferencesMap: IWorkReference[] = [
     issuedAt: "July 1, 2022",
     author: {
       fullname: "Jamel. M",
-      avatar:
-        "https://media.licdn.com/dms/image/C5603AQFWUPUmG3-Leg/profile-displayphoto-shrink_100_100/0/1517419154814?e=1710979200&v=beta&t=J-WyBb8lrg91Y68KKjeXwX22GwOIa9XWH1h1IHgLWt8",
+      avatar: JamelProfilePic,
       introduction: "Senior Product Owner | Manager | Freelance",
       relationship: "Jamel. worked with Richard on the same team",
       linkedIn:
@@ -27,8 +32,7 @@ const workReferencesMap: IWorkReference[] = [
     issuedAt: "June 27, 2022",
     author: {
       fullname: "Omar EL ALAOUI ABOUFARIS",
-      avatar:
-        "https://media.licdn.com/dms/image/C5603AQHtAGMGnGmznQ/profile-displayphoto-shrink_100_100/0/1545081894745?e=1710979200&v=beta&t=Ca5usGDbRBHQckf3SXRJtz-yupq7x7E_WjQOlnB65vM",
+      avatar: OmarProfilePic,
       introduction: "Lead Developer",
       relationship: "Omar worked with Richard on the same team",
       linkedIn:
@@ -44,8 +48,7 @@ const workReferencesMap: IWorkReference[] = [
     issuedAt: "June 27, 2022",
     author: {
       fullname: "Jérémie Letur",
-      avatar:
-        "https://media.licdn.com/dms/image/C4E03AQElS9_icwZghg/profile-displayphoto-shrink_100_100/0/1517454803624?e=1710979200&v=beta&t=jlLpJeQJxcugQCU5SBOb0l_mLVCwKUlviRcsS9-8ymo",
+      avatar: JeremieProfilePic,
       introduction: "Product Designer UI/UX",
       relationship: "Jérémie worked with Richard on the same team",
       linkedIn:
@@ -64,8 +67,7 @@ const workReferencesMap: IWorkReference[] = [
     issuedAt: "June 27, 2022",
     author: {
       fullname: "Flore Dutronc",
-      avatar:
-        "https://media.licdn.com/dms/image/C4D03AQEzRJBnjjxxZw/profile-displayphoto-shrink_100_100/0/1516528820588?e=1710979200&v=beta&t=5TIWOEC-5Oe4HYoANnRsZxKClanpfqY_FNauP28ER-0",
+      avatar: FloreProfilePic,
       introduction: "Senior Programme Executive @ Hotwire",
       relationship: "Flore worked with Richard but on different teams",
       linkedIn:
@@ -78,8 +80,7 @@ const workReferencesMap: IWorkReference[] = [
     issuedAt: "Jun 26, 2022",
     author: {
       fullname: "Mohamed Chaaben",
-      avatar:
-        "https://media.licdn.com/dms/image/C5603AQHKJFpX4RlBfA/profile-displayphoto-shrink_100_100/0/1517499134619?e=1710979200&v=beta&t=kOV60UmJWE_CTYEfz1oICbQcnQirURPFmwRNRGzSJRc",
+      avatar: MohamedProfilePic,
       introduction: "Lead Developer",
       relationship: "Mohamed worked with Richard but on the different teams",
       linkedIn:
