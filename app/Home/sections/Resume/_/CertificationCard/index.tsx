@@ -1,21 +1,17 @@
 import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
-import { Avatar } from "@radix-ui/themes";
 import { FaExternalLinkAlt as LinkLogo } from "react-icons/fa";
 
 import { Typography } from "@@src/components";
+import { useCompany } from "@@src/hooks";
+import CompanyLogoFallback from "@@/assets/images/companies/logoFallback.svg";
 
 export interface ICertification {
   title: string;
   issued: string;
   credentialUrl?: string;
-  provider: {
-    name: string;
-    url: string;
-    logoLocale?: string;
-    logoUrl?: string;
-  };
+  provider: string;
   skills?: Array<string>;
 }
 
@@ -24,19 +20,28 @@ const CertificationCard = ({
 }: {
   certification: ICertification;
 }) => {
+  const provider = useCompany(certification.provider);
+  const providerLogo = provider!.logo ? (
+    <NextImage
+      className="w-48 rounded"
+      src={provider!.logo}
+      alt={`${provider!.name}'s logo`}
+    />
+  ) : (
+    <NextImage
+      className="w-48 rounded"
+      src={CompanyLogoFallback}
+      alt={`${provider!.name}'s logo`}
+    />
+  );
+
   return (
     <article className="flex gap-24 w-full p-24 bg-zinc-900">
-      <aside>
-        <Avatar
-          size="4"
-          src={certification.provider.logoUrl}
-          fallback={<NextImage src={"?"} alt="" />}
-        />
-      </aside>
+      <aside>{providerLogo}</aside>
       <section className="w-full">
         <header>
           <h4 className="text-xl font-bold">{certification.title}</h4>
-          <Typography className="">{certification.provider.name}</Typography>
+          <Typography className="">{provider!.name}</Typography>
           <Typography className="text-sm text-zinc-400">
             Issued {certification.issued}
           </Typography>

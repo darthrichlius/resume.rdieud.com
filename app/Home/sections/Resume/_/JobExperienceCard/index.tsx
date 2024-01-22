@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import NextImage from "next/image";
-import { Avatar } from "@radix-ui/themes";
 
 import {
   FaChevronRight as RightIcon,
@@ -33,16 +32,24 @@ const JobExperienceCard = ({
   if (!!experience.meta?.disableChildrenCompany)
     disabledOptions.push("company");
 
+  const logo = company?.logo ? (
+    <NextImage
+      className="w-48 rounded"
+      src={company?.logo}
+      alt={`${company.name}'s logo`}
+    />
+  ) : (
+    <NextImage
+      className="w-48 rounded"
+      src={CompanyLogoFallback}
+      alt={`${company?.name}'s logo`}
+    />
+  );
+
   return (
     <article id={experience.company}>
       <header className="job-experience-card">
-        {!options?.disabled.includes("avatar") && (
-          <Avatar
-            size="4"
-            src={company?.logo}
-            fallback={<NextImage src={CompanyLogoFallback} alt="" />}
-          />
-        )}
+        {!options?.disabled.includes("avatar") && logo}
         <div>
           {experience.contract?.position && (
             <Typography className="font-bold">

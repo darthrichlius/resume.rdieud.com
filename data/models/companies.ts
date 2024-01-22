@@ -1,5 +1,21 @@
 import { ICompany } from "@@src/types";
 
+import VeepeeLogo from "@@/assets/images/companies/veepee_logo.jpeg";
+import UniversignLogo from "@@/assets/images/companies/universign_logo.jpeg";
+import WishibamLogo from "@@/assets/images/companies/wishibam_logo.jpeg";
+import KidilizLogo from "@@/assets/images/companies/kidiliz_logo.jpeg";
+import TartineLogo from "@@/assets/images/companies/tartine_et_chocolat_logo.jpeg";
+import YseLogo from "@@/assets/images/companies/yse_logo.jpeg";
+import UpdLogo from "@@/assets/images/companies/upd_logo.jpeg";
+import DeuslynnLogo from "@@/assets/images/companies/deuslynn_logo.jpeg";
+import AlstomLogo from "@@/assets/images/companies/alstom_logo.jpeg";
+import ETSLogo from "@@/assets/images/companies/ets_logo.jpeg";
+import ScrumLogo from "@@/assets/images/companies/scrum_org_logo.jpeg";
+import MWMLogo from "@@/assets/images/companies/measure_what_matter_logo.jpeg";
+import WhartonLogo from "@@/assets/images/companies/wharton_online_logo.jpeg";
+import GoogleLogo from "@@/assets/images/companies/google_logo.jpeg";
+import HubvisoryLogo from "@@/assets/images/companies/hubvisory_logo.jpeg";
+
 interface ICompanyModel extends ICompany {
   id: string;
 }
@@ -13,7 +29,7 @@ const CompaniesStatic: ICompanyModel[] = [
         "Veepee is an international and European leader in e-commerce, specializing in flash sales",
       full: "Veepee is an international and European leader in e-commerce, specializing in flash sales. For over 20 years, Veepee has served millions of clients worldwide, thanks to the collaboration of over 6000 employees contributing to the company's multi-billion-dollar annual revenue.",
     },
-    logo: "https://media.licdn.com/dms/image/C4D0BAQE-L8HBv3pQeg/company-logo_100_100/0/1630513258950/veepee_logo?e=1713398400&v=beta&t=1KecDAotDXMVWpDGLkl3gzB6MyuYjr7JPvCNdEcna5A",
+    logo: VeepeeLogo,
   },
   {
     id: "universign",
@@ -23,12 +39,12 @@ const CompaniesStatic: ICompanyModel[] = [
         "Universign is an eIDAS Trust service that provides electronic signature solutions competing with Docusign",
       full: "Universign specializes in providing electronic signature solutions to businesses and is among the few eIDAS Trust service providers in France. Using advanced cryptographic technologies, Universign ensures compliance with legal regulations. Now part of a European conglomerate, the company aims to compete with the global leader, Docusign.",
     },
-    logo: "https://media.licdn.com/dms/image/D560BAQHvvXP-MLE5mQ/company-logo_100_100/0/1705589789842/signaturitgroup_logo?e=1714003200&v=beta&t=-wOtDjGfLMroWuLbAav5GTwvTrDMp_1aIAWxv2jfJS0",
+    logo: UniversignLogo,
   },
   {
     id: "wishibam",
     name: "Wishibam",
-    logo: "https://media.licdn.com/dms/image/C4D0BAQFKQPh3FJIb4Q/company-logo_100_100/0/1632414460524/wishibam_logo?e=1713398400&v=beta&t=cpFE6yi37vgbok7ZGZF_OxwFn6GjmSf0hlUMfL2VdrI",
+    logo: WishibamLogo,
     description: {
       display:
         "Whishibam specializes in omnichannel solutions, empowering physical shops to seamlessly transition to an omnichannel sales strategy",
@@ -51,7 +67,7 @@ const CompaniesStatic: ICompanyModel[] = [
       display: "Catimini, a French premium children's prêt-à-porter brand",
       full: "Catimini, a French premium children's prêt-à-porter brand established in 1972 and owned by the Zannier group, offers its catalog online through its e-shop website and boutiques across France, providing an appreciable omnichannel experience for customers.",
     },
-    logo: "https://media.licdn.com/dms/image/C4D0BAQFfemjsrvPhMg/company-logo_200_200/0/1631336122444?e=1713398400&v=beta&t=vrGWlntLSlXlTfqBOIHZSpoYxEcAiwMxlap3pbZz8ZY",
+    logo: KidilizLogo,
   },
   {
     id: "kidiliz",
@@ -60,7 +76,7 @@ const CompaniesStatic: ICompanyModel[] = [
       display:
         "A French premium children's prêt-à-porter brand, owned by the Zannier Group, also known as the Kidiliz Group",
     },
-    logo: "https://media.licdn.com/dms/image/C4D0BAQFfemjsrvPhMg/company-logo_200_200/0/1631336122444?e=1713398400&v=beta&t=vrGWlntLSlXlTfqBOIHZSpoYxEcAiwMxlap3pbZz8ZY",
+    logo: KidilizLogo,
   },
   {
     id: "tartine",
@@ -70,7 +86,7 @@ const CompaniesStatic: ICompanyModel[] = [
         "Tartine et Chocolat, a French luxury children's brand synonymous with timeless elegance and sophisticated designs.",
       full: "Tartine et Chocolat is a premium French children's clothing and lifestyle brand. It is known for its high-end and elegant designs for infants and children. The brand offers a range of clothing, accessories, and other products with a focus on quality and sophistication",
     },
-    logo: "https://media.licdn.com/dms/image/C4D0BAQHhEBcd2jO9nQ/company-logo_200_200/0/1630580947720/tartine_et_chocolat_logo?e=1713398400&v=beta&t=A157pgVjxBzbUlVDjIgOtFhvoQ06Nxd5PUGh5pFyhrU",
+    logo: TartineLogo,
   },
   {
     id: "yse",
@@ -80,7 +96,7 @@ const CompaniesStatic: ICompanyModel[] = [
         "Ysé is a renowned French lingerie brand based in Paris created in 2012, catering to a chic audience",
       full: "Ysé is a lingerie brand created in 2012. It's a brand that describes itself as inspired by women, for women, embracing all their differences. Their mission: to progress and grow constantly, to continue surprising and making their customers even more beautiful.",
     },
-    logo: "https://media.licdn.com/dms/image/C4E0BAQERrmiVh1t78w/company-logo_200_200/0/1677084042599?e=1713398400&v=beta&t=vlEZPTjUnwxSaehim0XrBcQc1UNz9SrNSEsqh2JPVoA",
+    logo: YseLogo,
   },
   {
     id: "upd",
@@ -90,7 +106,7 @@ const CompaniesStatic: ICompanyModel[] = [
         "A renowned French brand of premium food for dogs and cats, regularly listed among the top 120 French Tech companies.",
       full: "Ultra Premium Direct is a notorious French brand of premium food for dogs and cats regularely quoted among the top 120 French Tech companies. Their mission is to assist all dog and cat owners in honoring the genuine bond of trust and love that exists between them and their pets by providing quality food that is easily accessible and perfectly suited to their needs",
     },
-    logo: "https://media.licdn.com/dms/image/C4E0BAQE10q9bFmsnrA/company-logo_200_200/0/1630648967699/natura_plus_ultra_pet_food_logo?e=1713398400&v=beta&t=A30CeZ5q0UI3FEtkBKr8I76ytTRf80W9C1sCLRZtKEc",
+    logo: UpdLogo,
   },
   {
     id: "deuslynn",
@@ -101,7 +117,7 @@ const CompaniesStatic: ICompanyModel[] = [
       full: "DEUSLYNN was a startup specializing in designing, building, and publishing user-centric applications. Their mission was to offer people with values innovative and enjoyable alternatives that catered to their needs and feedback, providing an incredible user experience.",
     },
     shortName: "Deuslynn",
-    logo: "https://media.licdn.com/dms/image/C560BAQFSAba7Lp-LUA/company-logo_100_100/0/1631341291740?e=1714003200&v=beta&t=G12HGGLtVWkP9g9Tbx8bRctM02w-u1kqd_k3ZnAbr3I",
+    logo: DeuslynnLogo,
   },
   {
     id: "alstom",
@@ -111,7 +127,38 @@ const CompaniesStatic: ICompanyModel[] = [
         "A leading French company specializing in designing and building trains, renowned for its iconic French TGV",
       full: "As the principal subsidiary of Alstom, one of the largest companies globally, Alstom Transport is a leading French company renowned for its expertise in building trains, including the iconic TGV—recognized worldwide as one of the most reliable and efficient high-speed trains. With a rich history and a reputation for competence in high-speed train manufacturing, Alstom has solidified its position as an industry leader.",
     },
-    logo: "https://media.licdn.com/dms/image/C4E0BAQHeGrabdKRiig/company-logo_100_100/0/1630578969587/alstom_logo?e=1714003200&v=beta&t=Z7-6ePeUvDA-4X6v1S-s9aiuUHPGYvYGmcx1iIg2-9E",
+    logo: AlstomLogo,
+  },
+  // CERTIFICATIONS
+  {
+    id: "ets_global",
+    name: "ETS Global",
+    logo: ETSLogo,
+  },
+  {
+    id: "scrum_org",
+    name: "Scrum.Org",
+    logo: ScrumLogo,
+  },
+  {
+    id: "mwm",
+    name: "Measure What Matters | OKR Resources",
+    logo: MWMLogo,
+  },
+  {
+    id: "wharton_online",
+    name: "Wharton Online",
+    logo: WhartonLogo,
+  },
+  {
+    id: "google",
+    name: "Google",
+    logo: GoogleLogo,
+  },
+  {
+    id: "hubvisory",
+    name: "Hubvisory",
+    logo: HubvisoryLogo,
   },
 ];
 
