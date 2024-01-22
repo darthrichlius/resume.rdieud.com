@@ -1,34 +1,39 @@
 import { IProject } from "@@/Home/sections/Portfolio";
 
-const portfolioMap: IProject[] = [
-  {
-    title: "Richard Dieud's Personal Website",
-    subtitle: "Responsive Website",
-    shortDescription:
-      "A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements",
-    description: `
-    <p>A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements.</p>
-    <p>The primary objective is to provide interested parties with more comprehensive and detailed information, and, most importantly, details consistent with what one seeks when exploring an engineering profile.</p>
-    <p>Furthermore, our aim is to deliver an enjoyable experience that contributes to expressing the personality of the website owner</p>
-    `,
-    stack: {
-      design: [{ label: "Figma" }],
-      front: [
-        { label: "TypeScript" },
-        { label: "React" },
-        { label: "Tailwind" },
-        { label: "Radix UI" },
-      ],
-      back: [{ label: "Next.Js" }],
-    },
-    links: [
-      {
-        label: "Github",
-        href: "https://github.com/darthrichlius/com.rdieud.resume ",
-        icon: "Github",
-      },
+/**
+ * A lazy way to keep the data while not displaying it .....
+ * This is a very cheaper way than trying to create a more configurable approach
+ */
+const archived = {
+  title: "Richard Dieud's Personal Website",
+  subtitle: "Responsive Website",
+  shortDescription:
+    "A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements",
+  description: `
+  <p>A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements.</p>
+  <p>The primary objective is to provide interested parties with more comprehensive and detailed information, and, most importantly, details consistent with what one seeks when exploring an engineering profile.</p>
+  <p>Furthermore, our aim is to deliver an enjoyable experience that contributes to expressing the personality of the website owner</p>
+  `,
+  stack: {
+    design: [{ label: "Figma" }],
+    front: [
+      { label: "TypeScript" },
+      { label: "React" },
+      { label: "Tailwind" },
+      { label: "Radix UI" },
     ],
+    back: [{ label: "Next.Js" }],
   },
+  links: [
+    {
+      label: "Github",
+      href: "https://github.com/darthrichlius/com.rdieud.resume ",
+      icon: "Github",
+    },
+  ],
+};
+
+const portfolioMap: IProject[] = [
   {
     title: "IamServiceDesk (ISD)",
     subtitle: "Responsive Web Application",
