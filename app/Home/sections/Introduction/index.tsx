@@ -1,18 +1,24 @@
 "use client";
 import React from "react";
 import NextLink from "next/link";
+import { FaChevronRight as RightIcon } from "react-icons/fa";
 
 import { Typography } from "@@src/components";
+import { HoverCard } from "@radix-ui/themes";
+import { useCompanies } from "@/app/src/hooks";
 
-const companies = [
-  { label: "Veepee", href: "#veepee" },
-  { label: "Universign", href: "#universign" },
-  { label: "Catimini", href: "#catimini" },
-  { label: "Yse Paris", href: "#yse" },
-  { label: "Ultra Premium Direct", href: "#upd" },
+const companiesMap = [
+  { id: "veepee", label: "Veepee", href: "#veepee" },
+  { id: "universign", label: "Universign", href: "#universign" },
+  { id: "catimini", label: "Catimini", href: "#catimini" },
+  { id: "yse", label: "Yse Paris", href: "#yse" },
+  { id: "upd", label: "Ultra Premium Direct", href: "#upd" },
+  { id: "alstom", label: "Alstom", href: "#alstom" },
 ];
 
 const HomeIntroductionSection = () => {
+  const companies = useCompanies();
+
   return (
     <section
       id="introduction"
@@ -21,31 +27,54 @@ const HomeIntroductionSection = () => {
       <div className={"app-container flex flex-col justify-center"}>
         <div className="flex flex-col gap-40 md:gap-64 md:-mt-64">
           <div>
-            <h1 className="text-7xl font-bold md:text-9xl">Richard Dieud</h1>
+            <h1 className="title-display">Richard Dieud</h1>
             <p className="text-wine-200 text-4xl font-bold mt-24 md:text-5xl md:mt-8">
               Software Engineer & Product Manager
             </p>
           </div>
-          <Typography className="text-lg leading-10 tracking-wide text-zinc-400 [word-spacing:0.075em] md:text-2xl">
-            I bring passion 🎨, <strong>efficiency</strong> 🗝️ and{" "}
-            <strong>full proficiency</strong> 🧠 together
+          <Typography className="text-base sm:text-lg  md:text-2xl leading-7 sm:leading-10 tracking-wide text-zinc-400 [word-spacing:0.075em]">
+            Blending <strong>curiosity</strong> 🧠, <strong>efficiency</strong>{" "}
+            🗝️, and <strong>passion</strong> 🎨 to build
             <br />
-            to build user-centric <strong>experiences</strong> and{" "}
+            user-centric <strong>experiences</strong> and{" "}
             <strong>products</strong> that scale ✨
           </Typography>
-          <div className="flex gap-36">
-            <p className="home-section-wordked-for">Worked for</p>
-            <ul className="flex flex-wrap gap-16">
-              {companies.map((company) => (
+          <ul className="flex flex-wrap gap-x-20 gap-y-8">
+            <li>
+              <Typography className="home-section-wordked-for">
+                Formerly
+              </Typography>
+            </li>
+            {companiesMap.map((item) => {
+              const company = companies.find((c) => item.id === c.id);
+              return (
                 <li
-                  key={company.label}
+                  key={item.label}
                   className="text-base hover:text-wine-200 md:text-xl"
                 >
-                  <NextLink href={company.href}>{company.label}</NextLink>
+                  <HoverCard.Root openDelay={200}>
+                    <HoverCard.Trigger>
+                      <NextLink href={item.href}>{item.label}</NextLink>
+                    </HoverCard.Trigger>
+                    <HoverCard.Content className="w-288 text-sm">
+                      <Typography className="">
+                        {company?.description?.display}
+                      </Typography>
+                      <Typography className="flex gap-4 justify-end items-center mt-16 font-bold text-wine-200 text-right">
+                        <RightIcon className="w-12" />
+                        <NextLink
+                          className="hover:text-wine-100"
+                          href={item.href}
+                        >
+                          View my experience
+                        </NextLink>
+                      </Typography>
+                    </HoverCard.Content>
+                  </HoverCard.Root>
                 </li>
-              ))}
-            </ul>
-          </div>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>
