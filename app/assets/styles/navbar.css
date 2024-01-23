@@ -3,17 +3,21 @@
 }
 
 .mobile-menu-container {
-  @apply absolute bottom-0 w-full px-16 py-32 bg-wine-200 z-50;
+  @apply absolute bottom-0 w-full bg-wine-700 z-50;
 }
 
 .mobile-menu-list {
-  @apply flex flex-col;
+  @apply flex flex-col gap-24 px-16 py-32;
 }
 
 .mobile-menu-separator {
-  @apply mt-8 mb-8 w-full h-2 bg-zinc-200 bg-opacity-70;
+  @apply hidden mt-8 mb-8 w-full h-2 bg-zinc-600 bg-opacity-70;
 }
 
 .mobile-menu-list a {
-  @apply text-3xl font-bold;
+  @apply inline-block w-full text-zinc-200 text-3xl font-bold;
+}
+
+.mobile-menu-footer {
+  @apply flex justify-between items-center px-16 py-16 bg-wine-800;
 }

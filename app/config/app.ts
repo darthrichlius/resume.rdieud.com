@@ -1,4 +1,5 @@
 interface IAppConfig {
+  version: string;
   owner: {
     fullname: string;
     contact: {
@@ -10,6 +11,7 @@ interface IAppConfig {
 }
 
 const AppConfig: IAppConfig = {
+  version: "v0.1.0",
   owner: {
     fullname: "Richard Dieud",
     contact: {

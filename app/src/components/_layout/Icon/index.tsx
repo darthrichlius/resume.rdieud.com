@@ -8,7 +8,10 @@ import {
   FaSymfony as SymfonyLogo,
   FaGlobe as WebsiteLogo,
 } from "react-icons/fa";
-import { MdEmail as EmailLogo } from "react-icons/md";
+import {
+  MdEmail as EmailLogo,
+  MdLightMode as LightModeLogo,
+} from "react-icons/md";
 import { BiLogoTypescript as TypeScriptLogo } from "react-icons/bi";
 import { IoLogoFigma as FigmaLogo } from "react-icons/io5";
 import { TbBrandNextjs as NextJsLogo } from "react-icons/tb";
@@ -32,7 +35,8 @@ export type TRegisteredIcon =
   | "Email"
   | "Download"
   | "Website"
-  | "Github";
+  | "Github"
+  | "LightMode";
 
 const DataMap: Record<TRegisteredIcon, any> = {
   // STACK & TOOLS
@@ -48,6 +52,7 @@ const DataMap: Record<TRegisteredIcon, any> = {
   Download: DownloadLogo,
   Website: WebsiteLogo,
   Github: GithubLogo,
+  LightMode: LightModeLogo,
 };
 
 const Icon = ({ index, className }: Props) => {

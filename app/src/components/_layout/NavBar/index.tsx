@@ -1,11 +1,15 @@
 "use client";
 import { useState } from "react";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 import NextLink from "next/link";
+import { useRouter } from "next/navigation";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { RxHamburgerMenu as ClosedMobileMenuIcon } from "react-icons/rx";
 import { IoClose as OpenedMobileMenuIcon } from "react-icons/io5";
-import { Typography } from "@@src/components";
-import { useRouter } from "next/navigation";
+
+import { Icon, Typography } from "@@src/components";
+import AppConfig from "@@/config/app";
 
 interface IMenu {
   label: string;
@@ -22,7 +26,10 @@ const menus: IMenu[] = [
 
 const NavBar = () => {
   const router = useRouter();
+  const { width, height } = useWindowSize();
   const [showMobileMenu, toggleMobileMenu] = useState(false);
+  const [isConfettiActive, setConfettiActive] = useState(false);
+
   const handleMenuClick = (href?: string) => {
     router.push(href || "/");
     toggleMobileMenu(false);
@@ -32,21 +39,56 @@ const NavBar = () => {
     toggleMobileMenu(false);
   };
 
+  /**
+   * @todo Showcase a new Confetti with a different approach at each click
+   * It will requires to play with the options and drawShape()
+   */
+  const handleLightModeClick = () => {
+    setConfettiActive(true);
+    setTimeout(() => {
+      setConfettiActive(false);
+    }, 8000);
+  };
+
   return (
     <>
       <NavigationMenu.Root>
-        <NavigationMenu.List className="gap-32 hidden sm:flex">
+        <NavigationMenu.List className="gap-24 md:gap-32 hidden sm:flex">
           {menus.map((menu, i) => (
             <NavigationMenu.Item key={`menu-${i}`}>
               <NavigationMenu.Link
-                className="text-base md:text-xl"
+                className="text-sm md:text-base"
                 href={menu.href}
               >
-                {menu.label}
+                <Typography>{menu.label}</Typography>
               </NavigationMenu.Link>
             </NavigationMenu.Item>
           ))}
+          <div className="flex gap-24 border-l border-l-zinc-600 ml-16 pl-40">
+            <NextLink
+              className="text-zinc-600 hover:text-zinc-400"
+              href={AppConfig.owner.contact.github}
+              target="blank"
+            >
+              <Icon index="Github" />
+            </NextLink>
+            <NextLink
+              className="text-zinc-600 hover:text-zinc-400"
+              href={AppConfig.owner.contact.linkedin}
+              target="blank"
+            >
+              <Icon index="Linkedin" />
+            </NextLink>
+            <button
+              className="text-zinc-600 hover:text-zinc-400"
+              title="Turn on light mode"
+              onClick={handleLightModeClick}
+            >
+              <Icon index="LightMode" />
+            </button>
+          </div>
         </NavigationMenu.List>
+        {isConfettiActive && <Confetti width={width} height={height} />}
         <button onClick={() => toggleMobileMenu((s) => !s)} className="block">
           {showMobileMenu ? (
             <OpenedMobileMenuIcon className="w-32 h-32 sm:hidden" />
@@ -118,8 +160,29 @@ const MobileMenu = ({
             </div>
           ))}
         </menu>
-        <footer>
-          <Typography>Alpha v0.1.0</Typography>
+        <footer className="mobile-menu-footer">
+          <NextLink href="#" className="flex gap-8 items-baseline">
+            <Icon className="w-12 h-16 text-zinc-400" index="Download" />
+            <Typography className="text-zinc-400 font-bold">
+              Download CV
+            </Typography>
+          </NextLink>
+          <div className="flex gap-24 border-l border-l-zinc-600 ml-16 pl-40">
+            <NextLink
+              className="text-zinc-400 hover:text-zinc-400"
+              href={AppConfig.owner.contact.github}
+              target="blank"
+            >
+              <Icon index="Github" />
+            </NextLink>
+            <NextLink
+              className="text-zinc-400 hover:text-zinc-400"
+              href={AppConfig.owner.contact.linkedin}
+              target="blank"
+            >
+              <Icon index="Linkedin" />
+            </NextLink>
+          </div>
         </footer>
       </div>
     </section>
