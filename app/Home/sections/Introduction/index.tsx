@@ -35,7 +35,7 @@ const HomeIntroductionSection = () => {
           <Typography className="text-base sm:text-lg  md:text-2xl leading-7 sm:leading-10 tracking-wide text-zinc-400 [word-spacing:0.075em]">
             Blending <strong>curiosity</strong> 🧠, <strong>efficiency</strong>{" "}
             🗝️, and <strong>passion</strong> 🎨 to build
-            <br />
+            <br className="hidden sm:inline-block" />
             user-centric <strong>experiences</strong> and{" "}
             <strong>products</strong> that scale ✨
           </Typography>
