@@ -22,7 +22,7 @@ const HomeIntroductionSection = () => {
   return (
     <section
       id="introduction"
-      className="home-section home-section-h-max flex justify-center"
+      className="home-section flex justify-center"
     >
       <div className={"app-container flex flex-col justify-center"}>
         <div className="flex flex-col gap-40 md:gap-64 md:-mt-64">
