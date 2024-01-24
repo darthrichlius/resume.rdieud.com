@@ -3,7 +3,7 @@ import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 
-import { Icon } from "@@src/components";
+import { Icon, Typography } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
 import AppConfig from "@@/config/app";
 
@@ -32,15 +32,12 @@ const expertHighlight = [
   { icon: <Icon index="React" />, alt: "React" },
   { icon: <Icon index="NextJs" />, alt: "Next.Js" },
   { icon: <Icon index="Symfony" />, alt: "Symfony" },
-  { icon: <Icon index="NodeJs" />, alt: "NodeJs" },
+  { icon: <Icon index="NodeJs" />, alt: "Node.Js" },
 ];
 
 const HomePresentationSection = () => {
   return (
-    <section
-      id="presentation"
-      className="home-section home-section-h-max flex justify-center"
-    >
+    <section id="presentation" className="home-section flex justify-center">
       <div className={"app-container"}>
         <div className={"lg:flex lg:justify-between"}>
           <div className="w-full lg:max-w-lg">
@@ -58,25 +55,30 @@ const HomePresentationSection = () => {
             </h2>
           </div>
           <div className="w-full lg:max-w-lg mt-56 lg:mt-1">
-            <p className="text-zinc-400 text-lg leading-8 md:text-xl [word-spacing:0.1em] md:leading-10">
+            <Typography className="text-zinc-400 text-lg leading-8 md:text-xl [word-spacing:0.1em] md:leading-10">
               <strong>Senior fullstack web engineer</strong> and Product
               Manager, specialized in <strong>React</strong>,{" "}
               <strong>NodeJs</strong> & <strong>Symfony</strong> environments,
               with the experience and <strong>critical thinking</strong>{" "}
               mindset, to <strong>effectively</strong> think, plan, design,
-              test, ship, and manage digital{" "}
+              build, and manage digital{" "}
               <strong>systems throughout their cycles</strong>
-            </p>
-            <div className="grid grid-cols-2 gap-56 mt-48">
+            </Typography>
+            <div className="grid grid-cols-2 gap-56 justify-center mt-48">
               {contactLinks.map((link) => (
                 <NextLink
                   key={link.label}
-                  className="flex items-center gap-8 max-w-fit text-lg md:text-xl hover:text-wine-200"
+                  className="justify-self-center lg:justify-self-start hover:text-wine-200"
                   target="_blank"
                   href={link.href}
                 >
-                  <span>{link.icon}</span>
-                  {link.label}
+                  <Typography
+                    as="span"
+                    className="flex items-center gap-8 w-96 lg:w-fit lg:max-w-fit text-lg md:text-xl"
+                  >
+                    <span>{link.icon}</span>
+                    {link.label}
+                  </Typography>
                 </NextLink>
               ))}
             </div>
@@ -84,7 +86,11 @@ const HomePresentationSection = () => {
         </div>
         <div className="home-stack-highlight">
           {expertHighlight.map((stack) => (
-            <span key={stack.alt} title={stack.alt} className="w-64 h-64">
+            <span
+              key={stack.alt}
+              title={stack.alt}
+              className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64"
+            >
               {stack.icon}
             </span>
           ))}

@@ -1,9 +1,5 @@
 .home-section {
-  padding-top: 64px;
-}
-
-.home-section-h-max {
-  @apply h-[100vh] min-h-[425px] md:min-h-[calc(100vw-250px)] lg:min-h-0 max-h-[1024px];
+  @apply pt-64;
 }
 
 .home-section > header {
@@ -25,7 +21,7 @@
 }
 
 #introduction.home-section {
-  @apply pt-96 md:pt-128;
+  @apply h-[100vh] min-h-[425px] md:min-h-[calc(100vw-250px)] lg:min-h-0 max-h-[1024px] pt-96 md:pt-128;
 
   background-image: url("../images/bg/hero-bg.svg");
   background-position-x: 20%;
@@ -50,6 +46,10 @@
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#presentation.home-section {
+  @apply min-h-[100vh];
 }
 
 #resume h3 {
