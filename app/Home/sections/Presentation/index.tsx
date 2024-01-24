@@ -2,6 +2,7 @@
 import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
+import classnames from "classnames";
 
 import { Icon, Typography } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
@@ -37,12 +38,25 @@ const expertHighlight = [
 ];
 
 const HomePresentationSection = () => {
-  const { isLandScape } = useWindow();
+  const { isLandScape, isLgVertical, winHeight, winWidth } = useWindow();
+
+  console.debug(
+    "useWindow => ",
+    isLandScape,
+    isLgVertical,
+    winHeight,
+    winWidth
+  );
 
   return (
     <section
       id="presentation"
-      className={`home-section ${isLandScape ? "window-is-landscape" : ""}`}
+      // className={`home-section ${isLandScape ? "window-is-landscape" : ""}`}
+      className={classnames({
+        ["home-section"]: true,
+        ["window-is-landscape"]: isLandScape,
+        ["window-is-lg-vertical"]: isLgVertical,
+      })}
     >
       <div className={"app-container"}>
         <div className={"lg:flex lg:justify-between"}>

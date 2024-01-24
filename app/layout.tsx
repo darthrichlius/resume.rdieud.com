@@ -15,7 +15,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={"font-body"}>
         <Theme appearance="dark">
-          <WindowProvider breakpoint={1104}>
+          <WindowProvider
+            breakpoints={{
+              isLandScape: 1104,
+              isLgVertical: 1104,
+            }}
+          >
             <header className="flex justify-center fixed  bg-[#111113] z-40 w-full py-16 px-24 md:px-32 xl:px-1">
               <Header />
             </header>

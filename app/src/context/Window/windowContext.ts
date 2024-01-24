@@ -8,6 +8,7 @@ interface IWindowContext {
    * Only relevant for screens before a certain breakpoint
    */
   isLandScape: boolean;
+  isLgVertical: boolean;
   winWidth: number;
   winHeight: number;
 }

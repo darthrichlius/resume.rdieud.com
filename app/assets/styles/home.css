@@ -45,11 +45,11 @@
 }
 
 #presentation.home-section {
-  @apply flex justify-center h-[100%] min-h-[100vh] py-128 sm:py-0;
+  @apply flex justify-center h-[100%] min-h-[100vh] md:min-h-full pt-128 sm:pt-0;
 }
 
 #presentation.home-section.window-is-landscape {
-  @apply sm:py-72;
+  @apply pt-128;
 }
 
 #resume h3 {
