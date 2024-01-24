@@ -10,12 +10,20 @@
   @apply flex flex-col gap-24 px-16 py-32;
 }
 
+.mobile-menu-list-narrow-height {
+  @apply grid grid-cols-3 gap-24 px-16 py-32;
+}
+
 .mobile-menu-separator {
   @apply hidden mt-8 mb-8 w-full h-2 bg-zinc-600 bg-opacity-70;
 }
 
-.mobile-menu-list a {
+.mobile-menu-list-menu-link {
   @apply inline-block w-full text-zinc-200 text-3xl font-bold;
+}
+
+.mobile-menu-list-narrow-height .mobile-menu-list-menu-link {
+  @apply text-2xl;
 }
 
 .mobile-menu-footer {

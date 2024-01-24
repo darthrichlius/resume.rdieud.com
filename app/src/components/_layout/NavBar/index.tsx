@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import { useWindowSize } from "react-use";
+import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import NextLink from "next/link";
 import { useRouter } from "next/navigation";
@@ -10,6 +9,7 @@ import { IoClose as OpenedMobileMenuIcon } from "react-icons/io5";
 
 import { Icon, Typography } from "@@src/components";
 import AppConfig from "@@/config/app";
+import { useWindowResize } from "@/app/src/hooks";
 
 interface IMenu {
   label: string;
@@ -26,7 +26,10 @@ const menus: IMenu[] = [
 
 const NavBar = () => {
   const router = useRouter();
-  const { width, height } = useWindowSize();
+  const {
+    isResizing,
+    windowSize: { width: winWidth, height: winHeight },
+  } = useWindowResize();
   const [showMobileMenu, toggleMobileMenu] = useState(false);
   const [isConfettiActive, setConfettiActive] = useState(false);
 
@@ -49,6 +52,10 @@ const NavBar = () => {
       setConfettiActive(false);
     }, 8000);
   };
+
+  useEffect(() => {
+    toggleMobileMenu(false);
+  }, [isResizing]);
 
   return (
     <>
@@ -88,7 +95,7 @@ const NavBar = () => {
             </button>
           </div>
         </NavigationMenu.List>
-        {isConfettiActive && <Confetti width={width} height={height} />}
+        {isConfettiActive && <Confetti width={winWidth} height={winHeight} />}
         <button onClick={() => toggleMobileMenu((s) => !s)} className="block">
           {showMobileMenu ? (
             <OpenedMobileMenuIcon className="w-32 h-32 sm:hidden" />
@@ -118,6 +125,10 @@ const MobileMenu = ({
   handleClose: () => void;
   handleMenuClick: (href?: string) => void;
 }) => {
+  const {
+    windowSize: { height: winHeight },
+  } = useWindowResize();
+
   const onMenuClick = (e: any, href?: string) => {
     e.preventDefault();
     e.stopPropagation();
@@ -146,14 +157,30 @@ const MobileMenu = ({
         onClick={(e) => onFalsyLayoutClick(e)}
         className="mobile-menu-container"
       >
-        <menu className="mobile-menu-list">
-          <NextLink key={"home"} onClick={(e) => onMenuClick(e)} href="">
+        <menu
+          className={`${
+            // 400 is arbitrary, comes from the max heigh space that uses the mobile-menu
+            winHeight < 400
+              ? "mobile-menu-list-narrow-height"
+              : "mobile-menu-list"
+          }`}
+        >
+          <NextLink
+            key={"home"}
+            className="mobile-menu-list-menu-link"
+            onClick={(e) => onMenuClick(e)}
+            href=""
+          >
             <Typography as="span">Home</Typography>
           </NextLink>
           <div className="mobile-menu-separator" />
           {menus.map((menu, i) => (
             <div key={`mobile-menu-${i}`}>
-              <NextLink onClick={(e) => onMenuClick(e, menu.href)} href={""}>
+              <NextLink
+                className="mobile-menu-list-menu-link"
+                onClick={(e) => onMenuClick(e, menu.href)}
+                href={""}
+              >
                 <Typography as="span">{menu.label}</Typography>
               </NextLink>
               <div className="mobile-menu-separator" />
