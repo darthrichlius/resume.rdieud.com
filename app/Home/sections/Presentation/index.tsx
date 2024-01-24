@@ -6,6 +6,7 @@ import NextImage from "next/image";
 import { Icon, Typography } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
 import AppConfig from "@@/config/app";
+import { useWindow } from "@@src/context";
 
 const contactLinks = [
   {
@@ -36,8 +37,13 @@ const expertHighlight = [
 ];
 
 const HomePresentationSection = () => {
+  const { isLandScape } = useWindow();
+
   return (
-    <section id="presentation" className="home-section flex justify-center">
+    <section
+      id="presentation"
+      className={`home-section ${isLandScape ? "window-is-landscape" : ""}`}
+    >
       <div className={"app-container"}>
         <div className={"lg:flex lg:justify-between"}>
           <div className="w-full lg:max-w-lg">

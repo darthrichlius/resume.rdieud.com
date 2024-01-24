@@ -30,7 +30,11 @@ const useWindowResize = (debouncedDelay: number = 200) => {
 
   useEffect(() => {
     if (typeof window === "undefined") {
-      return; // Skip if running in a non-browser environment
+      /**
+       * Skip if running in a non-browser environment
+       * It is also useful for specific case where the code is pre-run on on-browser environment
+       */
+      return;
     }
 
     window.addEventListener("resize", handleResize);
