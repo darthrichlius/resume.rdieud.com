@@ -1,5 +1,5 @@
 .home-section > header {
-  @apply flex items-center justify-center shrink-0 w-full min-h-176 md:h-256  bg-wine-200 font-display text-6xl uppercase md:text-9xl lg:text-[192px];
+  @apply flex items-center justify-center shrink-0 w-full min-h-176 md:h-256 mt-192 mb-192 bg-wine-200 font-display text-6xl uppercase md:text-9xl lg:text-[192px];
 }
 
 .home-section-wordked-for {
