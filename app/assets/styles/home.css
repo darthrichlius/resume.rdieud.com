@@ -17,7 +17,7 @@
 }
 
 #introduction.home-section {
-  @apply h-[100vh] min-h-[425px] md:min-h-[calc(100vw-250px)] lg:min-h-0 max-h-[1024px] pt-96 md:pt-128;
+  @apply flex justify-center h-[100vh] min-h-[425px] md:min-h-[calc(100vw-250px)] lg:min-h-0 max-h-[1024px] pt-96 md:pt-128;
 
   background-image: url("../images/bg/hero-bg.svg");
   background-position-x: 20%;
@@ -49,6 +49,14 @@
 }
 
 #presentation.home-section.window-is-landscape {
+  @apply pt-128;
+}
+
+#references.home-section {
+  @apply flex justify-center pt-176;
+}
+
+#references.home-section.window-is-landscape {
   @apply pt-128;
 }
 

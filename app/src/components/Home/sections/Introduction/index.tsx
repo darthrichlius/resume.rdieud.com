@@ -20,12 +20,9 @@ const HomeIntroductionSection = () => {
   const companies = useCompanies();
 
   return (
-    <section
-      id="introduction"
-      className="home-section flex justify-center"
-    >
+    <section id="introduction" className="home-section">
       <div className={"app-container flex flex-col justify-center"}>
-        <div className="flex flex-col gap-40 md:gap-64 md:-mt-64">
+        <div className="flex flex-col gap-24 2xs:gap-40 md:gap-64 md:-mt-64">
           <div>
             <h1 className="title-display">Richard Dieud</h1>
             <p className="text-wine-200 text-4xl font-bold mt-24 md:text-5xl md:mt-8">

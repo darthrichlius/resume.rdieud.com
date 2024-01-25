@@ -5,6 +5,7 @@ import { Header, Footer } from "@@src/components";
 import "@radix-ui/themes/styles.css";
 import "@@/assets/styles/globals.css";
 import { WindowProvider } from "@@src/context";
+import { appExtendedThemeParams } from "@@/config/params";
 
 export default function RootLayout({
   children,
@@ -17,8 +18,8 @@ export default function RootLayout({
         <Theme appearance="dark">
           <WindowProvider
             breakpoints={{
-              isLandScape: 1104,
-              isLgVertical: 1104,
+              isLandScape: parseInt(appExtendedThemeParams.screens.lg),
+              isLgVertical: parseInt(appExtendedThemeParams.screens.lg),
             }}
           >
             <header className="flex justify-center fixed  bg-[#111113] z-40 w-full py-16 px-24 md:px-32 xl:px-1">

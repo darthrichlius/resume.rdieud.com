@@ -5,8 +5,11 @@ import defaultTheme from "tailwindcss/defaultTheme";
  */
 export const appExtendedThemeParams = {
   screens: {
-    "2xs": "320px",
-    // => @media (min-width: 320px) { ... }
+    /**
+     * Adding `1px` helps making the mobile-first `max-width`
+     */
+    "2xs": "321px",
+    // => @media (min-width: 321px) { ... }
     xs: "475px",
     // => @media (min-width: 475px) { ... }
     sm: defaultTheme.screens.sm,
