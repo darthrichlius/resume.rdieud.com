@@ -52,7 +52,7 @@ const HomeIntroductionSection = () => {
                 >
                   <HoverCard.Root openDelay={200}>
                     <HoverCard.Trigger>
-                      <NextLink href={item.href}>{item.label}</NextLink>
+                      <NextLink href={"#resume"}>{item.label}</NextLink>
                     </HoverCard.Trigger>
                     <HoverCard.Content className="w-288 text-sm">
                       <Typography className="">
@@ -62,7 +62,7 @@ const HomeIntroductionSection = () => {
                         <RightIcon className="w-12" />
                         <NextLink
                           className="hover:text-wine-100"
-                          href={item.href}
+                          href={"#resume"}
                         >
                           View my experience
                         </NextLink>
