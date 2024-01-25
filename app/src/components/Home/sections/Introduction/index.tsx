@@ -29,7 +29,8 @@ const HomeIntroductionSection = () => {
               Software Engineer & Product Manager
             </p>
           </div>
-          <Typography className="text-base sm:text-lg  md:text-2xl leading-7 sm:leading-10 tracking-wide text-zinc-400 [word-spacing:0.075em]">
+          {/* `md:leading-10` is necessary because `md:text-2xl` includes a `line-height` directive, which was overwriting ours due to its higher specificity. */}
+          <Typography className="text-base sm:text-lg  md:text-2xl leading-7 sm:leading-10 md:leading-10 tracking-wide text-zinc-400 [word-spacing:0.075em]">
             Blending <strong>curiosity</strong> 🧠, <strong>efficiency</strong>{" "}
             🗝️, and <strong>passion</strong> 🎨 to build
             <br className="hidden sm:inline-block" />
