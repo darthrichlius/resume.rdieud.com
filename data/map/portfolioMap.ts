@@ -1,4 +1,4 @@
-import { IProject } from "@@/Home/sections/Portfolio";
+import { IProject } from "@/app/src/components/Home/sections/Portfolio";
 
 /**
  * A lazy way to keep the data while not displaying it .....

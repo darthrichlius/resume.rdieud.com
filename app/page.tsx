@@ -5,7 +5,7 @@ import {
   HomeReferencesSection,
   HomeResumeSection,
   HomePortfolioSection,
-} from "@@/Home";
+} from "@@src/components/Home";
 
 export const metadata: Metadata = {
   title:

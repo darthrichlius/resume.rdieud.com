@@ -1,5 +1,5 @@
 import React from "react";
-import { CertificationCard } from "../_/";
+import { CertificationCard } from "../_";
 import CertificationsMap from "@/data/map/certificationsMap";
 
 const ResumeCertifications = () => {

@@ -37,9 +37,16 @@ const HomePortfolioSection = () => {
       </header>
       <div className="app-container flex justify-center">
         <div className="flex flex-col gap-96">
+          I love bla bla Featured POC, ..
           {portfolioMap.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
+          <h3>Archived</h3>
+          <ul>
+            <li>Trenqr</li>
+            <li>Esteban</li>
+            <li>LaTaniere</li>
+          </ul>
         </div>
       </div>
     </HomeSectionLayout>

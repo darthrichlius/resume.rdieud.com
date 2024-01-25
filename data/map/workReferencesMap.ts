@@ -1,4 +1,4 @@
-import { IWorkReference } from "@@/Home/sections/References/_/WorkReferenceCard";
+import { IWorkReference } from "@@src/components/Home/sections/References/_/WorkReferenceCard";
 
 import JamelProfilePic from "@@/assets/images/people/jamel.jpeg";
 import OmarProfilePic from "@@/assets/images/people/omar.jpeg";
