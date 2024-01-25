@@ -24,7 +24,7 @@ const WindowProvider = ({ breakpoints, children }: Props) => {
    * as we'll be primarily focusing on wide screens.
    */
   const isLgVertical =
-    winWidth < breakpoints.isLgVertical && winHeight >= winWidth * (4 / 3);
+    winWidth >= breakpoints.isLgVertical && winHeight >= winWidth * (4 / 3);
 
   return (
     <WindowContext.Provider

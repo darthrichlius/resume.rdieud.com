@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 import defaultColors from "tailwindcss/colors";
 
+import { appExtendedThemeParams } from "./app/config/params";
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -77,11 +79,13 @@ const config: Config = {
       "448": "448px",
       "512": "512px",
     },
-    extend: {
-      screens: {
-        lg: "1104px",
-        // => @media (min-width: 1104px) { ... }
-      },
+    screens: {
+      /**
+       * As our screens contain small breakpoints below `sm`, we can't use `extend`.
+       * Additionally, we don't use `defaultTheme.screens` as our screen definition parameters already take into account the Tailwind defaults.
+       */
+
+      ...appExtendedThemeParams.screens,
     },
   },
   plugins: [],
