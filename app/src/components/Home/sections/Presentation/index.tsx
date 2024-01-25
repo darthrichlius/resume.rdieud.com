@@ -38,20 +38,11 @@ const expertHighlight = [
 ];
 
 const HomePresentationSection = () => {
-  const { isLandScape, isLgVertical, winHeight, winWidth } = useWindow();
-
-  console.debug(
-    "useWindow => ",
-    isLandScape,
-    isLgVertical,
-    winHeight,
-    winWidth
-  );
+  const { isLandScape, isLgVertical } = useWindow();
 
   return (
     <section
       id="presentation"
-      // className={`home-section ${isLandScape ? "window-is-landscape" : ""}`}
       className={classnames({
         ["home-section"]: true,
         ["window-is-landscape"]: isLandScape,
