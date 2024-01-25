@@ -53,7 +53,7 @@
 }
 
 #references.home-section {
-  @apply flex justify-center pt-176;
+  @apply flex justify-center pt-192;
 }
 
 #references.home-section.window-is-landscape {
