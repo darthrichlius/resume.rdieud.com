@@ -5,6 +5,7 @@ import NextImage from "next/image";
 import {
   FaChevronRight as RightIcon,
   FaChevronUp as UpIcon,
+  FaChevronDown as DownIcon,
 } from "react-icons/fa";
 
 import { Typography } from "@@src/components";
@@ -25,6 +26,7 @@ const JobExperienceCard = ({
   };
 }) => {
   const [showAboutCompany, toggleAboutCompany] = useState(false);
+  const [showFullDescription, toggleFullDescription] = useState(false);
   const company = useCompany(experience.company);
 
   let disabledOptions: TDeactivable = [];
@@ -52,14 +54,14 @@ const JobExperienceCard = ({
         {!options?.disabled.includes("avatar") && logo}
         <div>
           {experience.contract?.position && (
-            <Typography className="font-bold">
+            <Typography className="font-bold text-lg">
               {experience.contract?.position}
             </Typography>
           )}
           {(company?.name || experience.contract?.type) && (
             <Typography className="text-sm">
               {company?.name && <span>{company?.name}</span>}
-              {company?.name && experience.contract?.type && <span>·</span>}
+              {company?.name && experience.contract?.type && <span> · </span>}
               {experience.contract?.type && (
                 <span>{experience.contract?.type}</span>
               )}
@@ -87,7 +89,7 @@ const JobExperienceCard = ({
         }`}
       >
         {company?.description && !options?.disabled.includes("company") && (
-          <div className="p-12 rounded bg-zinc-300 text-sm">
+          <div className="border-b border-b-zinc-300 py-12 text-sm">
             <div className="flex justify-between">
               <Typography className="font-bold">About the company</Typography>
               <button
@@ -113,12 +115,50 @@ const JobExperienceCard = ({
         )}
 
         {experience.description && (
-          <div
-            className="job-experience-card-experience-description"
-            dangerouslySetInnerHTML={{
-              __html: experience.description,
-            }}
-          />
+          <>
+            {experience.description?.display && (
+              <div
+                className="job-experience-card-experience-description mt-32"
+                dangerouslySetInnerHTML={{
+                  __html: experience.description.display,
+                }}
+              />
+            )}
+            {experience.description?.complement && showFullDescription && (
+              <div
+                className="job-experience-card-experience-description mt-12"
+                dangerouslySetInnerHTML={{
+                  __html: experience.description.complement,
+                }}
+              />
+            )}
+            {experience.description?.complement && (
+              <div className="flex justify-start mt-8 pb-12">
+                <button
+                  className="flex shrink-0 gap-8 py-4 text-zinc-500 hover:text-zinc-800 text-sm font-bold leading-4"
+                  onClick={() => toggleFullDescription((s) => !s)}
+                >
+                  <Typography as="span">
+                    {showFullDescription ? "— Less" : "— Read More"}
+                  </Typography>
+                  {showFullDescription ? (
+                    <UpIcon className="w-12" />
+                  ) : (
+                    <DownIcon className="w-8" />
+                  )}
+                </button>
+              </div>
+            )}
+
+            {experience.description?.footer && (
+              <div
+                className="job-experience-card-experience-description pt-12 text-zinc-500 mt-8"
+                dangerouslySetInnerHTML={{
+                  __html: experience.description.footer,
+                }}
+              />
+            )}
+          </>
         )}
         <div className=" border-l border-l-zinc-400 pl-20 md:border-l-0 md:p-1">
           {experience.children?.map((child, i) => (

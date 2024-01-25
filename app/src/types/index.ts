@@ -55,7 +55,11 @@ export interface IExperience {
    * Represents the company ID
    */
   company: string;
-  description?: string;
+  description?: {
+        display?: string;
+        complement?: string;
+        footer?: string;
+      };
   children?: IExperience[];
   group?: (TExperienceYear | EExperiencePosition)[];
 }

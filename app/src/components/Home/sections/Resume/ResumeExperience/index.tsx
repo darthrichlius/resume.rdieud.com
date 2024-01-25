@@ -19,20 +19,22 @@ const ResumeExperience = () => {
 
   return (
     <div>
-      <article className="p-24 bg-zinc-900">
+      <article>
         <header>
-          <h3>Experience</h3>
-          <div className="mt-32 text-zinc-500 md:text-sm">
-            <Typography>
-              As part of my <strong>8+ years of work experience</strong>, I had
-              the opportunity to work as a <strong>developer (6+ years)</strong>
-              , <strong>product manager (4+ years)</strong>, but also as the{" "}
-              <strong>Chief Product & Technical Officer (4 years)</strong> at my
-              own company.
+          <h3 className="section-title-h3">Experience</h3>
+          <div className="mt-64 text-zinc-400 md:text-xl">
+            <Typography className="leading-10">
+              In my <strong>8+ years of work experience</strong>, I served as a{" "}
+              <strong>developer (6+ years)</strong>,{" "}
+              <strong>product manager (4+ years)</strong>, and{" "}
+              <strong>Entrepreneur /</strong>{" "}
+              <strong>Chief Product & Technical Officer (4 years)</strong>.
             </Typography>
-            <Typography className="mt-16 md:mt-8">
-              On a few occasions, some of these professional experiences took
-              place <u>within the same company</u> or <u>concomitantly</u>.
+            <Typography className="leading-10">
+              Additionally, <span className="text-wine-200">several</span> of
+              these roles occurred{" "}
+              <span className="text-wine-200">within the same company</span> or{" "}
+              <span className="text-wine-200">concurrently</span>.
             </Typography>
           </div>
         </header>
@@ -54,16 +56,16 @@ const ResumeExperience = () => {
             unfolded
           </Typography>
         </aside>
-        <div className="flex flex-col gap-32 px-32 py-32">
+        <div className="flex flex-col gap-40 px-32 py-32">
           {experiences.map((exp, i) => (
             <JobExperienceCard key={i} experience={exp} />
           ))}
         </div>
       </article>
-      <div className="">
+      <div>
         <button
           onClick={() => toggleWorkExperience((s) => !s)}
-          className="flex flex-col items-center justify-center h-56 w-full rounded-b-lg text-lg font-bold hover:bg-zinc-800"
+          className="flex flex-col items-center justify-center h-56 w-full rounded-b-lg pt-8 text-lg font-bold hover:bg-zinc-800"
         >
           <Typography as="span">
             {expandWorkExperience ? "Show Less" : "Show all experiences"}

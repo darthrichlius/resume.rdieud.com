@@ -2,6 +2,10 @@
   @apply flex items-center justify-center shrink-0 w-full min-h-176 md:h-256 mt-192 mb-192 bg-wine-200 font-display text-6xl uppercase md:text-9xl lg:text-[192px];
 }
 
+.section-title-h3 {
+  @apply text-6xl font-bold;
+}
+
 .home-section-wordked-for {
   @apply border-r border-r-zinc-400 pr-24 sm:pr-36 sm:mr-8 text-base md:text-xl font-bold;
   word-spacing: 0.085em;
@@ -60,12 +64,8 @@
   @apply pt-128;
 }
 
-#resume h3 {
-  @apply text-3xl font-bold;
-}
-
 #resume .experience-grid {
-  @apply flex flex-col gap-24 mt-48 md:flex-row;
+  @apply flex flex-col md:flex-row gap-24 mt-64 p-24 bg-zinc-900;
 }
 
 #resume .experience-grid-group-card {
@@ -93,7 +93,7 @@
 }
 
 #resume .experience-grid-group-list-item-sub {
-  @apply flex flex-col gap-16 md:gap-24 border-l border-l-zinc-400 mt-24 ml-16 pl-24;
+  @apply flex flex-col gap-16 md:gap-24 border-l-4 border-l-zinc-700 mt-24 ml-16 pl-24;
 }
 
 #resume .experience-grid-group-list-item-sub p {
@@ -105,7 +105,7 @@
 }
 
 #resume .job-experience-card-experience-description {
-  @apply mt-24 app-typography text-sm;
+  @apply app-typography text-sm;
 }
 
 #resume .job-experience-card-experience-description p:not(:first-child) {
