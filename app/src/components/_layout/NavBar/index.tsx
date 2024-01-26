@@ -125,6 +125,7 @@ const MobileMenu = ({
   handleClose: () => void;
   handleMenuClick: (href?: string) => void;
 }) => {
+  const [height, setHeight] = useState(0);
   const {
     windowSize: { height: winHeight },
   } = useWindowResize();
@@ -148,6 +149,19 @@ const MobileMenu = ({
     e.stopPropagation();
   };
 
+  useEffect(() => {
+    // Client-specific logic
+    /**
+     * Necessary to avoid a mismatch error where the server rendering doesn't match the client rendering.
+     * This discrepancy is due to the fact that useWindowResize() only works properly on the client side.
+     * However, the pages are statically rendered.
+     * One solution could have been to force client rendering or SSR.
+     * However, the solution of using useEffect() is another approach.
+     */
+
+    setHeight(winHeight);
+  }, [winHeight]);
+
   return (
     <section
       className={`${open ? "" : "hidden"} mobile-menu`}
@@ -159,10 +173,7 @@ const MobileMenu = ({
       >
         <menu
           className={`${
-            // 400 is arbitrary, comes from the max heigh space that uses the mobile-menu
-            winHeight < 400
-              ? "mobile-menu-list-narrow-height"
-              : "mobile-menu-list"
+            height < 400 ? "mobile-menu-list-narrow-height" : "mobile-menu-list"
           }`}
         >
           <NextLink
