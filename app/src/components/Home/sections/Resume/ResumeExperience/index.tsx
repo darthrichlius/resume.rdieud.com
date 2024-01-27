@@ -9,9 +9,37 @@ import { Typography } from "@@src/components";
 import { ExperienceListGroupCard, JobExperienceCard } from "../_";
 import experienceSummaryMap from "@/data/map/experienceSummaryMap";
 import experienceMap from "@/data/map/experienceMap";
+import { useRouter } from "next/navigation";
 
 const ResumeExperience = () => {
   const [expandWorkExperience, toggleWorkExperience] = useState(false);
+
+  /***
+   * ! IMPORTANT
+   * We didn't use useRef + `ref.current.scrollIntoView()` as we didn't succeed in working out the offset.
+   */
+  const handleToggleExperience = () => {
+    const yOffset = -100; // Empirical value
+    if (expandWorkExperience) {
+      const targetElement = document.getElementById("resume-experience");
+
+      if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const offset = rect.top + window.scrollY + yOffset;
+
+        window.scrollTo({
+          top: offset,
+          behavior: "smooth",
+        });
+
+        // Add a delay before adjusting the scroll position
+        setTimeout(() => {
+          window.scrollBy(0, yOffset);
+          toggleWorkExperience((s) => !s);
+        }, 350);
+      }
+    } else toggleWorkExperience((s) => !s);
+  };
 
   const experiences = expandWorkExperience
     ? experienceMap
@@ -48,7 +76,10 @@ const ResumeExperience = () => {
           ))}
         </div>
       </article>
-      <article className="flex bg-zinc-200 text-zinc-950">
+      <article
+        id="resume-experience"
+        className="flex bg-zinc-200 text-zinc-950"
+      >
         <aside className="hidden bg-zinc-400 px-16 py-32 md:block md:w-176 md:grow md:shrink-0 lg:w-192">
           <Typography className="font-bold">Chronological</Typography>
           <Typography className="mt-8 text-sm text-zinc-600">
@@ -64,7 +95,7 @@ const ResumeExperience = () => {
       </article>
       <div>
         <button
-          onClick={() => toggleWorkExperience((s) => !s)}
+          onClick={() => handleToggleExperience()}
           className="flex flex-col items-center justify-center h-56 w-full rounded-b-lg pt-8 text-lg font-bold hover:bg-zinc-800"
         >
           <Typography as="span">

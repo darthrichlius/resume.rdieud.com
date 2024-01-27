@@ -144,9 +144,9 @@ const JobExperienceCard = ({
                     {showFullDescription ? "— Less" : "— Read More"}
                   </Typography>
                   {showFullDescription ? (
-                    <UpIcon className="w-10" />
+                    <UpIcon className="w-12" />
                   ) : (
-                    <DownIcon className="w-10" />
+                    <DownIcon className="w-12" />
                   )}
                 </button>
               </div>
