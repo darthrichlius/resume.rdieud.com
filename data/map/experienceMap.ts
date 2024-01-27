@@ -29,7 +29,7 @@ const experienceMap: IExperience[] = [
         <p>After a 2-year professional break in the context of the COVID-19 pandemic and a private event, I re-entered the professional arena as a Product Owner for Universign, driven by my curiosity around crypto technologies.</p>
       `,
       complement: `
-      <p>I was part of a product team composed of 3 other POs (1 permanent and 2 contractual) and a Product Lead. My daily routine involved project meetings, workshops, follow-ups with designers, testing, backlog management, and backlog grooming with tech leads, as well as competitive analysis.</p>
+        <p>I was part of a product team composed of 3 other POs (1 permanent and 2 contractual) and a Product Lead. My daily routine involved project meetings, workshops, follow-ups with designers, testing, backlog management, and backlog grooming with tech leads, as well as competitive analysis.</p>
         <p>My scope <b>covered both the web application and the mobile application</b>. In contrast to the web scope, I was the sole Product Owner for a mobile team of 4.</p>
         <p>
           - <b>Discovery</b>: Competitive Analysis
@@ -64,8 +64,8 @@ const experienceMap: IExperience[] = [
         <p>Worked on the development of a <b>SaaS solution</b> specifically designed for retailers <b>transitioning to an omnichannel sales strategy</b>. One of the key features was the creation of a smart and versatile catalog importer, addressing a significant barrier in the transition process.</p>
       `,
       complement: `
-      <p>The solution facilitates digital transformation, enhances stock management, and streamlines orders through a ready-to-use online omnichannel platform. A major achievement has been assisting several retailers in sustaining their operations and staying competitive. Consequently, our solution played a pivotal role in <b>increasing the revenue of several brands by 10 to 15%</b>.</p>
-      <p>In addition to my role as a Product Manager, I contributed to improving the company's workflow by implementing a customized Scrum methodology, resulting in faster and more effective delivery.</p>
+        <p>The solution facilitates digital transformation, enhances stock management, and streamlines orders through a ready-to-use online omnichannel platform. A major achievement has been assisting several retailers in sustaining their operations and staying competitive. Consequently, our solution played a pivotal role in <b>increasing the revenue of several brands by 10 to 15%</b>.</p>
+        <p>In addition to my role as a Product Manager, I contributed to improving the company's workflow by implementing a customized Scrum methodology, resulting in faster and more effective delivery.</p>
       `,
     },
     company: "wishibam",
@@ -199,12 +199,12 @@ const experienceMap: IExperience[] = [
         <p>Unfortunately, we missed the market momentum, and the final product did not align with current trends and the intense competition from our rivals. Consequently, the platform was closed one year later, although it did manage to activate a little more than a <b>thousand user accounts</b>.</p>
       `,
       footer: `
-      <p>
-        <b>Scope</b>: Project Management · Product Management · Team Management
-      </p>
-      <p>
-        <b>Stack</b>: PHP · Javascript · jQuery · HTML 5 · MySQL · Unit Testing · Tortoise SVN
-      </p>
+        <p>
+          <b>Scope</b>: Project Management · Product Management · Team Management
+        </p>
+        <p>
+          <b>Stack</b>: PHP · Javascript · jQuery · HTML 5 · MySQL · Unit Testing · Tortoise SVN
+        </p>
       `,
     },
     company: "deuslynn",

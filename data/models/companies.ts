@@ -122,6 +122,7 @@ const CompaniesStatic: ICompanyModel[] = [
   {
     id: "alstom",
     name: "Alstom Transport",
+    shortName: "Alstom",
     description: {
       display:
         "A leading French company specializing in designing and building trains, renowned for its iconic French TGV",
@@ -137,7 +138,7 @@ const CompaniesStatic: ICompanyModel[] = [
   },
   {
     id: "scrum_org",
-    name: "Scrum.Org",
+    name: "Scrum.org",
     logo: ScrumLogo,
   },
   {

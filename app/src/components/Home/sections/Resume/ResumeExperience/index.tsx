@@ -22,8 +22,8 @@ const ResumeExperience = () => {
       <article>
         <header>
           <h3 className="section-title-h3">Experience</h3>
-          <div className="mt-64 text-zinc-400 md:text-xl">
-            <Typography className="leading-10">
+          <div className="mt-56 md:mt-64 text-zinc-400 md:text-xl">
+            <Typography className="leading-8 md:leading-10">
               In my <strong>8+ years of work experience</strong>, I served as a{" "}
               <strong>developer (6+ years)</strong>,{" "}
               <strong>product manager (4+ years)</strong>, and{" "}

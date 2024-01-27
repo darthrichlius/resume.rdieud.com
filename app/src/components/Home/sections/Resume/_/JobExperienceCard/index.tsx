@@ -90,19 +90,21 @@ const JobExperienceCard = ({
       >
         {company?.description && !options?.disabled.includes("company") && (
           <div className="border-b border-b-zinc-300 py-12 text-sm">
-            <div className="flex justify-between">
-              <Typography className="font-bold">About the company</Typography>
+            <div className="flex justify-between items-start">
+              <Typography className="text-xs xs:text-sm font-bold">
+                About the company
+              </Typography>
               <button
-                className="flex shrink-0 gap-8 py-4 px-8 rounded leading-4 hover:bg-zinc-300 "
+                className="flex items-center shrink-0 gap-8 px-8 rounded leading-4 hover:bg-zinc-300 "
                 onClick={() => toggleAboutCompany((s) => !s)}
               >
-                <Typography as="span">
+                <Typography as="span" className="text-xs xs:text-sm ">
                   {showAboutCompany ? "Hide" : "Learn more"}
                 </Typography>
                 {showAboutCompany ? (
                   <UpIcon className="w-12" />
                 ) : (
-                  <RightIcon className="w-8" />
+                  <RightIcon className="h-10 sm:h-10 w-8" />
                 )}
               </button>
             </div>
@@ -142,9 +144,9 @@ const JobExperienceCard = ({
                     {showFullDescription ? "— Less" : "— Read More"}
                   </Typography>
                   {showFullDescription ? (
-                    <UpIcon className="w-12" />
+                    <UpIcon className="w-10" />
                   ) : (
-                    <DownIcon className="w-8" />
+                    <DownIcon className="w-10" />
                   )}
                 </button>
               </div>

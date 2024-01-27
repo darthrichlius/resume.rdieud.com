@@ -30,10 +30,15 @@ const ExperienceListItem = ({ experience }: { experience: IExperience }) => {
       <div className="experience-grid-group-list-item-main">
         <Typography>{company!.shortName || company!.name}</Typography>
         {(experience.contract!.location || experience.contract!.refYear) && (
-          <Typography>
-            - {experience.contract!.location}
-            {experience.contract!.refYear &&
-              `, ${experience.contract!.refYear}`}
+          <Typography className="text-sm">
+            -{" "}
+            <span className="sm:hidden md:inline">
+              {experience.contract!.location}
+            </span>
+            {experience.contract!.location && (
+              <span className="sm:hidden md:inline">, </span>
+            )}
+            {experience.contract!.refYear && experience.contract!.refYear}
           </Typography>
         )}
       </div>
