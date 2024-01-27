@@ -4,7 +4,7 @@ import CertificationsMap from "@/data/map/certificationsMap";
 
 const ResumeCertifications = () => {
   return (
-    <article className="mt-96">
+    <article id="resume-certification">
       <header>
         <h3 className="section-title-h3">Certifications</h3>
       </header>

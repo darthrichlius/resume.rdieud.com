@@ -46,7 +46,7 @@ const ResumeExperience = () => {
     : experienceMap.slice(0, 2);
 
   return (
-    <div>
+    <div id="resume-experience">
       <article>
         <header>
           <h3 className="section-title-h3">Experience</h3>
@@ -76,10 +76,7 @@ const ResumeExperience = () => {
           ))}
         </div>
       </article>
-      <article
-        id="resume-experience"
-        className="flex bg-zinc-200 text-zinc-950"
-      >
+      <article className="flex bg-zinc-200 text-zinc-950">
         <aside className="hidden bg-zinc-400 px-16 py-32 md:block md:w-176 md:grow md:shrink-0 lg:w-192">
           <Typography className="font-bold">Chronological</Typography>
           <Typography className="mt-8 text-sm text-zinc-600">

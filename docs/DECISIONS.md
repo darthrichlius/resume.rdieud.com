@@ -69,3 +69,12 @@ Finally, it serves as a complement to the `CHANGELOG.md` by offering a more **ex
 - The component uses data to **RENDER** following the paradigm outlined in the Map, focusing on the Look & Feel.
 - This approach aligns with what is commonly referred to as **"Object Mapping."**
 - Yes, I understand that "Model" may introduce confusion if you think in terms of `MVC`, but take a breath and cut me some slack :)
+
+### Why not dynamically importing icons?
+
+- The approach was considered but not deemed relevant.
+- Importing each file has advantages that reduce errors:
+  - We can be sure the files exist.
+  - We avoid any situations related to server rendering.
+  - Next Image works better and seamlessly when files are imported.
+- This is not a definitive approach; it is the one that binds the current context.

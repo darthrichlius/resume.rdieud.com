@@ -111,3 +111,22 @@
 #resume .job-experience-card-experience-description p:not(:first-child) {
   @apply mt-12;
 }
+
+#resume-skills .resume-skills-groups {
+  @apply flex flex-col gap-64 mt-64;
+}
+
+#resume-skills .resume-skills-group {
+  @apply flex flex-col gap-32;
+}
+
+#resume-skills .resume-skills-group h4 {
+  @apply app-typography text-zinc-400 text-2xl font-bold;
+}
+
+#resume-skills .resume-skills-line {
+  @apply flex flex-wrap gap-20;
+}
+#resume-skills .resume-skills-line-item {
+  @apply inline-block w-48 md:w-56;
+}
