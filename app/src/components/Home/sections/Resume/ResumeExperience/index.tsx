@@ -9,7 +9,6 @@ import { Typography } from "@@src/components";
 import { ExperienceListGroupCard, JobExperienceCard } from "../_";
 import experienceSummaryMap from "@/data/map/experienceSummaryMap";
 import experienceMap from "@/data/map/experienceMap";
-import { useRouter } from "next/navigation";
 
 const ResumeExperience = () => {
   const [expandWorkExperience, toggleWorkExperience] = useState(false);
@@ -19,9 +18,9 @@ const ResumeExperience = () => {
    * We didn't use useRef + `ref.current.scrollIntoView()` as we didn't succeed in working out the offset.
    */
   const handleToggleExperience = () => {
-    const yOffset = -100; // Empirical value
+    const yOffset = -70; // Empirical value
     if (expandWorkExperience) {
-      const targetElement = document.getElementById("resume-experience");
+      const targetElement = document.getElementById("resume-experience-list");
 
       if (targetElement) {
         const rect = targetElement.getBoundingClientRect();
@@ -84,7 +83,10 @@ const ResumeExperience = () => {
             unfolded
           </Typography>
         </aside>
-        <div className="flex flex-col gap-40 px-32 py-32">
+        <div
+          id="resume-experience-list"
+          className="flex flex-col gap-40 px-32 py-32"
+        >
           {experiences.map((exp, i) => (
             <JobExperienceCard key={i} experience={exp} />
           ))}

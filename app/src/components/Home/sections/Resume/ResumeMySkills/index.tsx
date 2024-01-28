@@ -13,10 +13,10 @@ const ResumeMySkills = () => {
           <h4>Frontend</h4>
           <div className="resume-skills-line">
             {[
+              "typescript",
               "react",
               "vite",
               "redux",
-              "typescript",
               "tailwind",
               "materialui",
               "javascript",
@@ -36,11 +36,11 @@ const ResumeMySkills = () => {
           <h4>Backend</h4>
           <div className="resume-skills-line">
             {[
+              "nodejs",
+              "expressjs",
               "symfony",
               "php",
               "wordpress",
-              "nodejs",
-              "express",
               "postgresql",
               "mysql",
               "sqlite",

@@ -39,6 +39,8 @@ import grafana from "@@/assets/images/icons/skills/Grafana-Dark.svg";
 import grafana_ from "@@/assets/images/icons/skills/Grafana-Light.svg";
 import jenkins from "@@/assets/images/icons/skills/Jenkins-Dark.svg";
 import jenkins_ from "@@/assets/images/icons/skills/Jenkins-Light.svg";
+import linux from "@@/assets/images/icons/skills/Linux-Dark.svg";
+import linux_ from "@@/assets/images/icons/skills/Linux-Light.svg";
 import markdown from "@@/assets/images/icons/skills/Markdown-Dark.svg";
 import markdown_ from "@@/assets/images/icons/skills/Markdown-Light.svg";
 import materialui from "@@/assets/images/icons/skills/MaterialUI-Dark.svg";
@@ -99,6 +101,7 @@ export type TSkillIconIndex =
   | "jenkins"
   | "jest"
   | "kubernetes"
+  | "linux"
   | "markdown"
   | "materialui"
   | "mysql"
@@ -205,6 +208,8 @@ const IconsMap: {
   { index: "jenkins", title: "Jenkins", element: jenkins_, theme: "light" },
   { index: "jest", title: "Jest", element: jest },
   { index: "kubernetes", title: "Kubernetes", element: kubernetes },
+  { index: "linux", title: "Linux", element: linux, theme: "dark" },
+  { index: "linux", title: "Linux", element: linux_, theme: "light" },
   { index: "markdown", title: "MarkDown", element: markdown, theme: "dark" },
   { index: "markdown", title: "MarkDown", element: markdown_, theme: "light" },
   {
@@ -279,7 +284,13 @@ const IconsMap: {
   { index: "sass", title: "SaaS", element: sass },
   { index: "selenium", title: "Selenium", element: selenium },
   { index: "sentry", title: "Sentry", element: sentry },
-  { index: "sequelize", title: "Sequelize", element: sequelize },
+  { index: "sequelize", title: "Sequelize", element: sequelize, theme: "dark" },
+  {
+    index: "sequelize",
+    title: "Sequelize",
+    element: sequelize_,
+    theme: "light",
+  },
   { index: "sqlite", title: "SQLite", element: sqlite },
   {
     index: "styledcomponents",
