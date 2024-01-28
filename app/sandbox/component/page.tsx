@@ -10,6 +10,7 @@ const SandBoxComponentTestPage = () => {
 
   return (
     <div>
+      {/* @ts-expect-error */}
       <SkillIcon index={qParamIndex} theme={qParamTheme} />
     </div>
   );
