@@ -296,7 +296,7 @@ const IconsMap: {
   { index: "redis", title: "Redis", element: redis, theme: "dark" },
   { index: "redis", title: "Redis", element: redis_, theme: "light" },
   { index: "redux", title: "Redux", element: redux },
-  { index: "sass", title: "SaaS", element: sass },
+  { index: "sass", title: "Saas", element: sass },
   { index: "selenium", title: "Selenium", element: selenium },
   { index: "sentry", title: "Sentry", element: sentry },
   { index: "sequelize", title: "Sequelize", element: sequelize, theme: "dark" },
