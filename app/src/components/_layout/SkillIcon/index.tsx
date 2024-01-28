@@ -29,6 +29,8 @@ import xd from "@@/assets/images/icons/skills/XD.svg";
 
 import expressjs from "@@/assets/images/icons/skills/ExpressJS-Dark.svg";
 import expressjs_ from "@@/assets/images/icons/skills/ExpressJS-Light.svg";
+import elasticsearch from "@@/assets/images/icons/skills/Elasticsearch-Dark.svg";
+import elasticsearch_ from "@@/assets/images/icons/skills/Elasticsearch-Light.svg";
 import figma from "@@/assets/images/icons/skills/Figma-Light.svg";
 import figma_ from "@@/assets/images/icons/skills/Figma-Light.svg";
 import gitlab from "@@/assets/images/icons/skills/GitLab-Dark.svg";
@@ -89,6 +91,7 @@ import webpack_ from "@@/assets/images/icons/skills/Webpack-Light.svg";
 export type TSkillIconIndex =
   | "css"
   | "docker"
+  | "elasticsearch"
   | "expressjs"
   | "figma"
   | "git"
@@ -180,6 +183,18 @@ const IconsMap: {
 }[] = [
   { index: "css", title: "CSS", element: css },
   { index: "docker", title: "Docker", element: docker },
+  {
+    index: "elasticsearch",
+    title: "Elasticsearch",
+    element: elasticsearch,
+    theme: "dark",
+  },
+  {
+    index: "elasticsearch",
+    title: "Elasticsearch",
+    element: elasticsearch_,
+    theme: "light",
+  },
   {
     index: "expressjs",
     title: "Express JS",
@@ -323,9 +338,6 @@ const IconsMap: {
 
 /**
  * Return the corresponding element related to the index and to the theme when the icon is themed
- *
- * @param param0
- * @returns
  */
 const SkillIcon = ({
   index,
