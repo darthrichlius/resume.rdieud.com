@@ -1,9 +1,8 @@
 import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
-import { FaExternalLinkAlt as LinkLogo } from "react-icons/fa";
 
-import { Typography } from "@@src/components";
+import { Icon, Typography } from "@@src/components";
 import { useCompany } from "@@src/hooks";
 import CompanyLogoFallback from "@@/assets/images/companies/logoFallback.svg";
 
@@ -70,7 +69,7 @@ const CertificationCard = ({
               target="_blank"
               href={certification.credentialUrl}
             >
-              Show credential <LinkLogo className="w-12 md:w-16" />
+              Show credential <Icon className="w-12 md:w-16" index="Website" />
             </NextLink>
           </footer>
         )}
