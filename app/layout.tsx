@@ -26,7 +26,7 @@ export default function RootLayout({
               <Header />
             </header>
             <main className="px-24 md:px-32 xl:px-1">{children}</main>
-            <footer className="py-28 px-24 md:px-32 xl:px-1">
+            <footer className="pt-28 px-0 md:px-32 xl:px-1">
               <Footer />
             </footer>
           </WindowProvider>
