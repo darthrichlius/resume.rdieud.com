@@ -33,6 +33,9 @@ const portfolioMap: IProject[] = [
         icon: "Github",
       },
     ],
+    meta: {
+      isFeatured: true,
+    },
   },
   {
     title: "IamServiceDesk (or ISD)",
@@ -55,7 +58,6 @@ const portfolioMap: IProject[] = [
         { label: "React" },
         { label: "Axios" },
         { label: "Tailwind" },
-        { label: "Tailwind" },
         { label: "Radix UI" },
         { label: "React Hook Form" },
         { label: "React Query" },
@@ -76,6 +78,9 @@ const portfolioMap: IProject[] = [
         icon: "Website",
       },
     ],
+    meta: {
+      isFeatured: true,
+    },
   },
   {
     title: "Garce Games",
@@ -109,6 +114,9 @@ const portfolioMap: IProject[] = [
         icon: "Website",
       },
     ],
+    meta: {
+      isFeatured: true,
+    },
   },
   {
     title: "FromSchool",
@@ -127,6 +135,9 @@ const portfolioMap: IProject[] = [
         { label: "React" },
         { label: "ElectronJS" },
       ],
+    },
+    meta: {
+      isFeatured: true,
     },
   },
 
@@ -147,12 +158,10 @@ const portfolioMap: IProject[] = [
         icon: "Github",
       },
     ],
-    meta: {
-      isArchived: true,
-    },
+    keywords: ["nodejs", "javascript", "jest", "eslint"],
   },
   {
-    title: "⚰️ resume.rdieud.com - version 1",
+    title: "resume.rdieud - vr1",
     subtitle: "Responsive Website",
     shortDescription:
       "The <b>first and retired version</b> of my resume and portfolio website.",
@@ -180,13 +189,13 @@ const portfolioMap: IProject[] = [
         icon: "Website",
       },
     ],
-    keywords: ["php", "wordpress", "javascript", "figma"],
+    keywords: ["archived", "php", "wordpress", "javascript", "figma"],
     meta: {
       isArchived: true,
     },
   },
   {
-    title: "⚰️ trenqr.com",
+    title: "trenqr.com",
     subtitle: "Responsive Website",
     shortDescription: "Social media",
     description: `
@@ -200,7 +209,7 @@ const portfolioMap: IProject[] = [
         { label: "Google Analytics" },
       ],
     },
-    keywords: ["socialnetwork", "php", "javascript", "mysql"],
+    keywords: ["archived", "socialnetwork", "php", "javascript", "mysql"],
     meta: {
       isArchived: true,
     },

@@ -32,13 +32,17 @@ export interface IProject {
   keywords?: string[];
   links?: IProjectLink[];
   meta?: {
-    isArchived: boolean;
+    isFeatured?: boolean;
+    isArchived?: boolean;
   };
 }
 
 const HomePortfolioSection = () => {
-  const featured = portfolioMap.filter((item) => !item.meta?.isArchived);
+  const featured = portfolioMap.filter((item) => item.meta?.isFeatured);
   const archived = portfolioMap.filter((item) => item.meta?.isArchived);
+  const listed = portfolioMap.filter(
+    (item) => !item.meta || (!item.meta?.isFeatured && !item.meta?.isArchived)
+  );
 
   return (
     <HomeSectionLayout id="portfolio">
@@ -57,15 +61,32 @@ const HomePortfolioSection = () => {
               for my values and interests.
             </Typography>
             {featured.map((project) => (
-              <FeaturedProjectCard key={project.title} project={project} />
+              <FeaturedProjectCard
+                key={"featured-" + project.title}
+                project={project}
+              />
             ))}
           </div>
           <div className="flex flex-col gap-72">
             <h3 className="section-title-h3">Archived & More</h3>
             <div>
+              {listed.map((project, i) => (
+                <>
+                  <ListedProjectCard
+                    key={"listed-" + project.title}
+                    project={project}
+                  />
+                  {i < archived.length - 1 && (
+                    <div className="my-36 h-1 w-full bg-zinc-600" />
+                  )}
+                </>
+              ))}
               {archived.map((project, i) => (
                 <>
-                  <ArchivedProjectCard key={project.title} project={project} />
+                  <ListedProjectCard
+                    key={"archived-" + project.title}
+                    project={project}
+                  />
                   {i < archived.length - 1 && (
                     <div className="my-36 h-1 w-full bg-zinc-600" />
                   )}
@@ -145,15 +166,16 @@ const FeaturedProjectCard = ({ project }: { project: IProject }) => {
   );
 };
 
-const ArchivedProjectCard = ({ project }: { project: IProject }) => {
+const ListedProjectCard = ({ project }: { project: IProject }) => {
   return (
     <article>
       <header className="flex justify-between sm:justify-normal items-start md:items-center">
         <Typography className="text-xl md:text-2xl lg:text-3xl font-bold leading-none md:leading-7">
+          {project.meta?.isArchived && <span title="Archived project">⚰️</span>}{" "}
           {project.title}
         </Typography>
         {project.links && (
-          <div className="flex gap-16 ml-24">
+          <div className="flex gap-16 sm:ml-24">
             {project.links?.map((link) => (
               <NextLink
                 key={`project-link-${link.label}-${project.title}`}
