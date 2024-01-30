@@ -11,7 +11,8 @@ import {
   MdEmail as EmailLogo,
   MdLightMode as LightModeLogo,
 } from "react-icons/md";
-import { HiOutlineExternalLink as WebsiteLogo } from "react-icons/hi";
+import { VscLinkExternal as WebsiteLogo } from "react-icons/vsc";
+// import { HiOutlineExternalLink as WebsiteLogo } from "react-icons/hi";
 import { BiLogoTypescript as TypeScriptLogo } from "react-icons/bi";
 import { IoLogoFigma as FigmaLogo } from "react-icons/io5";
 import { TbBrandNextjs as NextJsLogo } from "react-icons/tb";

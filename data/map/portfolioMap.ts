@@ -111,7 +111,48 @@ const portfolioMap: IProject[] = [
     ],
   },
   {
-    title: "resume.rdieud.com - v1",
+    title: "FromSchool",
+    subtitle: "Desktop Progociel",
+    shortDescription: `
+      <b>FromSchool</b>, a tailor-made school administration solution developed for a school by a business partner, 
+      now under my leadership, undergoes <b>migration from WinDev to ElectronJS</b> 
+      to enhance reliability and secure its development lifecycle
+    `,
+    description: `
+      <p></p>
+    `,
+    stack: {
+      front: [
+        { label: "TypeScript" },
+        { label: "React" },
+        { label: "ElectronJS" },
+      ],
+    },
+  },
+
+  {
+    title: "Esteban JS",
+    subtitle: "Library",
+    shortDescription: "An elegant nodejs assertions library",
+    description: `
+      <p>An elegant nodejs assertions library</p>
+    `,
+    stack: {
+      front: [{ label: "Javascript" }, { label: "Node.JS" }],
+    },
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/darthrichlius/estebanjs ",
+        icon: "Github",
+      },
+    ],
+    meta: {
+      isArchived: true,
+    },
+  },
+  {
+    title: "⚰️ resume.rdieud.com - version 1",
     subtitle: "Responsive Website",
     shortDescription:
       "The <b>first and retired version</b> of my resume and portfolio website.",
@@ -145,28 +186,7 @@ const portfolioMap: IProject[] = [
     },
   },
   {
-    title: "Esteban JS",
-    subtitle: "Library",
-    shortDescription: "An elegant nodejs assertions library",
-    description: `
-      <p>An elegant nodejs assertions library</p>
-    `,
-    stack: {
-      front: [{ label: "Javascript" }, { label: "Node.JS" }],
-    },
-    links: [
-      {
-        label: "Github",
-        href: "https://github.com/darthrichlius/estebanjs ",
-        icon: "Github",
-      },
-    ],
-    meta: {
-      isArchived: true,
-    },
-  },
-  {
-    title: "trenqr.com",
+    title: "⚰️ trenqr.com",
     subtitle: "Responsive Website",
     shortDescription: "Social media",
     description: `
