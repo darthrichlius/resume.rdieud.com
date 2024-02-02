@@ -209,7 +209,7 @@ const MobileMenu = ({
             className="flex gap-8 items-baseline"
             onClick={handleDownloadClick}
           >
-            <Icon className="w-12 h-16 text-zinc-400" index="Download" />
+            <Icon className="w-16 h-16 text-zinc-400" index="Download" />
             <Typography className="text-zinc-400 font-bold">
               Download CV
             </Typography>
@@ -220,14 +220,14 @@ const MobileMenu = ({
               href={AppConfig.owner.contact.github}
               target="blank"
             >
-              <Icon index="Github" />
+              <Icon className="w-20 h-20" index="Github" />
             </NextLink>
             <NextLink
               className="text-zinc-400 hover:text-zinc-400"
               href={AppConfig.owner.contact.linkedin}
               target="blank"
             >
-              <Icon index="Linkedin" />
+              <Icon className="w-20 h-20" index="Linkedin" />
             </NextLink>
           </div>
         </footer>
