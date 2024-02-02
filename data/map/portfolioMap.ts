@@ -158,15 +158,15 @@ const portfolioMap: IProject[] = [
         icon: "Github",
       },
     ],
-    keywords: ["nodejs", "javascript", "jest", "eslint"],
+    keywords: ["package", "library", "nodejs", "javascript", "jest", "eslint"],
   },
   {
-    title: "resume.rdieud - vr1",
+    title: "v1_resume.rdieud",
     subtitle: "Responsive Website",
     shortDescription:
-      "The <b>first and retired version</b> of my resume and portfolio website.",
+      "The <b>first and retired version</b> of my resume and portfolio website",
     description: `
-      <p>The <b>first and retired version</b> of my resume and portfolio website.</p>
+      <p>The <b>first and retired version</b> of my resume and portfolio website</p>
     `,
     stack: {
       front: [{ label: "Figma" }, { label: "Saas" }],
@@ -180,16 +180,20 @@ const portfolioMap: IProject[] = [
     links: [
       {
         label: "Github",
-        href: "https://github.com/darthrichlius/v1.resume.rdieud.com",
+        href: "https://github.com/darthrichlius/wp-theme-sand-portfolio",
         icon: "Github",
       },
-      {
-        label: "Website",
-        href: "local.com",
-        icon: "Website",
-      },
     ],
-    keywords: ["archived", "php", "wordpress", "javascript", "figma"],
+    keywords: [
+      "figma",
+      "php",
+      "wordpress",
+      "wordpress-theme",
+      "javascript",
+      "sass",
+      "googleanalytics",
+      "hotjar",
+    ],
     meta: {
       isArchived: true,
     },
@@ -197,9 +201,10 @@ const portfolioMap: IProject[] = [
   {
     title: "trenqr.com",
     subtitle: "Responsive Website",
-    shortDescription: "Social media",
+    shortDescription:
+      "For friendly individuals looking to connect through common interests within a positive and welcoming platform",
     description: `
-      <p>Social media</p>
+      <p>Social network for friendly individuals looking to connect through common interests within a positive and welcoming platform</p>
     `,
     stack: {
       front: [{ label: "Javascript" }, { label: "Saas" }],
@@ -209,7 +214,21 @@ const portfolioMap: IProject[] = [
         { label: "Google Analytics" },
       ],
     },
-    keywords: ["archived", "socialnetwork", "php", "javascript", "mysql"],
+    links: [
+      {
+        label: "Github",
+        href: "https://github.com/darthrichlius/trenqr.com",
+        icon: "Github",
+      },
+    ],
+    keywords: [
+      "socialnetwork",
+      "php",
+      "propretaryframework",
+      "javascript",
+      "mysql",
+      "googleanalytics",
+    ],
     meta: {
       isArchived: true,
     },

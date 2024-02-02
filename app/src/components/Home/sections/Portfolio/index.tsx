@@ -171,7 +171,7 @@ const ListedProjectCard = ({ project }: { project: IProject }) => {
     <article>
       <header className="flex justify-between sm:justify-normal items-start md:items-center">
         <Typography className="text-xl md:text-2xl lg:text-3xl font-bold leading-none md:leading-7">
-          {project.meta?.isArchived && <span title="Archived project">⚰️</span>}{" "}
+          {project.meta?.isArchived && <span title="Retired project">⚰️</span>}{" "}
           {project.title}
         </Typography>
         {project.links && (
