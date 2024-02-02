@@ -77,22 +77,24 @@ const NavBar = () => {
               className="text-zinc-600 hover:text-zinc-400"
               href={AppConfig.owner.contact.github}
               target="blank"
+              title="Navigate to my Github repository"
             >
-              <Icon index="Github" />
+              <Icon className="w-16 -h-16" index="Github" />
             </NextLink>
             <NextLink
               className="text-zinc-600 hover:text-zinc-400"
               href={AppConfig.owner.contact.linkedin}
               target="blank"
+              title="Navigate to my Linkedin profile"
             >
-              <Icon index="Linkedin" />
+              <Icon className="w-16 -h-16" index="Linkedin" />
             </NextLink>
             <button
               className="text-zinc-600 hover:text-zinc-400"
               title="Turn on light mode"
               onClick={handleLightModeClick}
             >
-              <Icon index="LightMode" />
+              <Icon className="w-16 -h-16" index="LightMode" />
             </button>
           </div>
         </NavigationMenu.List>
