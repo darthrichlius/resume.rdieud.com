@@ -3,29 +3,46 @@ import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 import classnames from "classnames";
+import toast, { Toaster } from "react-hot-toast";
 
 import { Icon, Typography } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
 import AppConfig from "@@/config/app";
 import { useWindow } from "@@src/context";
 
+const resumeFilename = AppConfig.assets.file.resume;
+
+const DOWNLOAD_RESUME = "download:resume";
+
 const contactLinks = [
   {
+    id: "github",
     label: "Github",
+    title: "Navigate to my Github repository",
     href: AppConfig.owner.contact.github,
     icon: <Icon index="Github" />,
   },
   {
+    id: "linkedin",
     label: "LinkedIn",
+    title: "Navigate to my Linkedin profile",
     href: AppConfig.owner.contact.linkedin,
     icon: <Icon index="Linkedin" />,
   },
   {
+    id: "email",
     label: "Email",
+    title: "Contact me by email",
     href: `mailto:${AppConfig.owner.contact.email}`,
     icon: <Icon index="Email" />,
   },
-  { label: "Resume", href: "/", icon: <Icon index="Download" /> },
+  {
+    id: DOWNLOAD_RESUME,
+    label: "Resume",
+    title: "Download my CV in PDF format",
+    href: "/",
+    icon: <Icon index="Download" />,
+  },
 ];
 
 const expertHighlight = [
@@ -39,6 +56,35 @@ const expertHighlight = [
 
 const HomePresentationSection = () => {
   const { isLandScape, isLgVertical } = useWindow();
+
+  const handleclick = async (e: any, id: string) => {
+    if (DOWNLOAD_RESUME === id) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const response = await fetch("api/file/resume");
+      if (response.ok) {
+        const blob = await response.blob();
+
+        if (typeof window !== "undefined" && typeof document !== "undefined") {
+          const url = (window as any).URL.createObjectURL(blob);
+          const link = (document as any).createElement("a");
+          link.href = url;
+          link.download = resumeFilename;
+          link.click();
+          (window as any).URL.revokeObjectURL(url);
+        }
+      } else {
+        toast.error(
+          "Unable to download the file. \nPlease contact the administrator",
+          {
+            duration: 4000,
+            icon: "❌",
+          }
+        );
+      }
+    }
+  };
 
   return (
     <section
@@ -78,10 +124,12 @@ const HomePresentationSection = () => {
             <div className="grid grid-cols-2 gap-56 justify-center mt-48">
               {contactLinks.map((link) => (
                 <NextLink
-                  key={link.label}
+                  key={link.id}
                   className="justify-self-center lg:justify-self-start hover:text-wine-200"
                   target="_blank"
                   href={link.href}
+                  title={link.title || undefined}
+                  onClick={(e) => handleclick(e, link.id)}
                 >
                   <Typography
                     as="span"
@@ -107,6 +155,7 @@ const HomePresentationSection = () => {
           ))}
         </div>
       </div>
+      <Toaster />
     </section>
   );
 };
