@@ -33,9 +33,9 @@ const ResumeExperience = () => {
 
         // Add a delay before adjusting the scroll position
         setTimeout(() => {
-          window.scrollBy(0, yOffset);
+          //window.scrollBy(0, yOffset);
           toggleWorkExperience((s) => !s);
-        }, 350);
+        }, 1000);
       }
     } else toggleWorkExperience((s) => !s);
   };
