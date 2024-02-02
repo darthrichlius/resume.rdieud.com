@@ -3,14 +3,12 @@ import React from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 import classnames from "classnames";
-import toast, { Toaster } from "react-hot-toast";
 
 import { Icon, Typography } from "@@src/components";
 import Image from "@@/assets/images/avatar.jpeg";
 import AppConfig from "@@/config/app";
 import { useWindow } from "@@src/context";
-
-const resumeFilename = AppConfig.assets.file.resume;
+import downloadCVFile from "@@src/services/downloadCVFile";
 
 const DOWNLOAD_RESUME = "download:resume";
 
@@ -62,27 +60,7 @@ const HomePresentationSection = () => {
       e.preventDefault();
       e.stopPropagation();
 
-      const response = await fetch("api/file/resume");
-      if (response.ok) {
-        const blob = await response.blob();
-
-        if (typeof window !== "undefined" && typeof document !== "undefined") {
-          const url = (window as any).URL.createObjectURL(blob);
-          const link = (document as any).createElement("a");
-          link.href = url;
-          link.download = resumeFilename;
-          link.click();
-          (window as any).URL.revokeObjectURL(url);
-        }
-      } else {
-        toast.error(
-          "Unable to download the file. \nPlease contact the administrator",
-          {
-            duration: 4000,
-            icon: "❌",
-          }
-        );
-      }
+      downloadCVFile()
     }
   };
 
@@ -155,7 +133,6 @@ const HomePresentationSection = () => {
           ))}
         </div>
       </div>
-      <Toaster />
     </section>
   );
 };

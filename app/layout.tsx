@@ -1,4 +1,5 @@
 import { Theme } from "@radix-ui/themes";
+import { Toaster } from "react-hot-toast";
 
 import { Header, Footer } from "@@src/components";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
             </footer>
           </WindowProvider>
         </Theme>
+        <Toaster />
       </body>
     </html>
   );

@@ -9,7 +9,8 @@ import { IoClose as OpenedMobileMenuIcon } from "react-icons/io5";
 
 import { Icon, Typography } from "@@src/components";
 import AppConfig from "@@/config/app";
-import { useWindowResize } from "@/app/src/hooks";
+import { useWindowResize } from "@@src/hooks";
+import downloadCVFile from "@@src/services/downloadCVFile";
 
 interface IMenu {
   label: string;
@@ -149,6 +150,10 @@ const MobileMenu = ({
     e.stopPropagation();
   };
 
+  const handleDownloadClick = () => {
+    downloadCVFile();
+  };
+
   useEffect(() => {
     // Client-specific logic
     /**
@@ -199,7 +204,11 @@ const MobileMenu = ({
           ))}
         </menu>
         <footer className="mobile-menu-footer">
-          <NextLink href="#" className="flex gap-8 items-baseline">
+          <NextLink
+            href="#"
+            className="flex gap-8 items-baseline"
+            onClick={handleDownloadClick}
+          >
             <Icon className="w-12 h-16 text-zinc-400" index="Download" />
             <Typography className="text-zinc-400 font-bold">
               Download CV

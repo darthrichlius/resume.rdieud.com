@@ -34,7 +34,7 @@ const AppConfig: IAppConfig = {
   },
   assets: {
     file: {
-      resume: "CV_RDIEUD_202.pdf",
+      resume: "CV_RDIEUD_2024.pdf",
     },
   },
 };
