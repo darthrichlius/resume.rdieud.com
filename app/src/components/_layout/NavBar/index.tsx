@@ -128,6 +128,7 @@ const MobileMenu = ({
   handleClose: () => void;
   handleMenuClick: (href?: string) => void;
 }) => {
+  const [isDownloading, setIsDownloading] = useState(false);
   const [height, setHeight] = useState(0);
   const {
     windowSize: { height: winHeight },
@@ -152,8 +153,12 @@ const MobileMenu = ({
     e.stopPropagation();
   };
 
-  const handleDownloadClick = () => {
-    downloadCVFile();
+  const handleDownloadClick = async () => {
+    if (!isDownloading) {
+      setIsDownloading(true);
+      await downloadCVFile();
+      setIsDownloading(false);
+    }
   };
 
   useEffect(() => {

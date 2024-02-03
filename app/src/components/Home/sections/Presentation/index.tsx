@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 import classnames from "classnames";
@@ -53,6 +53,7 @@ const expertHighlight = [
 ];
 
 const HomePresentationSection = () => {
+  const [isDownloading, setIsDownloading] = useState(false);
   const { isLandScape, isLgVertical } = useWindow();
 
   const handleclick = async (e: any, id: string) => {
@@ -60,7 +61,11 @@ const HomePresentationSection = () => {
       e.preventDefault();
       e.stopPropagation();
 
-      downloadCVFile()
+      if (!isDownloading) {
+        setIsDownloading(true);
+        await downloadCVFile();
+        setIsDownloading(false);
+      }
     }
   };
 
