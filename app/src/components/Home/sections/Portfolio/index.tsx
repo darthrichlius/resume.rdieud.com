@@ -170,7 +170,7 @@ const ListedProjectCard = ({ project }: { project: IProject }) => {
   return (
     <article>
       <header className="flex justify-between sm:justify-normal items-start md:items-center">
-        <Typography className="text-xl md:text-2xl lg:text-3xl font-bold leading-none md:leading-7">
+        <Typography className="text-wine-200 text-xl md:text-2xl lg:text-3xl font-bold leading-none md:leading-7">
           {project.meta?.isArchived && <span title="Retired project">⚰️</span>}{" "}
           {project.title}
         </Typography>
@@ -198,13 +198,11 @@ const ListedProjectCard = ({ project }: { project: IProject }) => {
           />
         </Typography>
         {project.keywords && (
-          <div className="flex gap-8 flex-wrap">
+          <div className="flex gap-12 flex-wrap">
             {project.keywords.map((kw) => (
-              <Typography
-                key={`project-keyword-${kw}`}
-                className="text-wine-200 font-bold"
-              >
-                #{kw}
+              <Typography key={`project-keyword-${kw}`} className="font-normal">
+                <b>#</b>
+                {kw}
               </Typography>
             ))}
           </div>
