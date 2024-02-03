@@ -8,7 +8,7 @@ import "@radix-ui/themes/styles.css";
 import "@@/assets/styles/globals.css";
 import { WindowProvider } from "@@src/context";
 import { appExtendedThemeParams } from "@@/config/params";
-import { GoogleAnalyticsScript } from "@@src/scripts";
+import { GoogleAnalyticsScript, HotjarAnalyticsScript } from "@@src/scripts";
 
 export default function RootLayout({
   children,
@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleAnalyticsScript />
+      <HotjarAnalyticsScript />
       <body className={"font-body"}>
         <Theme appearance="dark">
           <WindowProvider
@@ -36,22 +37,6 @@ export default function RootLayout({
           </WindowProvider>
         </Theme>
         <Toaster />
-        <NextScript
-          id="HotjarAnalytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:3852158,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            `,
-          }}
-        />
       </body>
     </html>
   );
