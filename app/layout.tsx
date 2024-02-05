@@ -1,6 +1,5 @@
 import { Theme } from "@radix-ui/themes";
 import { Toaster } from "react-hot-toast";
-import NextScript from "next/script";
 
 import { Header, Footer } from "@@src/components";
 

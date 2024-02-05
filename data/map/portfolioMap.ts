@@ -1,15 +1,33 @@
-import { IProject } from "@/app/src/components/Home/sections/Portfolio";
+import { IProject } from "@@src/components/Home/sections/Portfolio";
+
+import GarcegamesMobile from "@@/assets/images/portfolio/garcegames/garcegames-mobile.png";
+import GarcegamesDesktop1 from "@@/assets/images/portfolio/garcegames/garcegames-desktop-1.png";
+import GarcegamesDesktop2 from "@@/assets/images/portfolio/garcegames/garcegames-desktop-2.png";
+
+import ISDMobile from "@@/assets/images/portfolio/isd/isd-mobile.png";
+import ISDDesktop1 from "@@/assets/images/portfolio/isd/isd-desktop-1.png";
+import ISDDesktop2 from "@@/assets/images/portfolio/isd/isd-desktop-2.png";
+
+import ResumeMobile from "@@/assets/images/portfolio/resume/resume-mobile.png";
+import ResumeDesktop from "@@/assets/images/portfolio/resume/resume-desktop.png";
+
+import FromSchoolDesktop1 from "@@/assets/images/portfolio/fromschool/fromschool-desktop-1.png";
+import FromSchoolDesktop2 from "@@/assets/images/portfolio/fromschool/fromschool-desktop-2.png";
+import FromSchoolDesktop3 from "@@/assets/images/portfolio/fromschool/fromschool-desktop-3.png";
 
 const portfolioMap: IProject[] = [
+  // ################################
+  // ##### ##### FEATURES ##### #####
+
   {
     title: "resume.rdieud.com",
     subtitle: "Responsive Website",
     shortDescription:
       "The <b>2nd iteration</b> of my resume-focused professional website. It is an optimized revision designed to offer detailed insights about my work experience, skills and achievements.",
     description: `
-    <p>A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements.</p>
-    <p>The primary objective is to provide interested parties with more comprehensive and detailed information, and, most importantly, details consistent with what one seeks when exploring an engineering profile.</p>
-    <p>Furthermore, our aim is to deliver an enjoyable experience that contributes to expressing the personality of the website owner</p>
+      <p>A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements.</p>
+      <p>The primary objective is to provide interested parties with more comprehensive and detailed information, and, most importantly, details consistent with what one seeks when exploring an engineering profile.</p>
+      <p>Furthermore, our aim is to deliver an enjoyable experience that contributes to expressing the personality of the website owner</p>
     `,
     stack: {
       design: [{ label: "Figma" }],
@@ -26,6 +44,16 @@ const portfolioMap: IProject[] = [
         { label: "Google Analytics" },
       ],
     },
+    medias: [
+      {
+        src: ResumeDesktop,
+        order: 1,
+      },
+      {
+        src: ResumeMobile,
+        order: 2,
+      },
+    ],
     links: [
       {
         label: "Github",
@@ -48,9 +76,9 @@ const portfolioMap: IProject[] = [
      * A service desk tool that supports all your requirements, akin to Jira, but safeguards the user-friendly experience of Trello.
      */
     description: `
-    <p>An agile, usable, and scalable service desk application designed for individuals and SMEs aiming to reduce costs.</p>
-    <p>The project focuses on gaining experience in building a solution used by product and support department teams to visualize insights, manage actions, and enhance productivity. The outcome will serve as a foundation for a business application tailored to African businesses, considering their unique constraints.</p>
-    <p>The software's key feature is to offer a comprehensive catalog of features for team collaboration, support management, and project management, with a primary emphasis on delivering a high-quality seamless user experience as a key differentiator.</p>
+      <p>An agile, usable, and scalable service desk application designed for individuals and SMEs aiming to reduce costs.</p>
+      <p>The project focuses on gaining experience in building a solution used by product and support department teams to visualize insights, manage actions, and enhance productivity. The outcome will serve as a foundation for a business application tailored to African businesses, considering their unique constraints.</p>
+      <p>The software's key feature is to offer a comprehensive catalog of features for team collaboration, support management, and project management, with a primary emphasis on delivering a high-quality seamless user experience as a key differentiator.</p>
     `,
     stack: {
       front: [
@@ -71,6 +99,20 @@ const portfolioMap: IProject[] = [
         { label: "Zustand" },
       ],
     },
+    medias: [
+      {
+        src: ISDDesktop1,
+        order: 1,
+      },
+      {
+        src: ISDDesktop2,
+        order: 2,
+      },
+      {
+        src: ISDMobile,
+        order: 3,
+      },
+    ],
     links: [
       {
         label: "Website",
@@ -102,6 +144,20 @@ const portfolioMap: IProject[] = [
         { label: "Sentry" },
       ],
     },
+    medias: [
+      {
+        src: GarcegamesDesktop1,
+        order: 1,
+      },
+      {
+        src: GarcegamesDesktop2,
+        order: 2,
+      },
+      {
+        src: GarcegamesMobile,
+        order: 3,
+      },
+    ],
     links: [
       {
         label: "Github",
@@ -136,10 +192,27 @@ const portfolioMap: IProject[] = [
         { label: "ElectronJS" },
       ],
     },
+    medias: [
+      {
+        src: FromSchoolDesktop1,
+        order: 1,
+      },
+      {
+        src: FromSchoolDesktop2,
+        order: 2,
+      },
+      {
+        src: FromSchoolDesktop3,
+        order: 3,
+      },
+    ],
     meta: {
       isFeatured: true,
     },
   },
+
+  // ################################
+  // ##### ##### PROJECTS ##### #####
 
   {
     title: "Esteban JS",
@@ -160,6 +233,10 @@ const portfolioMap: IProject[] = [
     ],
     keywords: ["package", "library", "nodejs", "javascript", "jest", "eslint"],
   },
+
+  // ################################
+  // ##### ##### ARCHIVED ##### #####
+
   {
     title: "v1_resume.rdieud",
     subtitle: "Responsive Website",

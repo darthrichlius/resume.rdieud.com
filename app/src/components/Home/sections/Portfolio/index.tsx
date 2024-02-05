@@ -19,6 +19,14 @@ interface IProjectLink {
   icon?: TRegisteredIcon;
 }
 
+interface IProjectMedia {
+  src: any;
+  order: number;
+  alt?: string;
+  title?: string;
+  description?: string;
+}
+
 export interface IProject {
   title: string;
   subtitle?: string;
@@ -29,6 +37,7 @@ export interface IProject {
     front?: IStack[];
     back?: IStack[];
   };
+  medias?: IProjectMedia[];
   keywords?: string[];
   links?: IProjectLink[];
   meta?: {
@@ -160,7 +169,8 @@ const FeaturedProjectCard = ({ project }: { project: IProject }) => {
         </div>
       </section>
       <aside className="mt-36 w-full md:shrink-0 md:mt-1 md:w-[50%] max-h-max lg:max-h-[345px] xl:w-1/2">
-        <NextImage src={portfolioPlaceholder} alt="Image" />
+        {project.medias && Array.isArray(project.medias) && <NextImage src={project.medias[0].src} alt="Image" />}
+        {!project.medias && <NextImage src={portfolioPlaceholder} alt="Image" />}
       </aside>
     </article>
   );
