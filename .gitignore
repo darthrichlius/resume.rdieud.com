@@ -40,3 +40,6 @@ next-env.d.ts
 # app/assets/images/*
 .env*
 .ignore
+
+# Sentry Config File
+.sentryclirc
