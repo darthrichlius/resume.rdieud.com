@@ -12,7 +12,14 @@ import downloadCVFile from "@@src/services/downloadCVFile";
 
 const DOWNLOAD_RESUME = "download:resume";
 
-const contactLinks = [
+const contactLinks: {
+  id: string;
+  label: string;
+  labelMobile?: string;
+  title: string;
+  href: string;
+  icon: any;
+}[] = [
   {
     id: "github",
     label: "Github",
@@ -36,7 +43,8 @@ const contactLinks = [
   },
   {
     id: DOWNLOAD_RESUME,
-    label: "Resume",
+    label: "Download CV (PDF)",
+    labelMobile: "My CV (PDF)",
     title: "Download my CV in PDF format",
     href: "/",
     icon: <Icon index="Download" />,
@@ -116,10 +124,20 @@ const HomePresentationSection = () => {
                 >
                   <Typography
                     as="span"
-                    className="flex items-center gap-8 w-96 lg:w-fit lg:max-w-fit text-lg md:text-xl"
+                    className="flex items-center gap-8 w-144 md:w-160 lg:w-fit lg:max-w-fit text-lg md:text-xl"
                   >
                     <span>{link.icon}</span>
-                    {link.label}
+                    {link.labelMobile && (
+                      <>
+                        <span className="lg:hidden">{link.labelMobile}</span>
+                        <span className="hidden lg:inline-block">
+                          {link.label}
+                        </span>
+                      </>
+                    )}
+                    {!link.labelMobile && (
+                      <span className="">{link.label}</span>
+                    )}
                   </Typography>
                 </NextLink>
               ))}
