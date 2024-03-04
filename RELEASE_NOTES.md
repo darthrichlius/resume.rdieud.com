@@ -2,6 +2,10 @@
 
 These release notes intend to summarize, from a user point of view, the various implementations related to this application.
 
+## 0.2.1
+
+- Fix a typo in the **PDF downloadable resume**
+
 ## 0.2.0
 
 - Add Release Notes
