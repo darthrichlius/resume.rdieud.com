@@ -3,11 +3,17 @@ import { ICertification } from "@@src/components/Home/sections/Resume/_/Certific
 const CertificationsMap: ICertification[] = [
   {
     title: "TOEIC® | 920/990",
+    meta: {
+      tags: ["languages"],
+    },
     issued: "Jan 2023",
     provider: "ets_global",
   },
   {
     title: "Professional Scrum Product Owner I",
+    meta: {
+      tags: ["product-management"],
+    },
     issued: "Feb 2023",
     credentialUrl: "https://www.scrum.org/certificates/924702",
     provider: "scrum_org",
@@ -22,6 +28,9 @@ const CertificationsMap: ICertification[] = [
   },
   {
     title: "OKR Certification: Leadership and Goal Setting",
+    meta: {
+      tags: ["product-management"],
+    },
     issued: "Jan 2023",
     credentialUrl:
       "https://coursera.org/share/f29571fd7abb09f1e4d54d2c71ecbd51",
@@ -29,6 +38,9 @@ const CertificationsMap: ICertification[] = [
   },
   {
     title: "Wharton certified Marketing",
+    meta: {
+      tags: ["product-management"],
+    },
     issued: "Jan 2023",
     credentialUrl:
       "https://coursera.org/share/0b6b9be4247339baf162aa431eddf3b6",
@@ -44,6 +56,9 @@ const CertificationsMap: ICertification[] = [
   },
   {
     title: "Google Certified Foundations of User Experience (UX) Design",
+    meta: {
+      tags: ["design"],
+    },
     issued: "Dec 2022",
     credentialUrl:
       "https://coursera.org/share/24a0347e2e3d84635d0ddedc39b117a5",
@@ -51,6 +66,9 @@ const CertificationsMap: ICertification[] = [
   },
   {
     title: "Certified Product Manager",
+    meta: {
+      tags: ["product-management"],
+    },
     issued: "Nov 2022",
     credentialUrl: "https://badgr.com/public/assertions/1Oz35EDsTl-gYZtyK9dXPw",
     provider: "hubvisory",

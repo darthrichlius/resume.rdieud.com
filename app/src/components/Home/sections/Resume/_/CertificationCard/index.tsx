@@ -8,6 +8,9 @@ import CompanyLogoFallback from "@@/assets/images/companies/logoFallback.svg";
 
 export interface ICertification {
   title: string;
+  meta?: {
+    tags?: Array<string>;
+  };
   issued: string;
   credentialUrl?: string;
   provider: string;

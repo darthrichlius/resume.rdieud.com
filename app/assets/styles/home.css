@@ -130,3 +130,11 @@
 #resume-skills .resume-skills-line-item {
   @apply inline-block w-48 md:w-56;
 }
+
+#resume-certification .certification-menu {
+  @apply border-b-2 border-transparent pb-8 text-lg text-zinc-600 hover:text-zinc-400 font-bold;
+}
+
+#resume-certification .certification-menu.is-active {
+  @apply border-wine-200 text-wine-200;
+}
