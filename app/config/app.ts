@@ -27,7 +27,7 @@ const AppConfig: IAppConfig = {
        *
        * @todo Add a proxy step to ensure it is not a scraper, and then, only then, display the email.
        */
-      email: "hello@rdieud.com",
+      email: "hello-job@rdieud.com",
       github: "https://github.com/darthrichlius",
       linkedin: "https://www.linkedin.com/in/rdieud/",
     },
