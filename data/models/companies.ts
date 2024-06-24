@@ -15,6 +15,7 @@ import MWMLogo from "@@/assets/images/companies/measure_what_matter_logo.jpeg";
 import WhartonLogo from "@@/assets/images/companies/wharton_online_logo.jpeg";
 import GoogleLogo from "@@/assets/images/companies/google_logo.jpeg";
 import HubvisoryLogo from "@@/assets/images/companies/hubvisory_logo.jpeg";
+import MetaLogo from "@@/assets/images/companies/meta_logo.jpeg";
 
 interface ICompanyModel extends ICompany {
   id: string;
@@ -160,6 +161,15 @@ const CompaniesStatic: ICompanyModel[] = [
     id: "hubvisory",
     name: "Hubvisory",
     logo: HubvisoryLogo,
+  },
+  {
+    id: "linuxfoundation",
+    name: "The Linux Foundation",
+  },
+  {
+    id: "meta",
+    name: "Meta",
+    logo: MetaLogo,
   },
 ];
 

@@ -2,6 +2,39 @@ import { ICertification } from "@@src/components/Home/sections/Resume/_/Certific
 
 const CertificationsMap: ICertification[] = [
   {
+    title: "Meta Front-End Developer Professional Certificate",
+    meta: {
+      tags: ["software-engineering"],
+    },
+    issued: "(In Progress)",
+    provider: "meta",
+    skills: [
+      "React",
+      "Advanced React",
+      "Javascript",
+      "UX/UI Design",
+      "Version Control",
+    ],
+  },
+  {
+    title: "OpenJS Node.js Application Developer (JSNAD)",
+    meta: {
+      tags: ["software-engineering"],
+    },
+    issued: "(In Progress)",
+    logo: "node_jsnad.png",
+    provider: "linuxfoundation",
+  },
+  {
+    title: "OpenJS Node.js Services Developer (JSNSD)",
+    meta: {
+      tags: ["software-engineering"],
+    },
+    issued: "(In Progress)",
+    logo: "node_jsnsd.png",
+    provider: "linuxfoundation",
+  },
+  {
     title: "TOEIC® | 920/990",
     meta: {
       tags: ["languages"],

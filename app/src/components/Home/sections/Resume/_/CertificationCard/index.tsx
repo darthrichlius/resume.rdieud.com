@@ -13,6 +13,7 @@ export interface ICertification {
   };
   issued: string;
   credentialUrl?: string;
+  logo?: string;
   provider: string;
   skills?: Array<string>;
 }
@@ -23,19 +24,32 @@ const CertificationCard = ({
   certification: ICertification;
 }) => {
   const provider = useCompany(certification.provider);
-  const providerLogo = provider!.logo ? (
-    <NextImage
-      className="w-48 rounded"
-      src={provider!.logo}
-      alt={`${provider!.name}'s logo`}
-    />
-  ) : (
-    <NextImage
-      className="w-48 rounded"
-      src={CompanyLogoFallback}
-      alt={`${provider!.name}'s logo`}
-    />
-  );
+  let providerLogo = null;
+  if (certification.logo) {
+    const imageFromLogo =
+      require(`@@/assets/images/certifications/${certification.logo}`).default;
+    providerLogo = (
+      <NextImage
+        className="w-48 rounded"
+        src={imageFromLogo}
+        alt={`${provider!.name}'s logo`}
+      />
+    );
+  } else {
+    providerLogo = provider?.logo ? (
+      <NextImage
+        className="w-48 rounded"
+        src={provider!.logo}
+        alt={`${provider!.name}'s logo`}
+      />
+    ) : (
+      <NextImage
+        className="w-48 rounded"
+        src={CompanyLogoFallback}
+        alt={`${provider!.name}'s logo`}
+      />
+    );
+  }
 
   return (
     <article className="flex gap-24 w-full p-24 bg-zinc-900">

@@ -35,7 +35,7 @@ const ResumeCertifications = () => {
         <h3 className="section-title-h3">Certifications</h3>
       </header>
       <div className="mt-64">
-        <ul className="flex gap-16 mb-40">
+        <ul className="flex flex-nowrap gap-24 mb-40">
           <li>
             <NextLink
               id={CERTIFICATION_MENU_ID.ALL}
@@ -46,7 +46,7 @@ const ResumeCertifications = () => {
               href={"#"}
               onClick={(e) => handleMenuChange(e, CERTIFICATION_MENU_ID.ALL)}
               target="blank"
-              title="..."
+              title="All certificates"
             >
               All
             </NextLink>
@@ -61,7 +61,7 @@ const ResumeCertifications = () => {
               href={"#"}
               onClick={(e) => handleMenuChange(e, CERTIFICATION_MENU_ID.SE)}
               target="blank"
-              title="..."
+              title="Software Engineering"
             >
               Software Engineering
             </NextLink>
@@ -76,7 +76,7 @@ const ResumeCertifications = () => {
               href={"#"}
               onClick={(e) => handleMenuChange(e, CERTIFICATION_MENU_ID.PM)}
               target="blank"
-              title="..."
+              title="Product Management, Marketing & Communication"
             >
               Product Management
             </NextLink>
@@ -91,7 +91,7 @@ const ResumeCertifications = () => {
               href={"#"}
               onClick={(e) => handleMenuChange(e, CERTIFICATION_MENU_ID.DS)}
               target="blank"
-              title="..."
+              title="UX & UI Design"
             >
               Design
             </NextLink>
@@ -106,7 +106,7 @@ const ResumeCertifications = () => {
               href={"#"}
               onClick={(e) => handleMenuChange(e, CERTIFICATION_MENU_ID.LG)}
               target="blank"
-              title="..."
+              title="Spoken and Working Languages"
             >
               Languages
             </NextLink>
