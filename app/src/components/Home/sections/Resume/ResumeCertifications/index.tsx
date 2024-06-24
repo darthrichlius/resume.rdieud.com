@@ -16,7 +16,7 @@ const CERTIFICATION_MENU_ID = {
 const ResumeCertifications = () => {
   const [selectedMenu, setSelectedMenu] = useState(CERTIFICATION_MENU_ID.ALL);
 
-  const handleMenuChange = (e, id) => {
+  const handleMenuChange = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
 
     setSelectedMenu(id);
