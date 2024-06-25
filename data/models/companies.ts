@@ -16,6 +16,7 @@ import WhartonLogo from "@@/assets/images/companies/wharton_online_logo.jpeg";
 import GoogleLogo from "@@/assets/images/companies/google_logo.jpeg";
 import HubvisoryLogo from "@@/assets/images/companies/hubvisory_logo.jpeg";
 import MetaLogo from "@@/assets/images/companies/meta_logo.jpeg";
+import AWSLogo from "@@/assets/images/companies/aws.jpeg";
 
 interface ICompanyModel extends ICompany {
   id: string;
@@ -170,6 +171,11 @@ const CompaniesStatic: ICompanyModel[] = [
     id: "meta",
     name: "Meta",
     logo: MetaLogo,
+  },
+  {
+    id: "aws",
+    name: "Amazon Web Services (AWS)",
+    logo: AWSLogo,
   },
 ];
 

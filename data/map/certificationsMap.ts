@@ -51,6 +51,24 @@ const CertificationsMap: ICertification[] = [
     provider: "linuxfoundation",
   },
   {
+    title: "AWS certified Cloud Practitioner",
+    meta: {
+      tags: ["software-engineering"],
+    },
+    issued: "(In Progress)",
+    logo: "aws-certified-cloud-practitioner-associate.png",
+    provider: "aws",
+  },
+  {
+    title: "AWS certified Developer",
+    meta: {
+      tags: ["software-engineering"],
+    },
+    issued: "(In Progress)",
+    logo: "aws-certified-developer-associate.png",
+    provider: "aws",
+  },
+  {
     title: "TOEIC® | 920/990",
     meta: {
       tags: ["languages"],
