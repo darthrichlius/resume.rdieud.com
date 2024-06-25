@@ -5,6 +5,7 @@ export enum EExperiencePosition {
 }
 
 export type TExperienceYear =
+  | "2024"
   | "2023"
   | "2022"
   | "2021"
@@ -56,10 +57,10 @@ export interface IExperience {
    */
   company: string;
   description?: {
-        display?: string;
-        complement?: string;
-        footer?: string;
-      };
+    display?: string;
+    complement?: string;
+    footer?: string;
+  };
   children?: IExperience[];
   group?: (TExperienceYear | EExperiencePosition)[];
 }

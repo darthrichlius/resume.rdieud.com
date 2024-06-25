@@ -4,6 +4,36 @@ const experienceMap: IExperience[] = [
   {
     description: {
       display: `
+        <p>After years as a Product Leader, I decided to <b>transition back to software engineering</b> to fully embrace the exciting opportunities offered by the industry, especially in the <b>cloud services</b> and the promising <b>new AI era</b>.</p>
+        <p>In my free time, I developed half a dozen personal projects focused on improving and perfecting technologies that interest me, including <b>React</b>, <b>Next.js</b>, <b>Node.js/Express.js</b>, <b>monorepos</b>, <b>microservices</b>, <b>microfrontends</b>, and <b>cloud/serverless</b> applications.</p>
+      `,
+      complement: `
+        <p>During this period, I built applications in various contexts and fields, such as <b>video games</b>, <b>productivity</b>, <b>real-time communication</b>, and <b>AI conversation</b>.</p>
+        <p>Additionally, I obtained certifications in various domains to enhance my knowledge, creativity, and resourcefulness, making me an even more valuable asset to any company I would be proud to join.<p>
+        `,
+      footer: `
+          <p>
+            <b>Stack</b>: TypeScript · React · NextJS · NodeJS · ExpressJS · API · PostgreSQL · Turborepo · Prisma · Webpack · React Native
+          </p>
+          <p>
+            <b>Certifications</b>: Meta Front-End Developer · Meta Back-End Developer · NodeJS Application Developper (JSNAD) · NodeJS Services Developer (JSNSD) · AWS certified Practitioner · AWS certified Developer
+          </p>
+        `,
+    },
+    company: "",
+    contract: {
+      location: "France",
+      position: "Freelance Senior Fullstack Engineer",
+      type: "Permanent",
+      startDate: "Oct 2023",
+      endDate: "Today",
+      duration: "9 mos",
+    },
+    group: ["2024", EExperiencePosition.DEVELOPER],
+  },
+  {
+    description: {
+      display: `
         <p>Veepee is an extraordinary company, where I had the pleasure of experiencing an <b>exceptional working environment</b>, <b>talented management</b>, and the <b>responsibility and challenges</b> that accelerated my experience in product ownership.</p>
         <p>Recruited in 2023 as a Product Owner, I led a portfolio of a dozen products, impacting the entire 5000+ employee organization.</p>
       `,
@@ -71,7 +101,7 @@ const experienceMap: IExperience[] = [
     company: "wishibam",
     contract: {
       location: "Paris, Île-de-France, France",
-      position: "Product Manager / Developer",
+      position: "Senior Fullstack Engineer /Product Manager",
       type: "Permanent",
       startDate: "Dec 2018",
       endDate: "Jun 2020",
@@ -210,7 +240,7 @@ const experienceMap: IExperience[] = [
     company: "deuslynn",
     contract: {
       location: "Lyon, Auvergne-Rhône-Alpes, France",
-      position: "Owner / CPTO",
+      position: "Owner / Principal Tech & Product",
       type: "Permanent",
       startDate: "Nov 2012",
       endDate: "Oct 2016",
@@ -244,7 +274,7 @@ const experienceMap: IExperience[] = [
     company: "alstom",
     contract: {
       location: "Lyon, Auvergne-Rhône-Alpes, France",
-      position: "Project Manager",
+      position: "Tech Lead / Project Manager",
       type: "",
       startDate: "Oct 2011",
       endDate: "Sep 2012",

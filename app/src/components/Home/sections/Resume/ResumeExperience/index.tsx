@@ -11,7 +11,7 @@ import experienceSummaryMap from "@/data/map/experienceSummaryMap";
 import experienceMap from "@/data/map/experienceMap";
 
 const ResumeExperience = () => {
-  const [expandWorkExperience, toggleWorkExperience] = useState(false);
+  const [expandWorkExperience, toggleWorkExperience] = useState(true);
 
   /***
    * ! IMPORTANT
