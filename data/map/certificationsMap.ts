@@ -17,6 +17,22 @@ const CertificationsMap: ICertification[] = [
     ],
   },
   {
+    title: "Meta Back-End Developer Professional Certificate",
+    meta: {
+      tags: ["software-engineering"],
+    },
+    issued: "(In Progress)",
+    provider: "meta",
+    skills: [
+      "Python",
+      "Django (Web Framework)",
+      "API",
+      "UX/UI Design",
+      "MySQL",
+      "Bash (Unix Shell)",
+    ],
+  },
+  {
     title: "OpenJS Node.js Application Developer (JSNAD)",
     meta: {
       tags: ["software-engineering"],
