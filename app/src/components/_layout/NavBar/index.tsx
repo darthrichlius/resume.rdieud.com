@@ -21,6 +21,7 @@ interface IMenu {
 const menus: IMenu[] = [
   { label: "References", href: "#references", icon: "" },
   { label: "Resume", href: "#resume", icon: "" },
+  { label: "Certifications", href: "#resume-certification", icon: "" },
   { label: "Portfolio", href: "#portfolio", icon: "" },
   { label: "Contact", href: "#presentation", icon: "" },
 ];
