@@ -15,10 +15,65 @@ import FromSchoolDesktop1 from "@@/assets/images/portfolio/fromschool/fromschool
 import FromSchoolDesktop2 from "@@/assets/images/portfolio/fromschool/fromschool-desktop-2.png";
 import FromSchoolDesktop3 from "@@/assets/images/portfolio/fromschool/fromschool-desktop-3.png";
 
+import LCBYDesktop from "@@/assets/images/portfolio/lechatbyyou/lcby-desktop.png";
+
 const portfolioMap: IProject[] = [
   // ################################
   // ##### ##### FEATURES ##### #####
 
+  {
+    title: "LeChatByYou (WIP)",
+    subtitle: "Responsive Web Application (Monorepo / Miscroservices)",
+    shortDescription:
+      "<b>LeChatByYou</b> is a small yet promising application facilitating real-time <b>human-to-human</b> and <b>human-to-AI</b> interactions through various Large Language Models (LLMs). Users have the freedom to choose their <b>preferred LLM</b> for chatting with an AI assistant or enjoying seamless, authentic conversations with friends and family.",
+    description: `
+      <p>A professional profile identity website designed for Richard Dieud to offer a comprehensive representation of his work experience and achievements.</p>
+      <p>The primary objective is to provide interested parties with more comprehensive and detailed information, and, most importantly, details consistent with what one seeks when exploring an engineering profile.</p>
+      <p>Furthermore, our aim is to deliver an enjoyable experience that contributes to expressing the personality of the website owner</p>
+    `,
+    stack: {
+      design: [
+        { label: "<b>AWS</b> (EC2, Lambda, ElasticCache, RDS, S3)" },
+        { label: "Vercel" },
+        {
+          label:
+            "<b>AI Models Providers</b> (OpenAI, HuggingFace, Meta  LLama, ...)",
+        },
+      ],
+      front: [
+        { label: "Turborepo (Monorepo)" },
+        { label: "Websocket" },
+        { label: "React" },
+        { label: "Redux" },
+        { label: "TypeScript" },
+        { label: "shadcn/ui" },
+        { label: "Radix UI" },
+        { label: "TailwindCSS" },
+      ],
+      back: [
+        { label: "NodeJS" },
+        { label: "Next.Js" },
+        { label: "ExpressJS" },
+        { label: "Postgresql" },
+        { label: "Redis" },
+        { label: "Hotjar" },
+      ],
+    },
+    medias: [
+      {
+        src: LCBYDesktop,
+        order: 1,
+      },
+      {
+        src: ResumeMobile,
+        order: 2,
+      },
+    ],
+    links: [],
+    meta: {
+      isFeatured: true,
+    },
+  },
   {
     title: "resume.rdieud.com",
     subtitle: "Responsive Website",
@@ -30,11 +85,12 @@ const portfolioMap: IProject[] = [
       <p>Furthermore, our aim is to deliver an enjoyable experience that contributes to expressing the personality of the website owner</p>
     `,
     stack: {
-      design: [{ label: "Figma" }],
+      design: [{ label: "Figma" }, { label: "(Tailor-made) Design System" }],
       front: [
         { label: "TypeScript" },
         { label: "React" },
-        { label: "Tailwind" },
+        { label: "React Hook Form" },
+        { label: "TailwindCSS" },
         { label: "Radix UI" },
       ],
       back: [
@@ -82,21 +138,22 @@ const portfolioMap: IProject[] = [
     `,
     stack: {
       front: [
+        { label: "AWS (RDS)" },
         { label: "TypeScript" },
         { label: "React" },
         { label: "Axios" },
         { label: "Tailwind" },
         { label: "Radix UI" },
         { label: "React Hook Form" },
-        { label: "React Query" },
       ],
       back: [
         { label: "Next.Js" },
+        { label: "React Query" },
         { label: "Prisma" },
         { label: "Zod" },
         { label: "MySQL" },
         { label: "Sentry" },
-        { label: "Zustand" },
+        { label: "Zustand (Store Manager)" },
       ],
     },
     medias: [
@@ -134,15 +191,17 @@ const portfolioMap: IProject[] = [
       <p>Ultimately, the platform could be provided as a white-label solution for any partner looking to build a product related to video games without the need for prior research and development investment and ongoing maintenance costs.</p>
     `,
     stack: {
+      design: [{ label: "Rest API" }],
       front: [
         { label: "TypeScript" },
         { label: "React" },
         { label: "ViteJs" },
         { label: "Chakra UI" },
-        { label: "Tailwind" },
-        { label: "Zustand" },
+        { label: "TailwindCSS" },
+        { label: "Zustand (Store Manager)" },
         { label: "Sentry" },
       ],
+      back: [{ label: "React Query" }, { label: "React Router" }],
     },
     medias: [
       {

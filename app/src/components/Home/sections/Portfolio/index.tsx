@@ -125,7 +125,7 @@ const FeaturedProjectCard = ({ project }: { project: IProject }) => {
         </header>
         <div className="flex flex-col gap-32 mt-32">
           {project.shortDescription && (
-            <Typography className="text-zinc-400 text-base md:text-lg leading-7 md:leading-8">
+            <Typography className="text-zinc-400 text-base md:text-base leading-7 md:leading-7">
               <span
                 dangerouslySetInnerHTML={{
                   __html: project.shortDescription,
@@ -134,15 +134,19 @@ const FeaturedProjectCard = ({ project }: { project: IProject }) => {
             </Typography>
           )}
           {project.stack && Object.values(project.stack).length && (
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-8">
               {Object.values(project.stack).map((gpStack, ci) => (
                 <ul
                   key={ci}
-                  className="flex flex-wrap gap-16 md:gap-16 text-zinc-200 text-lg"
+                  className="flex flex-wrap gap-16 md:gap-x-16 md:gap-y-8 text-zinc-200 text-base"
                 >
                   {gpStack.map((stack) => (
                     <li key={stack.label} className="shrink-0">
-                      {stack.label}
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: stack.label,
+                        }}
+                      />
                     </li>
                   ))}
                 </ul>
@@ -169,8 +173,12 @@ const FeaturedProjectCard = ({ project }: { project: IProject }) => {
         </div>
       </section>
       <aside className="mt-36 w-full md:shrink-0 md:mt-1 md:w-[50%] max-h-max lg:max-h-[345px] xl:w-1/2">
-        {project.medias && Array.isArray(project.medias) && <NextImage src={project.medias[0].src} alt="Image" />}
-        {!project.medias && <NextImage src={portfolioPlaceholder} alt="Image" />}
+        {project.medias && Array.isArray(project.medias) && (
+          <NextImage src={project.medias[0].src} alt="Image" />
+        )}
+        {!project.medias && (
+          <NextImage src={portfolioPlaceholder} alt="Image" />
+        )}
       </aside>
     </article>
   );
