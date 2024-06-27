@@ -38,6 +38,13 @@ const experienceSummaryMap: {
           },
         ],
       },
+      {
+        contract: {
+          location: "Lyon FR",
+          refYear: "2012",
+        },
+        company: "deuslynn",
+      },
     ],
   },
   {
