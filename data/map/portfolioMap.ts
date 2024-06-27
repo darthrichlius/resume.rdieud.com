@@ -37,7 +37,7 @@ const portfolioMap: IProject[] = [
         { label: "Vercel" },
         {
           label:
-            "<b>AI Models Providers</b> (OpenAI, HuggingFace, Meta  LLama, ...)",
+            "<b>AI Models Providers</b> (OpenAI GPTs, HuggingFace, Meta  LLama, ...)",
         },
       ],
       front: [
