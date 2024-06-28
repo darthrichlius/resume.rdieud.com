@@ -2,6 +2,13 @@
 
 These release notes intend to summarize, from a user point of view, the various implementations related to this application.
 
+## [0.4.0]
+
+- Add "Let's talk" section
+- Add calendly link
+- Better highlighting of the download CV button
+- Improve the readability of the message on the `Introduction` and `Presentation` section
+
 ## [0.3.0]
 
 - Portfolio: Add `LeChatByYou` application

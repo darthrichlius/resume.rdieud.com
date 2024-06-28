@@ -16,7 +16,7 @@ interface IAppConfig {
 }
 
 const AppConfig: IAppConfig = {
-  version: "v0.3.0",
+  version: "v0.4.0",
   owner: {
     fullname: "Richard Dieud",
     contact: {

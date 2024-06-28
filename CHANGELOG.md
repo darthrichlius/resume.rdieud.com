@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.4.0]
+
+- Add "Let's talk" section
+- Add calendly link
+- Better highlighting of the download CV button
+- Improve the readability of the message on the `Introduction` and `Presentation` section
+
 ## [0.3.0]
 
 - Portfolio: Add `LeChatByYou` application
