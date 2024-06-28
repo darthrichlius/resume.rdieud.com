@@ -2,6 +2,10 @@
 
 These release notes intend to summarize, from a user point of view, the various implementations related to this application.
 
+## [0.4.1]
+
+- Fix grammar typo
+
 ## [0.4.0]
 
 - Add "Let's talk" section
