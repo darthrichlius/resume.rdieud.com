@@ -43,7 +43,7 @@ const WorkReferenceCard = ({ reference }: { reference: IWorkReference }) => {
   }
 
   return (
-    <article className="bg-zinc-900 p-16 relative z-10 lg:max-w-2xl">
+    <article className="bg-zinc-900 p-20 relative z-10 lg:max-w-2xl">
       <NextLink
         href={`${AppConfig.owner.contact.linkedin}/details/recommendations/`.replaceAll(
           "//",

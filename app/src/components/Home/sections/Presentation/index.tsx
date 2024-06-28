@@ -21,6 +21,13 @@ const contactLinks: {
   icon: any;
 }[] = [
   {
+    id: "email",
+    label: "Send Email",
+    title: "Contact me by email",
+    href: `mailto:${AppConfig.owner.contact.email}`,
+    icon: <Icon index="Email" />,
+  },
+  {
     id: "github",
     label: "Github",
     title: "Navigate to my Github repository",
@@ -34,13 +41,8 @@ const contactLinks: {
     href: AppConfig.owner.contact.linkedin,
     icon: <Icon index="Linkedin" />,
   },
-  {
-    id: "email",
-    label: "Email",
-    title: "Contact me by email",
-    href: `mailto:${AppConfig.owner.contact.email}`,
-    icon: <Icon index="Email" />,
-  },
+
+  /*
   {
     id: DOWNLOAD_RESUME,
     label: "Download CV (PDF)",
@@ -49,22 +51,23 @@ const contactLinks: {
     href: "/",
     icon: <Icon index="Download" />,
   },
+  //*/
 ];
 
 const expertHighlight = [
-  { icon: <Icon index="Figma" />, alt: "Figma" },
-  { icon: <Icon index="TypeScript" />, alt: "TypeScript" },
   { icon: <Icon index="React" />, alt: "React" },
   { icon: <Icon index="NextJs" />, alt: "Next.Js" },
-  { icon: <Icon index="Symfony" />, alt: "Symfony" },
+  { icon: <Icon index="TypeScript" />, alt: "TypeScript" },
   { icon: <Icon index="NodeJs" />, alt: "Node.Js" },
+  { icon: <Icon index="Symfony" />, alt: "Symfony" },
+  { icon: <Icon index="Figma" />, alt: "Figma" },
 ];
 
 const HomePresentationSection = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const { isLandScape, isLgVertical } = useWindow();
 
-  const handleclick = async (e: any, id: string) => {
+  const handleClick = async (e: any, id: string) => {
     if (DOWNLOAD_RESUME === id) {
       e.preventDefault();
       e.stopPropagation();
@@ -104,27 +107,28 @@ const HomePresentationSection = () => {
           </div>
           <div className="w-full lg:max-w-lg mt-56 lg:mt-1">
             <Typography className="text-zinc-400 text-lg leading-8 md:text-xl [word-spacing:0.1em] md:leading-10">
-              <strong>Senior fullstack web engineer</strong> and Product
-              Manager, specialized in <strong>React</strong>,{" "}
-              <strong>NodeJs</strong> & <strong>Symfony</strong> environments,
-              with the experience and <strong>critical thinking</strong>{" "}
-              mindset, to <strong>effectively</strong> think, plan, design,
-              build, and manage digital{" "}
-              <strong>systems throughout their cycles</strong>
+              <strong>Senior fullstack web engineer</strong> with Product
+              Manager background and <strong>agile</strong> experience,
+              specialized in <strong>React</strong>, <strong>NodeJs</strong> &{" "}
+              <strong>Symfony</strong> environments. I use my soft-skills,
+              intuition from past experiences and{" "}
+              <strong>critical thinking</strong> mindset, to{" "}
+              <strong>effectively</strong> think, plan, design, build, and
+              manage digital <strong>systems throughout their cycles</strong>
             </Typography>
-            <div className="grid grid-cols-2 gap-56 justify-center mt-48">
+            <div className="flex flex-wrap justify-between xs:gap-24 xs:justify-center md:gap-56 md:justify-start mt-48 text-wine-200">
               {contactLinks.map((link) => (
                 <NextLink
                   key={link.id}
-                  className="justify-self-center lg:justify-self-start hover:text-wine-200"
+                  className="justify-self-center lg:justify-self-start hover:text-[#fff]"
                   target="_blank"
                   href={link.href}
                   title={link.title || undefined}
-                  onClick={(e) => handleclick(e, link.id)}
+                  onClick={(e) => handleClick(e, link.id)}
                 >
                   <Typography
                     as="span"
-                    className="flex items-center gap-8 w-144 md:w-160 lg:w-fit lg:max-w-fit text-lg md:text-xl"
+                    className="flex items-center gap-8 w-128 justify-center md:w-160 lg:w-fit lg:max-w-fit text-lg md:text-xl"
                   >
                     <span>{link.icon}</span>
                     {link.labelMobile && (
