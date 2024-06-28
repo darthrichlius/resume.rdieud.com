@@ -6,6 +6,7 @@ import {
   FaReact as ReactLogo,
   FaNodeJs as NodeJsLogo,
   FaSymfony as SymfonyLogo,
+  FaCalendarAlt as ScheduleCallLogo,
 } from "react-icons/fa";
 import {
   MdEmail as EmailLogo,
@@ -37,7 +38,8 @@ export type TRegisteredIcon =
   | "Download"
   | "Website"
   | "Github"
-  | "LightMode";
+  | "LightMode"
+  | "ScheduleMeet";
 
 const DataMap: Record<TRegisteredIcon, any> = {
   // STACK & TOOLS
@@ -54,6 +56,7 @@ const DataMap: Record<TRegisteredIcon, any> = {
   Website: WebsiteLogo,
   Github: GithubLogo,
   LightMode: LightModeLogo,
+  ScheduleMeet: ScheduleCallLogo,
 };
 
 const Icon = ({ index, className }: Props) => {

@@ -56,6 +56,33 @@
   @apply pt-128;
 }
 
+#presentation .lets-talk {
+  @apply flex flex-col gap-12 w-full lg:max-w-6xl mt-96 mb-48 p-48 rounded-xl;
+
+  background: radial-gradient(
+      94.88% 230.32% at 95.71% 28.51%,
+      rgba(67, 78, 117, 0.27) 0,
+      #3d353500 100%
+    ),
+    #0a0a0a;
+}
+
+#presentation .lets-talk-CTA {
+  @apply w-full sm:w-fit px-28 py-8 rounded-lg;
+}
+
+#presentation .lets-talk-CTA--wine {
+  @apply bg-wine-200 hover:bg-[#fff] hover:text-wine-200;
+}
+
+#presentation .lets-talk-CTA--dark {
+  @apply text-[#000] bg-[#fff] hover:text-[#fff] hover:bg-[#000];
+}
+
+#presentation .lets-talk-CTA-text {
+  @apply flex justify-center items-center gap-8 min-w-112 lg:w-fit lg:max-w-fit text-base;
+}
+
 #references.home-section {
   @apply flex justify-center pt-192;
 }

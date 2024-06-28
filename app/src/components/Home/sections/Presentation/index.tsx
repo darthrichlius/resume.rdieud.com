@@ -139,12 +139,47 @@ const HomePresentationSection = () => {
                         </span>
                       </>
                     )}
-                    {!link.labelMobile && (
-                      <span className="">{link.label}</span>
-                    )}
+                    {!link.labelMobile && <span>{link.label}</span>}
                   </Typography>
                 </NextLink>
               ))}
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center ">
+          <div className="lets-talk">
+            <Typography className="font-bold text-4xl text-center">
+              Let&apos;s Talk and Know each others.
+            </Typography>
+            <Typography className="text-xl text-center text-zinc-500">
+              Something on your mind? Need answers?
+            </Typography>
+            <div className="flex w-full flex-wrap gap-32 mt-24 justify-center">
+              <NextLink
+                className="lets-talk-CTA lets-talk-CTA--wine"
+                href={"https://calendly.com/dieudrichard"}
+                target="blank"
+              >
+                <Typography as="span" className="lets-talk-CTA-text">
+                  <span className="flex-grow-0 flex-shrink-0 h-16 w-16">
+                    {<Icon index="ScheduleMeet" />}
+                  </span>
+                  <span>Schedule a call</span>
+                </Typography>
+              </NextLink>
+              <NextLink
+                className="lets-talk-CTA lets-talk-CTA--dark"
+                onClick={(e) => handleClick(e, DOWNLOAD_RESUME)}
+                href={"javascript:void(0)"}
+                title={"Download my CV in PDF format"}
+              >
+                <Typography as="span" className="lets-talk-CTA-text">
+                  <span className="flex-grow-0 flex-shrink-0 h-16 w-16">
+                    {<Icon index="Download" />}
+                  </span>
+                  <span>Download CV</span>
+                </Typography>
+              </NextLink>
             </div>
           </div>
         </div>
