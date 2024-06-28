@@ -149,7 +149,7 @@ const HomePresentationSection = () => {
         <div className="flex justify-center ">
           <div className="lets-talk">
             <Typography className="font-bold text-4xl text-center">
-              Let&apos;s Talk and Know each others.
+              Let&apos;s Talk and Know each other.
             </Typography>
             <Typography className="text-xl text-center text-zinc-500">
               Something on your mind? Need answers?
