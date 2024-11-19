@@ -7,7 +7,7 @@ import "@radix-ui/themes/styles.css";
 import "@@/assets/styles/globals.css";
 import { WindowProvider } from "@@src/context";
 import { appExtendedThemeParams } from "@@/config/params";
-import { GoogleAnalyticsScript, HotjarAnalyticsScript } from "@@src/scripts";
+import { GoogleAnalyticsScript, HotjarAnalyticsScript, ABTastyTagScript } from "@@src/scripts";
 
 export default function RootLayout({
   children,
@@ -16,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <ABTastyTagScript />
       <GoogleAnalyticsScript />
       <HotjarAnalyticsScript />
       <body className={"font-body"}>
